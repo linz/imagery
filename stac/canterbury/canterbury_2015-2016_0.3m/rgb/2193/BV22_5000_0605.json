@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "BV22_5000_0605",
+  "links": [
+    { "rel": "self", "href": "./BV22_5000_0605.json", "type": "application/json" },
+    { "rel": "collection", "href": "./collection.json", "type": "application/json" },
+    { "rel": "parent", "href": "./collection.json", "type": "application/json" }
+  ],
+  "assets": {
+    "visual": {
+      "href": "./BV22_5000_0605.tiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "file:checksum": "1220eebe170f462171f3df0d45848db1e87d23d58952d1b8de57c45bd37ad18f78aa"
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "properties": { "start_datetime": "2015-11-15T11:00:00Z", "end_datetime": "2016-04-09T12:00:00Z", "datetime": null },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [172.0879077, -42.9530083],
+        [172.0874286, -42.9854227],
+        [172.1168629, -42.9856536],
+        [172.1173266, -42.9532389],
+        [172.0879077, -42.9530083]
+      ]
+    ]
+  },
+  "bbox": [172.0874286, -42.9856536, 172.1173266, -42.9530083],
+  "collection": "01GSRN8RQDMWP85PWYD3M21PJJ"
+}
