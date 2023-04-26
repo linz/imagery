@@ -5,7 +5,7 @@ Toitū Te Whenua makes New Zealand’s most up-to-date publicly owned aerial ima
 
 ## AWS Access
 
-Toitū Te Whenua provides a public requester pays bucket `s3://linz-imagery` 
+Toitū Te Whenua provides a public requester pays bucket `s3://linz-imagery` in `ap-southeast-2`.
 
 
 Using the [AWS CLI](https://aws.amazon.com/cli/) anyone with a AWS account can access all the imagery mentioned inside of this repository.
