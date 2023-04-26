@@ -11,3 +11,8 @@ Using the [AWS CLI](https://aws.amazon.com/cli/) anyone with a AWS account can a
 ```
 aws s3 ls s3://linz-imagery --request-payer requester
 ```
+
+
+## License
+
+All imagery and metadata is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) for more information on [Attribution](https://www.linz.govt.nz/products-services/data/licensing-and-using-data/attributing-elevation-or-aerial-imagery-data)
