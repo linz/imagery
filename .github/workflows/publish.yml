@@ -1,0 +1,25 @@
+name: Publish
+
+on: [push]
+
+jobs:
+  main:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: '18.x'
+
+      - name: Install
+        run: yarn
+
+      - name: format
+        run: yarn format
+
+      - name: Check formatting
+        run: git diff --exit-code
