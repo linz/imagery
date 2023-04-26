@@ -1,11 +1,8 @@
-# Imagery naming conventions 
-
+# Imagery naming conventions
 
 Imagery is named according to the majority region that imagery covers while also adhering to a few naming conventions.
 
-
 ## Imagery Path
-
 
 ```
 <region>/
@@ -23,14 +20,14 @@ s3://linz-imagery/auckland/auckland_2022_0.075m/rgb/2193/collection.json
 ```
 
 10m Satellite RGB imagery covering the North Island captured in 2023
+
 ```
 s3://linz-imagery/new-zealand/north-island_2023_10m/rgb/2193/collection.json
 ```
 
-
 ### Characters
 
-The path is restricted to a limited set of characters (a-z, A-Z, 0-9, -, _ ) and no whitespace.
+The path is restricted to a limited set of characters (a-z, A-Z, 0-9, -, \_ ) and no whitespace.
 
 ### Macrons
 
@@ -38,16 +35,17 @@ When a name contains macrons "Ōtorohanga" the macron is removed from the path b
 
 ### Apostrophes
 
-Where a name contains an apostrophe  "Hawke's Bay" the apostrophe is removed from the path but retained in the metadata's Title / Description.
+Where a name contains an apostrophe "Hawke's Bay" the apostrophe is removed from the path but retained in the metadata's Title / Description.
 
 ### Path components
+
 #### `region`
 
 Is taken from a list of regions
 
 - New Zealand `new-zealand`
 - Northland `northland`
-- Auckland  `auckland`
+- Auckland `auckland`
 - Waikato `waikato`
 - Bay of Plenty `bay-of-plenty`
 - Gisborne `gisborne`
@@ -65,11 +63,9 @@ Is taken from a list of regions
 - Pacific Islands `pacific-islands`
 - Antarctica `antarctica`
 
-
 #### `city-or-sub-region`
 
 This is free text and at the Imagery maintainers discretion. Unless the region has full coverage, a specific sub-region is used to help describe the dataset. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the region name should be repeated in place of the city or sub-region in order to keep naming consistent.
-
 
 #### `years`
 
@@ -77,13 +73,13 @@ If the "year" is part of the imagery path, it is the full four digits should be 
 
 As imagery can be updated after it is "named" the years may be incorrect it is best to use is as a rough guideline and then use the STAC collection.json for more precise timing.
 
-
 ### `resolution`
-The resolution of the imagery in meters  with no trailing zeros after the decimal point.
 
-### `product` 
+The resolution of the imagery in meters with no trailing zeros after the decimal point.
 
-Imagery product type, Generally this is `rgb` as is the primary imagery type for LINZ 
+### `product`
+
+Imagery product type, Generally this is `rgb` as is the primary imagery type for LINZ
 
 ### `crs`
 
