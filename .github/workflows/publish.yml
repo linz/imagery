@@ -37,7 +37,7 @@ jobs:
       - name: Create Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v2
         with:
-          args: stac-catalog --output stac/catalog.json --template template/catalog.json --collections files.txt
+          args: stac-catalog --output stac/catalog.json --template template/catalog.json stac/
 
       - name: Validate STAC
         run: |
@@ -45,10 +45,9 @@ jobs:
           shopt -s globstar
           docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
 
-      # FIXME: issue with the latest version (v2.0.0): https://github.com/aws-actions/configure-aws-credentials/issues/680
       - name: AWS Configure
         if: github.ref == 'refs/heads/master'
-        uses: aws-actions/configure-aws-credentials@v1.6.1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
