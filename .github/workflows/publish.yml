@@ -37,7 +37,7 @@ jobs:
       - name: Create Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v2
         with:
-          args: stac-catalog --output stac/catalog.json --template catalog_template.json --collections files.txt
+          args: stac-catalog --output stac/catalog.json --template template/catalog.json --collections files.txt
 
       - name: Validate STAC
         run: |
