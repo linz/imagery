@@ -6,20 +6,56 @@ jobs:
   main:
     name: Publish
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
       - name: Use Node.js 18.x
         uses: actions/setup-node@v2.2.0
         with:
-          node-version: '18.x'
+          node-version: "18.x"
 
       - name: Install
         run: yarn
 
-      - name: format
+      - name: Format
         run: yarn format
 
       - name: Check formatting
         run: git diff --exit-code
+
+      # TODO: Remove and modify "Create Catalog" once argo-tasks released
+      - name: Get Collections
+        run: |
+          echo "$(find stac/ -name collection.json)" > files.txt
+
+      # catalog.json is not pushed to the repository (temporary solution)
+      - name: Create Catalog
+        uses: docker://ghcr.io/linz/argo-tasks:v2
+        with:
+          args: stac-catalog --output stac/catalog.json --template catalog_template.json --collections files.txt
+
+      - name: Validate STAC
+        run: |
+          # Enable double star operator
+          shopt -s globstar
+          docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
+
+      # FIXME: issue with the latest version (v2.0.0): https://github.com/aws-actions/configure-aws-credentials/issues/680
+      - name: AWS Configure
+        uses: aws-actions/configure-aws-credentials@v1.6.1
+        with:
+          aws-region: ap-southeast-2
+          mask-aws-account-id: true
+          role-to-assume: ${{ secrets.AWS_CI_ROLE }}
+
+      # Sync STAC files only on push to 'master'
+      # TODO: change bucket to prod one once testing is done
+      - name: Sync STAC
+        if: github.ref == 'refs/heads/master'
+        run: |
+          aws s3 sync --size-only stac/ s3://linz-imagery-test/
