@@ -47,6 +47,7 @@ jobs:
 
       # FIXME: issue with the latest version (v2.0.0): https://github.com/aws-actions/configure-aws-credentials/issues/680
       - name: AWS Configure
+        if: github.ref == 'refs/heads/master'
         uses: aws-actions/configure-aws-credentials@v1.6.1
         with:
           aws-region: ap-southeast-2
