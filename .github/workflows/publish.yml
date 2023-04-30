@@ -28,7 +28,7 @@ jobs:
       - name: Check formatting
         run: git diff --exit-code
 
-      # catalog.json is not pushed to the repository (temporary solution)
+      # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v2
         with:
