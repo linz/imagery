@@ -11,22 +11,7 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v2.2.0
-        with:
-          node-version: "18.x"
-
-      - name: Install
-        run: yarn
-
-      - name: Format
-        run: yarn format
-
-      - name: Check formatting
-        run: git diff --exit-code
+      - uses: linz/action-typescript@v2
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create Catalog
@@ -49,8 +34,7 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE }}
 
       # Sync STAC files only on push to 'master'
-      # TODO: change bucket to prod one once testing is done
       - name: Sync STAC
         if: github.ref == 'refs/heads/master'
         run: |
-          aws s3 sync --size-only stac/ s3://linz-imagery-test/
+          aws s3 sync --size-only stac/ s3://linz-imagery/
