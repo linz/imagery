@@ -35,6 +35,7 @@ jobs:
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
+        uses: docker://ghcr.io/linz/argo-tasks:v2
         if: github.ref == 'refs/heads/master'
-        run: |
-          aws s3 sync --size-only stac/ s3://linz-imagery/
+        with:
+          args: stac-sync /github/workspace/stac/ s3://linz-imagery/
