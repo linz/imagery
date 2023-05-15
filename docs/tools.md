@@ -1,4 +1,4 @@
-# Tools to consume STAC metadata
+# STAC metadata
 
 A list of tools is available on [the STAC website](https://stacspec.org/en/about/tools-resources/).
 
