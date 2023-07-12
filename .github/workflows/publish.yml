@@ -6,6 +6,8 @@ jobs:
   main:
     name: Publish
     runs-on: ubuntu-latest
+    concurrency: deploy-${{ github.ref }}
+
     permissions:
       id-token: write
       contents: read
