@@ -8,7 +8,7 @@ A list of tools is available on [the STAC website](https://stacspec.org/en/about
 
 To deploy STAC Browser, you can follow [this documentation](https://github.com/radiantearth/stac-browser#get-started).
 
-For a quick start, you can use [the demo instance](https://radiantearth.github.io/stac-browser/), pass the link to the New Zealand Imagery STAC Catalog `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json` and click on the `Load` button.
+For a quick start, you can use [the demo instance](https://radiantearth.github.io/stac-browser/), pass the link to the New Zealand Imagery STAC Catalog `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json` and click on the `Load` button.
 
 ### Filtering the data
 

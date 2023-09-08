@@ -40,4 +40,4 @@ jobs:
         uses: docker://ghcr.io/linz/argo-tasks:v2
         if: github.ref == 'refs/heads/master'
         with:
-          args: stac-sync /github/workspace/stac/ s3://linz-imagery/
+          args: stac-sync /github/workspace/stac/ s3://nz-imagery/
