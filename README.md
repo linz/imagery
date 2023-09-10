@@ -1,6 +1,6 @@
 # New Zealand Imagery
 
-Toitū Te Whenua makes New Zealand’s most up-to-date publicly owned aerial imagery freely available to use under an open licence. You can access this through the [LINZ Data Service](https://data.linz.govt.nz/data/category/aerial-photos/?s=n), [LINZ Basemaps](https://basemaps.linz.govt.nz/#@-41.8899962,174.0492437,z5) or Amazon AWS.
+Toitū Te Whenua makes New Zealand's most up-to-date publicly owned aerial imagery freely available to use under an open licence. You can access this through the [LINZ Data Service](https://data.linz.govt.nz/data/category/aerial-photos/?s=n), [LINZ Basemaps](https://basemaps.linz.govt.nz/#@-41.8899962,174.0492437,z5) or the [Registry of Open Data on AWS](https://registry.opendata.aws/nz-imagery/).
 
 This repository contains STAC Collection metadata for each imagery dataset, as well as some guidance documentation:
 
@@ -10,14 +10,12 @@ This repository contains STAC Collection metadata for each imagery dataset, as w
 
 ## AWS Access
 
-# TODO update wording
+Toitū Te Whenua provides a public bucket hosted by the [Registry of Open Data on AWS](https://registry.opendata.aws/nz-imagery/) `s3://nz-imagery` in `ap-southeast-2`.
 
-Toitū Te Whenua provides a public requester pays bucket `s3://nz-imagery` in `ap-southeast-2`.
-
-Using the [AWS CLI](https://aws.amazon.com/cli/) anyone with a AWS account can access all of the imagery mentioned inside of this repository.
+Using the [AWS CLI](https://aws.amazon.com/cli/) anyone can access all of the imagery mentioned inside of this repository.
 
 ```
-aws s3 ls s3://nz-imagery --no-sign-request
+aws s3 ls --no-sign-request s3://nz-imagery/
 ```
 
 ## License
