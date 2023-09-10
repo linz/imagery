@@ -1,8 +1,8 @@
 # Get the link to the TIFF
 
-The STAC Catalog, https://linz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json, is the entry point of the LINZ imagery data. It points to the different STAC Collections representing a dataset.
+The STAC Catalog, https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json, is the entry point of the LINZ imagery data. It points to the different STAC Collections representing a dataset.
 
-> **_Note:_** The files on our AWS S3 bucket `linz-imagery` can be accessible with a `s3` path `s3://linz-imagery` or a `https` URL `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/`.
+> **_Note:_** The files on the AWS S3 bucket `nz-imagery` can be accessible with a `s3` path `s3://nz-imagery` or a `https` URL `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
 
 ## Manually navigate through the STAC Catalog to a get a TIFF
 
@@ -20,13 +20,13 @@ This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" data
 }
 ```
 
-2. The Collection can be accessible from this GitHub repository, `stac/wellington/wellington_2021_0.075m/rgb/2193/collection.json` or from `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/collection.json`. From the Collection get an Item link in the `links` list:
+2. The Collection can be accessible from this GitHub repository, `stac/wellington/wellington_2021_0.075m/rgb/2193/collection.json` or from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/collection.json`. From the Collection get an Item link in the `links` list:
 
 ```json
 { "rel": "item", "href": "./BQ31_500_040071.json", "type": "application/json" }
 ```
 
-3. The Item can be accessible from `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.json`. A list of assets can be found:
+3. The Item can be accessible from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.json`. A list of assets can be found:
 
 ```json
 "assets": {
@@ -39,7 +39,7 @@ This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" data
 
 ```
 
-In this case, the TIFF can be accessible from `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
+In this case, the TIFF can be accessible from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
 
 > **_Note:_** Our TIFF files and STAC Item files use the same base name. Having the link to the STAC Item, you can determine the TIFF link by changing its suffix from `.json` to `.tiff`.
 
@@ -55,13 +55,13 @@ This tool is described in [this page](tools.md).
 
 GDAL allows you to run command on a file that is not on your local machine using a virtual file systems path:
 
-- `/vicurl/https://linz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
-- `/vsis3/s3://linz-imagery/[PATH]`
+- `/vicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
+- `/vsis3/s3://nz-imagery/[PATH]`
 
 ## gdalinfo
 
 ```bash
-gdalinfo /vsicurl/https://linz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff
+gdalinfo /vsicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff
 ```
 
 <details>
@@ -150,7 +150,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 1. In QGIS, open the "Data Source Manager" (press `ctrl+L`)
 2. Select "Protocol: HTTP(S)" as the "Source Type"
 3. Select "HTTP/HTTPS/FTP" as the "Protocol Type"
-4. Paste the HTTPS URL to the TIFF, for example `https://linz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
+4. Paste the HTTPS URL to the TIFF, for example `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
 5. Click on the "Add" button and wait for the file to load.
 
 ![Data Source Manager](img/usage/qgis_data-source-manager.png)
