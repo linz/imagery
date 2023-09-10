@@ -10,7 +10,7 @@ This repository contains STAC Collection metadata for each imagery dataset, as w
 
 ## AWS Access
 
-Toitū Te Whenua provides a public bucket hosted by the [Registry of Open Data on AWS](https://registry.opendata.aws/nz-imagery/) `s3://nz-imagery` in `ap-southeast-2`.
+Toitū Te Whenua owns and maintains a public bucket which is sponsored and shared via the [Registry of Open Data on AWS](https://registry.opendata.aws/nz-imagery/) `s3://nz-imagery` in `ap-southeast-2`.
 
 Using the [AWS CLI](https://aws.amazon.com/cli/) anyone can access all of the imagery mentioned inside of this repository.
 
