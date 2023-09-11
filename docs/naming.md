@@ -16,13 +16,13 @@ Imagery is named according to the majority region that imagery covers while also
 7.5cm RGB imagery covering Auckland captured in 2022
 
 ```
-s3://linz-imagery/auckland/auckland_2022_0.075m/rgb/2193/collection.json
+s3://nz-imagery/auckland/auckland_2022_0.075m/rgb/2193/collection.json
 ```
 
 10m Satellite RGB imagery covering the North Island captured in 2023
 
 ```
-s3://linz-imagery/new-zealand/north-island_2023_10m/rgb/2193/collection.json
+s3://nz-imagery/new-zealand/north-island_2023_10m/rgb/2193/collection.json
 ```
 
 ### Characters
