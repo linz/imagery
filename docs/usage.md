@@ -164,7 +164,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 ![ArcGIS Pro New Cloud Storage Connection](img/usage/arcgis_pro_new_cloud_connection.png)
 
-2. In the "Create Cloud Storage Connection" dialog, add a Connection File Name e.g. "New Zealand Imagery", Servicer Provider as "AMAZON", Bucket Name as "nz-imagery", Region as "Asia Pacific (Sydney)" and Service Endpoint as "s3.ap-southeast-2.amazon.com".
+2. In the "Create Cloud Storage Connection" dialog, add a Connection File Name e.g. "New Zealand Imagery", Servicer Provider as "AMAZON", Bucket Name as `nz-imagery`, Region as "Asia Pacific (Sydney)" and Service Endpoint as `s3.ap-southeast-2.amazon.com`.
 3. Because this is a Public Bucket, add a Provider Option with Name of "AWS_NO_SIGN_REQUEST" and Value of "YES". This means that you won't need an Access Key ID or Secret Access Key.
 
 ![ArcGIS Pro Cloud Storage Connection Details](img/usage/arcgis_pro_connection_details.png)
