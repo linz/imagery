@@ -55,7 +55,7 @@ This tool is described in [this page](tools.md).
 
 GDAL allows you to run command on a file that is not on your local machine using a virtual file systems path:
 
-- `/vicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
+- `/vsicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
 - `/vsis3/s3://nz-imagery/[PATH]`
 
 ## gdalinfo
