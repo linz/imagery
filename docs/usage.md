@@ -47,6 +47,62 @@ In this case, the TIFF can be accessible from `https://nz-imagery.s3-ap-southeas
 
 This tool is described in [this page](tools.md).
 
+# s5cmd
+
+[s5cmd](https://github.com/peak/s5cmd) is a parallel file execution command-line interface tool. It is written in Go and the GitHub repository includes pre-built binaries for Windows, Mac and Linux. It supports public S3 buckets.
+
+List the contents of a public bucket using the `--no-sign-request` flag.
+
+```shell
+s5cmd --no-sign-request ls s3://nz-imagery/
+```
+
+```shell
+                                  DIR  auckland/
+                                  DIR  bay-of-plenty/
+                                  DIR  canterbury/
+                                  DIR  gisborne/
+                                  DIR  hawkes-bay/
+                                  DIR  manawatu-whanganui/
+                                  DIR  marlborough/
+                                  DIR  nelson/
+                                  DIR  new-zealand/
+                                  DIR  northland/
+                                  DIR  otago/
+                                  DIR  southland/
+                                  DIR  taranaki/
+                                  DIR  tasman/
+                                  DIR  waikato/
+                                  DIR  wellington/
+                                  DIR  west-coast/
+2023/09/01 02:49:04             18657  LICENSE
+2023/09/12 01:56:32            123024  catalog.json
+```
+
+Check the total size of all imagery held for one region.
+
+```shell
+s5cmd --no-sign-request du --humanize s3://nz-imagery/canterbury/*
+```
+```
+3.1T bytes in 170541 objects: s3://nz-imagery/canterbury/*
+```
+
+Check the total size of a specific imagery dataset and limit to just the image files (not metadata).
+
+```shell
+s5cmd --no-sign-request du --humanize s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff
+```
+```
+273.0G bytes in 2184 objects: s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff
+```
+
+Copy all of the image files to a new target location.
+
+```shell
+s5cmd --no-sign-request cp s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff <target_path>
+```
+
 # GDAL
 
 [GDAL](https://gdal.org/)
