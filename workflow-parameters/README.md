@@ -1,10 +1,10 @@
 # Workflow Parameters
-This folder contains the parameter yaml files used when running the argo workflow which publishes imagery to the [Registry of Open Data](https://registry.opendata.aws/nz-imagery/).
+This folder contains the parameter yaml files used when running the `publish-odr` argo workflow. This workflow publishes imagery to the [Registry of Open Data](https://registry.opendata.aws/nz-imagery/) and is considered a data release mechanism. 
 
 ## How it works
-As publishing to the ODR is considered a data release mechanism Imagery Mainters should ensure that data copied into `s3://nz-imagery` has at least two sets of eyes on it. 
+This process ensures that at least two sets of eyes review each dataset before it is published `s3://nz-imagery` (the ODR).
 
-### 1. Create Parameters Yaml file
+### Step 1: Create Parameters Yaml file
 
 **example.yaml:**
 ```yaml
@@ -12,16 +12,29 @@ As publishing to the ODR is considered a data release mechanism Imagery Mainters
 "target": "s3://linz-imagery-staging/test/sample_target/"
 ```
 
-There are additional parameters which can be added if required more information can be found [here](https://github.com/linz/topo-workflows/tree/master/workflows/imagery#publish-copy).
+Additional parameters can be added, more information can be found [here](https://github.com/linz/topo-workflows/tree/master/workflows/imagery#publish-copy).
 
-**Save this file to the `workflow-parameters` folder** - if it is saved in any other location the workflow will not be run, subdirectories within this folder are ok.
+**Save this file to the `workflow-parameters` folder** - if saved in any other location the workflow will not run, subdirectories are ok.
 
 ### 2. Create a Pull Request
 
-Create a pull request to this repo, using the XX pull request template, this standardises the information stored about each publish.
+Create a pull request to this repo, include the key information for the reviewer (Config Link).  
+Below is an example PR:
 
-Once the pull request has been reviewed, approved, and merged the `publish-to-odr`(link?) Github Action will run. **This will sumbit a publish-odr argo workflow for any changed or added yaml files within the workflow-parameters directory.**
+```md
+# Publish to ODR
 
-## Testing publish-to-odr
-If making changes to the github action please **don't** test the Action using `publish-odr` and a `s3://nz-imagery` target, instead change the action to call `publish-copy` and use a temporary target like shown in the example above.
+- Dataset Title: *paste here*  
+- Basemaps Config Link: *paste here*
+
+## Reviewer Checklist
+- [ ] Basemaps Config 
+- [ ] Target Path
+- [ ] collection.json metadata
+```
+
+Once the pull request has been reviewed, approved, and merged the [publish-to-odr](../.github/workflows/publish-to-odr.yml) Github Action will run. This will sumbit a `publish-odr` argo workflow for any **changed or added yaml files** within the **workflow-parameters directory.**
+
+## Testing publish-to-odr.yml
+If making changes to the github actions please **don't** test the Action using `publish-odr` and a `s3://nz-imagery` target, instead change the action to call `publish-copy` and use a temporary target like shown in the example above.
 
