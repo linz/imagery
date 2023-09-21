@@ -14,7 +14,14 @@ This is triggered by the GitHub Actions workflow `./github/workflows/publish-sit
 
 ## Development
 
+- `get.assets.sh` is a bash script to get the LINZ template assets (style and images) from the LINZ User Interface (LUI - `@linzjs/lui`) library. This ensure that the style and the logos are up-to-date with the LUI.
 - `generate.site.mjs` is the JS script to create the `index.html` page
 - `default.html` is the HTML template where the `README.md` converted content is put in, replacing the string `CONTENT_PLACEHOLDER`
-- `css/` and `img/` folders are where the static content is stored. The `index.html` page links directly to this content hosted on GitHub (rather than pushing these folders to `s3://nz-imagery/`)
-- `update.sh` is a bash script to update the LINZ template assets (style and images) from the `@linzjs/lui` library
+
+## Testing
+
+```shell
+npm install
+./site/get.assets.sh
+node site/generate.site.mjs
+```

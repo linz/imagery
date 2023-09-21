@@ -5,9 +5,8 @@ on:
         - master
       paths:
         - 'README.md'
-        - 'site/**'
-        - '!site/update.sh'
-        - '!site/site.md'
+        - 'site/default.html'
+        - 'site/generate.site.mjs'
 
 jobs:
   main:
@@ -37,5 +36,6 @@ jobs:
 
       - name: Deploy page to S3
         run: |
+          ./site/get.assets.sh
           node site/generate.site.mjs
-          aws s3 cp index.html s3://nz-imagery/index.html
+          aws s3 cp index.html s3://nz-imagery/index.html --content-type text/html
