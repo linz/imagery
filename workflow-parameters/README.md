@@ -4,7 +4,7 @@ This folder contains the parameter yaml files used when running the `publish-odr
 ## How it works
 This process ensures that at least two sets of eyes review each dataset before it is published `s3://nz-imagery` (the ODR).
 
-### Step 1: Create Parameters Yaml file
+### Step 1: Create Parameters Yaml file/s
 
 **example.yaml:**
 ```yaml
@@ -19,6 +19,7 @@ Additional parameters can be added, more information can be found [here](https:/
 ### Step 2: Create a Pull Request
 
 Create a pull request to this repo, include the key information for the reviewer.  
+
 Below is an example PR:
 
 ```md
@@ -33,9 +34,23 @@ Below is an example PR:
 - [ ] collection.json metadata
 ```
 
-### Step 3: Submit Argo Workflow (Automated)
+### Step 2a: Label the Pull Request
+There are three options for labelling the pull request
 
-Once the pull request has been reviewed, approved, and merged the [publish-to-odr](../.github/workflows/publish-to-odr.yml) Github Action will run. This will sumbit a `publish-odr` argo workflow for any **changed or added yaml files** within the **workflow-parameters directory.**
+**1. No Label**  
+- Github Action will trigger, but no argo submits will be called.
+- Useful for when modifying yamls within the `./workflow-parameters/` directory for reformatting purposes only.
+
+**2. `publish-odr-all`**
+- Will submit argo workflows for all **added** and **modified** files within the `./workflow-parameters/` directory
+
+**3. `publish-odr-added-only`**
+- Will submit argo workflows only for the **added files only** within the `./workflow-parameters/` directory. 
+
+
+### Step 3: Approve and Merge Pull Request -> Submit Argo Workflow (Automated)
+
+Once the pull request has been reviewed, approved, and merged the [publish-to-odr](../.github/workflows/publish-to-odr.yml) Github Action will run. This will sumbit a `publish-odr` argo workflow for the parameters files filtered by the pull request label.
 
 ## Testing publish-to-odr.yml
 If making changes to the github actions please **don't** test the action using `publish-odr` and a `s3://nz-imagery` target, instead change the action to call `publish-copy` and use a temporary target like shown in the example above.
