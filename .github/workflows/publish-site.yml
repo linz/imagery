@@ -19,6 +19,11 @@ jobs:
     steps:
       - uses: linz/action-typescript@v3
 
+      - name: Generate page
+        run: |
+          ./site/get.assets.sh
+          node site/generate.site.mjs
+
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -34,8 +39,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ODR_DATAMANAGER_ROLE }}
           role-chaining: true
 
-      - name: Deploy page to S3
+      - name: Publish page to S3
         run: |
-          ./site/get.assets.sh
-          node site/generate.site.mjs
           aws s3 cp index.html s3://nz-imagery/index.html --content-type text/html
