@@ -62,7 +62,7 @@ jobs:
           echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
 
       - name: Submit All Added & Modified Workflow(s)
-        if: ${{ github.event.label.name == 'publish-odr-all'}}
+        if: ${{ github.event.label.name == 'publish-odr-all-changes'}}
         run: |
           for file in ${{ steps.modified-files.outputs.modified_files }}; do
             if [[ "$file" == *workflow-parameters/*.yaml ]];
