@@ -84,6 +84,7 @@ Check the total size of all imagery held for one region.
 ```shell
 s5cmd --no-sign-request du --humanize s3://nz-imagery/canterbury/*
 ```
+
 ```
 3.1T bytes in 170541 objects: s3://nz-imagery/canterbury/*
 ```
@@ -93,6 +94,7 @@ Check the total size of a specific imagery dataset and limit to just the image f
 ```shell
 s5cmd --no-sign-request du --humanize s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff
 ```
+
 ```
 273.0G bytes in 2184 objects: s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff
 ```
