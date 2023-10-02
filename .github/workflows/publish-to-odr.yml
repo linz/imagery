@@ -1,17 +1,14 @@
 name: Publish to ODR
 
 on:
-  pull_request_target:
-    types: 
-      - closed
+  push:
     branches:
       - master
     paths: 
-      - "workflow-parameters/**.yaml"
+      - "publish-odr-parameters/**.yaml"
 
 jobs:
   main:
-    if: ${{ github.event.pull_request.merged == true }} && ${{github.event.label.name == 'publish-odr*'}}
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -55,34 +52,15 @@ jobs:
           ./argo-linux-amd64 version
 
       - name: Get All Added & Modified Files
-        if: ${{ github.event.label.name == 'publish-odr-all-changes'}}
         id: modified-files
         run: |
           # AM = Include: Added, Modified
           echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
 
       - name: Submit All Added & Modified Workflow(s)
-        if: ${{ github.event.label.name == 'publish-odr-all-changes'}}
         run: |
           for file in ${{ steps.modified-files.outputs.modified_files }}; do
-            if [[ "$file" == *workflow-parameters/*.yaml ]];
-            then
-              ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
-            fi
-          done
-
-      - name: Get Added Files Only
-        if: ${{ github.event.label.name == 'publish-odr-added-only'}}
-        id: added-files
-        run: |
-          # A = Include: Added
-          echo "added_files=$(git diff --name-only --diff-filter=A ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
-
-      - name: Submit Added Workflow(s) Only
-        if: ${{ github.event.label.name == 'publish-odr-added-only'}}
-        run: |
-          for file in ${{ steps.added-files.outputs.added_files }}; do
-            if [[ "$file" == *workflow-parameters/*.yaml ]];
+            if [[ "$file" == *publish-odr-parameters/*.yaml ]];
             then
               ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
             fi
