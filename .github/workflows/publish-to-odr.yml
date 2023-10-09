@@ -1,0 +1,67 @@
+name: Publish to ODR
+
+on:
+  push:
+    branches:
+      - master
+    paths: 
+      - "publish-odr-parameters/**.yaml"
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: "18.x"
+
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: "latest"
+
+      - name: AWS Configure
+        uses: aws-actions/configure-aws-credentials@v1.6.1
+        with:
+          aws-region: ap-southeast-2
+          mask-aws-account-id: true
+          role-to-assume: ${{ secrets.AWS_CI_ROLE }}
+
+      - name: Login to EKS
+        run: |
+          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 --role-arn ${{ secrets.AWS_EKS_ROLE }}
+
+      - name: Check EKS connection
+        run: |
+          kubectl get nodes
+
+      - name: Install Argo
+        run: |
+          curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.0-rc2/argo-linux-amd64.gz
+          gunzip argo-linux-amd64.gz
+          chmod +x argo-linux-amd64
+          ./argo-linux-amd64 version
+
+      - name: Get All Added & Modified Files
+        id: modified-files
+        run: |
+          # AM = Include: Added, Modified
+          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
+
+      - name: Submit All Added & Modified Workflow(s)
+        run: |
+          for file in ${{ steps.modified-files.outputs.modified_files }}; do
+            if [[ "$file" == *publish-odr-parameters/*.yaml ]];
+            then
+              ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
+            fi
+          done
