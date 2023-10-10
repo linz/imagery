@@ -37,7 +37,7 @@ Below is an example PR:
 
 ### Step 2a: if you dont want submit workflows
 There may be some cases when you dont want to submit workflows, for example reformatting files.   
-In this case add `[skip-workflows]` to the pull request title e.g- `fix[skip-workflows]: Reformatting parameter files`  
+In this case add `[skip-argo]` to the end of the pull request title e.g- `fix: Reformatting parameter files [skip-argo]`  
 
 ### Step 3: Approve and Merge Pull Request -> Submit Argo Workflow (Automated)
 
