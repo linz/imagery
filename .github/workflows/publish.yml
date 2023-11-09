@@ -23,6 +23,12 @@ jobs:
           shopt -s globstar
           docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v2 stac-validate "$PWD"/stac/**/collection.json
 
+      - name: Download actionlint
+        run: docker build --tag actionlint - < .github/workflows/actionlint.dockerfile
+
+      - name: Run actionlint to check workflow files
+        run: docker run --volume="${PWD}:/repo" --workdir=/repo actionlint -color
+
   deploy-prod:
     name: Publish STAC
     runs-on: ubuntu-latest
