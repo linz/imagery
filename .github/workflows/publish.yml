@@ -21,7 +21,7 @@ jobs:
         run: |
           # Enable double star operator
           shopt -s globstar
-          docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
+          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v2 stac-validate "$PWD"/stac/**/collection.json
 
   deploy-prod:
     name: Publish STAC
@@ -50,7 +50,7 @@ jobs:
         run: |
           # Enable double star operator
           shopt -s globstar
-          docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
+          docker run -v "${PWD}:${PWD}" ghcr.io/linz/argo-tasks:v2 stac-validate "$PWD"/stac/**/collection.json
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@v4
