@@ -7,6 +7,10 @@ jobs:
   main:
     # if: "!contains(github.event.head_commit.message, '[skip-argo]')"
     runs-on: ubuntu-latest
+
+    environment:
+      name: prod
+
     permissions:
       id-token: write
       contents: read
@@ -19,33 +23,23 @@ jobs:
       - name: Use Node.js 18.x
         uses: actions/setup-node@v2.2.0
         with:
-          node-version: "18.x"
+          node-version: '18.x'
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@v3
         with:
-          version: "latest"
+          version: 'latest'
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
-          role-to-assume: ${{ secrets.AWS_CI_ROLE }}
-          role-skip-session-tagging: true
-
-      - name: AWS Configure
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-region: ap-southeast-2
-          mask-aws-account-id: true
-          role-to-assume: ${{ secrets.AWS_EKS_ROLE }}
-          role-chaining: true
-          role-skip-session-tagging: true
+          role-to-assume: ${{ secrets.AWS_EKS_CI_ROLE }}
 
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 
+          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 --role-arn  ${{ secrets.AWS_EKS_ROLE }}
 
       - name: Check EKS connection
         run: |
