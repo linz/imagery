@@ -33,6 +33,10 @@ jobs:
     environment:
       name: prod
 
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
       - uses: linz/action-typescript@v3
 
