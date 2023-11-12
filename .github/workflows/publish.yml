@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: publish-${{ github.ref }}
     needs: main
-    if: github.ref == 'refs/heads/master'
+    if: ${{ github.ref == 'refs/heads/master' }}
 
     environment:
       name: prod
