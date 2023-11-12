@@ -35,7 +35,7 @@ jobs:
 
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 --role-arn ${{ secrets.AWS_EKS_ROLE }}
+          aws eks update-kubeconfig --name Workflow --region ap-southeast-2
 
       - name: Check EKS connection
         run: |
