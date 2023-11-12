@@ -2,14 +2,10 @@ name: Publish to ODR
 
 on:
   push:
-    branches:
-      - master
-    paths: 
-      - "publish-odr-parameters/**.yaml"
 
 jobs:
   main:
-    if: "!contains(github.event.head_commit.message, '[skip-argo]')"
+    # if: "!contains(github.event.head_commit.message, '[skip-argo]')"
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -45,24 +41,24 @@ jobs:
         run: |
           kubectl get nodes
 
-      - name: Install Argo
-        run: |
-          curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.0-rc2/argo-linux-amd64.gz
-          gunzip argo-linux-amd64.gz
-          chmod +x argo-linux-amd64
-          ./argo-linux-amd64 version
+      # - name: Install Argo
+      #   run: |
+      #     curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.0-rc2/argo-linux-amd64.gz
+      #     gunzip argo-linux-amd64.gz
+      #     chmod +x argo-linux-amd64
+      #     ./argo-linux-amd64 version
 
-      - name: Get All Added & Modified Files
-        id: modified-files
-        run: |
-          # AM = Include: Added, Modified
-          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
+      # - name: Get All Added & Modified Files
+      #   id: modified-files
+      #   run: |
+      #     # AM = Include: Added, Modified
+      #     echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
 
-      - name: Submit All Added & Modified Workflow(s)
-        run: |
-          for file in ${{ steps.modified-files.outputs.modified_files }}; do
-            if [[ "$file" == *publish-odr-parameters/*.yaml ]];
-            then
-              ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
-            fi
-          done
+      # - name: Submit All Added & Modified Workflow(s)
+      #   run: |
+      #     for file in ${{ steps.modified-files.outputs.modified_files }}; do
+      #       if [[ "$file" == *publish-odr-parameters/*.yaml ]];
+      #       then
+      #         ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
+      #       fi
+      #     done
