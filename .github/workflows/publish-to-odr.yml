@@ -61,13 +61,13 @@ jobs:
         id: modified-files
         run: |
           # AM = Include: Added, Modified
-          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }})" >> $GITHUB_OUTPUT
+
+          MODIFIED_FILEs=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }})
+          MODIFIED_PARAMETERS_FILES=$(echo $MODIFIED_FILES | grep "publish-odr-parameters/" | grep ".yaml\$" | sort | uniq)
+          echo "modified_files=${MODIFIED_PARAMETERS_FILES}" >> $GITHUB_OUTPUT
 
       - name: Submit All Added & Modified Workflow(s)
         run: |
           for file in ${{ steps.modified-files.outputs.modified_files }}; do
-            if [[ "$file" == *publish-odr-parameters/*.yaml ]];
-            then
-              ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
-            fi
+            ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
           done
