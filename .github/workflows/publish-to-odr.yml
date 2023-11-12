@@ -27,7 +27,7 @@ jobs:
           version: "latest"
 
       - name: AWS Configure
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
@@ -35,7 +35,7 @@ jobs:
           role-skip-session-tagging: true
 
       - name: AWS Configure
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
