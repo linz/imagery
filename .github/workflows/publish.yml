@@ -33,6 +33,10 @@ jobs:
     environment:
       name: prod
 
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
       - uses: linz/action-typescript@v3
 
@@ -59,7 +63,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
-          mask-aws-account-id: true
+          mask-aws-account-id: asdasd
           role-to-assume: ${{ secrets.AWS_ODR_DATA_MANAGER_ROLE }}
           role-chaining: true
 
