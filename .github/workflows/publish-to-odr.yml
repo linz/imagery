@@ -4,13 +4,18 @@ on:
   push:
     branches:
       - master
-    paths: 
-      - "publish-odr-parameters/**.yaml"
+    paths:
+      - 'publish-odr-parameters/**.yaml'
 
 jobs:
   main:
-    if: "!contains(github.event.head_commit.message, '[skip-argo]')"
+    name: Publish Imagery
+    if: ${{ !contains(github.event.head_commit.message, '[skip-argo]')  }}
     runs-on: ubuntu-latest
+
+    environment:
+      name: prod
+
     permissions:
       id-token: write
       contents: read
@@ -23,23 +28,23 @@ jobs:
       - name: Use Node.js 18.x
         uses: actions/setup-node@v2.2.0
         with:
-          node-version: "18.x"
+          node-version: '18.x'
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@v3
         with:
-          version: "latest"
+          version: 'latest'
 
       - name: AWS Configure
-        uses: aws-actions/configure-aws-credentials@v1.6.1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
-          role-to-assume: ${{ secrets.AWS_CI_ROLE }}
+          role-to-assume: ${{ secrets.AWS_EKS_CI_ROLE }}
 
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 --role-arn ${{ secrets.AWS_EKS_ROLE }}
+          aws eks update-kubeconfig --name Workflow --region ap-southeast-2 --role-arn  ${{ secrets.AWS_EKS_ROLE }}
 
       - name: Check EKS connection
         run: |
@@ -56,7 +61,7 @@ jobs:
         id: modified-files
         run: |
           # AM = Include: Added, Modified
-          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.pull_request.base.rfa }} ${{ github.event.pull_request.base.sha }})" >> $GITHUB_OUTPUT
+          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }})" >> $GITHUB_OUTPUT
 
       - name: Submit All Added & Modified Workflow(s)
         run: |

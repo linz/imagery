@@ -4,13 +4,34 @@ on: [push]
 
 jobs:
   main:
-    name: Publish
+    name: Validate STAC
+    runs-on: ubuntu-latest
+    concurrency: validate-${{ github.ref }}
+
+    steps:
+      - uses: linz/action-typescript@v3
+
+      # FIXME: catalog.json is not pushed to the repository (temporary solution)
+      - name: Create Catalog
+        uses: docker://ghcr.io/linz/argo-tasks:v2
+        with:
+          args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
+
+      - name: Validate STAC
+        run: |
+          # Enable double star operator
+          shopt -s globstar
+          docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
+
+  deploy-prod:
+    name: Publish STAC
     runs-on: ubuntu-latest
     concurrency: publish-${{ github.ref }}
+    needs: main
+    if: ${{ github.ref == 'refs/heads/master' }}
 
-    permissions:
-      id-token: write
-      contents: read
+    environment:
+      name: prod
 
     steps:
       - uses: linz/action-typescript@v3
@@ -28,25 +49,22 @@ jobs:
           docker run -v $PWD:$PWD ghcr.io/linz/argo-tasks:v2 stac-validate $PWD/stac/**/collection.json
 
       - name: AWS Configure
-        if: github.ref == 'refs/heads/master'
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
-          role-to-assume: ${{ secrets.AWS_CI_ROLE }}
+          role-to-assume: ${{ secrets.AWS_ODR_CI_ROLE }}
 
       - name: AWS Configure ODR
-        if: github.ref == 'refs/heads/master'
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
           mask-aws-account-id: true
-          role-to-assume: ${{ secrets.AWS_ODR_DATAMANAGER_ROLE }}
+          role-to-assume: ${{ secrets.AWS_ODR_DATA_MANAGER_ROLE }}
           role-chaining: true
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
         uses: docker://ghcr.io/linz/argo-tasks:v2
-        if: github.ref == 'refs/heads/master'
         with:
           args: stac-sync /github/workspace/stac/ s3://nz-imagery/
