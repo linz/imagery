@@ -40,6 +40,7 @@ jobs:
           mask-aws-account-id: true
           role-to-assume: ${{ secrets.AWS_EKS_ROLE }}
           role-chaining: true
+          role-skip-session-tagging: false
 
       - name: Login to EKS
         run: |
