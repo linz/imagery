@@ -63,7 +63,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
-          mask-aws-account-id: asdasd
+          mask-aws-account-id: true
           role-to-assume: ${{ secrets.AWS_ODR_DATA_MANAGER_ROLE }}
           role-chaining: true
 
