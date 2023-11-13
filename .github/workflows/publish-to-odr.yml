@@ -57,17 +57,12 @@ jobs:
           chmod +x argo-linux-amd64
           ./argo-linux-amd64 version
 
-      - name: Get All Added & Modified Files
+      - name: Submit Added/Changed Parameter Files
         id: modified-files
         run: |
           # AM = Include: Added, Modified
-          echo "modified_files=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }})" >> $GITHUB_OUTPUT
+          mapfile -d '' modified_parameter_files < <(git diff --name-only --diff-filter=AM -z ${{ github.event.before }} ${{ github.event.after }} -- "publish-odr-parameters/*.yaml")
 
-      - name: Submit All Added & Modified Workflow(s)
-        run: |
-          for file in ${{ steps.modified-files.outputs.modified_files }}; do
-            if [[ "$file" == *publish-odr-parameters/*.yaml ]];
-            then
-              ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f $file --generate-name publish-odr-
-            fi
+          for file in "${modified_parameter_files[@]}"; do
+            ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f "$file" --generate-name publish-odr-
           done
