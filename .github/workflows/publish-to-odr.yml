@@ -64,5 +64,6 @@ jobs:
           mapfile -d '' modified_parameter_files < <(git diff --name-only --diff-filter=AM -z ${{ github.event.before }} ${{ github.event.after }} -- "publish-odr-parameters/*.yaml")
 
           for file in "${modified_parameter_files[@]}"; do
-            ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f "$file" --generate-name publish-odr-"$(basename ${file%.yaml})"-
+            base=$(basename "${file%.yaml}")
+            ./argo-linux-amd64 submit --from wftmpl/publish-odr -n argo -f "$file" --generate-name "publish-odr-$base-"
           done
