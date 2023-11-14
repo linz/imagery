@@ -11,8 +11,11 @@ jobs:
 
       - name: pull-request
         run: |
-          gh pr edit ${{ github.ref_name }} --title '${{ github.event.head_commit.message }}' --body '' &&
-          gh pr reopen ${{ github.ref_name }} ||
-          gh pr create --base master --title '${{ github.event.head_commit.message }}' --body ''
+          if gh pr edit ${{ github.ref_name }} --title "$commit_message" --body ''; then
+              gh pr reopen ${{ github.ref_name }}
+          else
+              gh pr create --base master --title "$commit_message" --body ''
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: ${{ github.event.head_commit.message }}
