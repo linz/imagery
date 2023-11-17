@@ -20,6 +20,9 @@ jobs:
       id-token: write
       contents: read
 
+    env:
+      CLUSTER_NAME: Workflows
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,7 +47,7 @@ jobs:
 
       - name: Login to EKS
         run: |
-          aws eks update-kubeconfig --name Workflows --region ap-southeast-2
+          aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ap-southeast-2
 
       - name: Check EKS connection
         run: |
