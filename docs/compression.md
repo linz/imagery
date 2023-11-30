@@ -14,8 +14,8 @@ To enable ease of access Imagery is [standardized](https://github.com/linz/topo-
 LINZ's imagery archive consists of
 
 - 1 band 8bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
-- 3 band 8bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with NO_DATA) 
-- 4 band 8bit RGB-NiR aerial imagery (Sometimes with NO_DATA) - Not currently published
+- 3 band 8bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
+- 4 band 8bit RGB-NiR aerial imagery (Sometimes with `NO_DATA`) - Not currently published
 
 Other types
 - 16bit 4band+ RGB+ satellite imagery - Not currently published
@@ -68,16 +68,30 @@ docker run \
 sha256sum /output/${compression}_predictor-${precdictor}_level-${level}_error-${error}-raw.tiff
 ```
 
-
 ## Results
 
-Key results
+to start all tiffs were compressed as LZW to create a baseline
 
-# TODO fill in table
+The output data can be found in [compression-output.tsv](./data/compression-output.tsv)
 
-WebP is by far the best compression, it does take significantly longer to compress, Most of the cost with imagery is storage and egress, so taking longer to compress is not a big issue.
+Below is a table showing the relative file sizes, 63% means the file is 63% of the size of the LZW source image.
+
+| Imagery Type | LZW  | Zstd | WebP | Lerc |
+|--------------|------|------|------|------|
+| Grayscale    | 100% | 87%  | 63%  | 79%  |
+| RGB (8bit)   | 100% | 66%  | 34%  | 57%  |
+| RGBi (8bit)  | 100% | 79%  | NA   | 63%  |
+
+Some key results:
+
+RGB - Webp lossless is significantly better than all other types
+Grayscale - Webp lossless beats all other compressions tested
+RGBI - JpegXL creates almost 50% smaller files than other compression types
 
 ## Recommendation
 
+With RGB and Grayscale imagery: Webp lossless is by far the best compression to use.
+
+WebP does not support 4 band imagery so cannot be used on RGBi, More investigation needs to be done on RGBi and high bit count imagery, JpegXL could be very good for these usecases.
 
 
