@@ -85,14 +85,14 @@ Below is a table showing the relative file sizes, 63% means the file is 63% of t
 
 Some key results:
 
-RGB - Webp lossless is significantly better than all other types
-Grayscale - Webp lossless beats all other compressions tested
-RGBI - JpegXL creates almost 50% smaller files than other compression types
+RGB - WebP lossless is significantly better than all other types
+Grayscale - WebP lossless beats all other compressions tested
+RGBI - JPEG XL creates almost 50% smaller files than other compression types
 
 ## Recommendation
 
-With RGB and Grayscale imagery: Webp lossless is by far the best compression to use.
+With RGB and Grayscale imagery: WebP lossless is by far the best compression to use.
 
-WebP does not support 4 band imagery so cannot be used on RGBi, More investigation needs to be done on RGBi and high bit count imagery, JpegXL could be very good for these usecases.
+WebP does not support 4 band imagery so cannot be used on RGBi, More investigation needs to be done on RGBi and high bit count imagery, JPEG XL could be very good for these use cases.
 
 
