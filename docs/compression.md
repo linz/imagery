@@ -25,9 +25,9 @@ Other types
 
 As most of the imagery we are working on right now is RGB, the following document is mostly related to 8bit RGB imagery.
 
-LINZ uses GDAL for processing [COGs](https://gdal.org/drivers/raster/cog.html) which limits the compression types to LZW, DEFLATE, LERC, ZSTD and JpegXL
+LINZ uses GDAL for processing [COGs](https://gdal.org/drivers/raster/cog.html) which limits the compression types to LZW, DEFLATE, LERC, ZSTD and JPEG-XL
 
-At the time of testing JpegXL is not supported by most of the tools LINZ uses and until the support improves it cannot be recommended as our archive compression format.
+At the time of testing JPEG XL is not supported by most of the tools LINZ uses and until the support improves it cannot be recommended as our archive compression format.
 
 ## Testing
 
@@ -40,7 +40,7 @@ docker run \
     -v tiffs-path:/input \
     ghcr.io/osgeo/gdal:ubuntu-full-3.7.0 \
     gdal_translate \
-        -of COG \
+        -of GTIFF \
         -co num_threads=all_cpus \
         -co sparse_ok=true \
         -co compression=${compression} \
@@ -49,28 +49,29 @@ docker run \
         -co predictor=${predictor} \  # (zstd,deflate,lzw)
         -co max_z_error=${max_z_error} \  # (lerc)
     /input/input.tiff
-    /output/${compression}_predictor-${precdictor}_level-${level}_error-${error}.tiff
+    /output/${compression}_predictor-${predictor}_level-${level}_error-${error}.tiff
 ```
 
-To ensure the imagery is lossless the imagery was converted back to a raw uncompressed imagery and then hashed
+To ensure the imagery is lossless the imagery was converted back to a lzw image and then hashed
 
 ```bash
 docker run \
     -v tiffs-path:/input \
     ghcr.io/osgeo/gdal:ubuntu-full-3.7.0 \
     gdal_translate \
-        -of COG \
+        -of GTIFF \
         -co num_threads=all_cpus \
         -co sparse_ok=true \
-    /output/${compression}_predictor-${precdictor}_level-${level}_error-${error}.tiff
-    /output/${compression}_predictor-${precdictor}_level-${level}_error-${error}-raw.tiff
+        -co compress=lzw \
+    /output/${compression}_predictor-${predictor}_level-${level}_error-${error}.tiff
+    /output/${compression}_predictor-${predictor}_level-${level}_error-${error}-lzw.tiff
 
-sha256sum /output/${compression}_predictor-${precdictor}_level-${level}_error-${error}-raw.tiff
+sha256sum /output/${compression}_predictor-${predictor}_level-${level}_error-${error}-lzw.tiff
 ```
 
 ## Results
 
-to start all tiffs were compressed as LZW to create a baseline
+To start all tiffs were compressed as LZW to create a baseline
 
 The output data can be found in [compression-output.tsv](./data/compression-output.tsv)
 
