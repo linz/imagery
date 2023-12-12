@@ -9,7 +9,7 @@ jobs:
     concurrency: validate-${{ github.ref }}
 
     steps:
-      - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
+      - uses: linz/action-typescript@9bf69b0f313b3525d3ba3116f26b1aff7eb7a6c0 # v3
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create STAC Catalog
@@ -49,7 +49,7 @@ jobs:
       contents: read
 
     steps:
-      - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
+      - uses: linz/action-typescript@9bf69b0f313b3525d3ba3116f26b1aff7eb7a6c0 # v3
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create STAC Catalog
