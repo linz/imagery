@@ -98,7 +98,7 @@ The spatial resolution is the area covered on the ground by a single pixel. This
 
 ### `product`
 
-Imagery product type, generally this is `rgb` as is the primary imagery type for LINZ. Black and white imagery scanned from the Crown Aerial Film Archive is still stored as RGB, given that WEBP Lossless compression is more effective on 3-band RGB than other compression options that support single-band TIFFs.
+Imagery product type, generally this is `rgb` as it is the primary imagery type for LINZ. Black and white imagery scanned from the Crown Aerial Film Archive is still stored as RGB, given that WEBP Lossless compression is more effective on 3-band RGB than other compression options that support single-band TIFFs.
 
 ### `crs`
 
