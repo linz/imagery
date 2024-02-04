@@ -7,7 +7,7 @@ Imagery dataset titles and S3 paths are constructed from metadata about each ima
 The imagery dataset title is constructed from metadata that is entered when an imagery dataset is processed.
 
 ```
-<geographic_description|region> <gsd>m [<geospatial_category>|<survey_number>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
+[<geographic_description>|<region>] <gsd>m [<geospatial_category>|<survey_number>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
 ```
 
 ## Imagery Dataset S3 Paths
@@ -16,7 +16,7 @@ The imagery dataset S3 path is also constructed from similar metadata.
 
 ```
 <region>/
-  <geographic_description|region>[_<survey_number>?]_<start_year>[-<end_year>?]_<gsd>m/
+  [<geographic_description>|<region>][_<survey_number>?]_<start_year>[-<end_year>?]_<gsd>m/
     <product>/
       <crs>/
 ```
