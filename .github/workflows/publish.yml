@@ -12,12 +12,17 @@ jobs:
       - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
-      - name: Create Catalog
+      - name: Create STAC Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v2
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
-      - name: Validate STAC
+      - name: Validate STAC Catalog
+        uses: docker://ghcr.io/linz/argo-tasks:v2
+        with:
+          args: stac-validate /github/workspace/stac/catalog.json
+
+      - name: Validate STAC Collections
         run: |
           # Enable double star operator
           shopt -s globstar
@@ -47,12 +52,17 @@ jobs:
       - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
-      - name: Create Catalog
+      - name: Create STAC Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v2
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
-      - name: Validate STAC
+      - name: Validate STAC Catalog
+        uses: docker://ghcr.io/linz/argo-tasks:v2
+        with:
+          args: stac-validate /github/workspace/stac/catalog.json
+
+      - name: Validate STAC Collections
         run: |
           # Enable double star operator
           shopt -s globstar
