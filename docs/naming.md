@@ -7,7 +7,7 @@ Imagery dataset titles and S3 paths are constructed from metadata about each ima
 The imagery dataset title is constructed from metadata that is entered when an imagery dataset is processed.
 
 ```
-<geographic_description> <gsd>m [<geospatial_category>|<survey_number>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
+<geographic_description|region> <gsd>m [<geospatial_category>|<survey_number>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
 ```
 
 ## Imagery Dataset S3 Paths
@@ -16,7 +16,7 @@ The imagery dataset S3 path is also constructed from similar metadata.
 
 ```
 <region>/
-  <geographic_description>[_<survey_number>?]_<start_year>[-<end_year>?]_<gsd>m/
+  <geographic_description|region>[_<survey_number>?]_<start_year>[-<end_year>?]_<gsd>m/
     <product>/
       <crs>/
 ```
@@ -43,7 +43,7 @@ EPSG Code for the coordinate reference system of the imagery. Generally this is 
 
 ### `geographic_description`
 
-This is free text and at the imagery maintainers discretion. A specific city or sub-region or event name may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the region name should be repeated as the geographic description in order to keep naming consistent.
+This is free text and at the imagery maintainers discretion. A specific city or sub-region or event name may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the geographic description can be empty and the region will be used instead.
 
 ### `geospatial_category`
 
