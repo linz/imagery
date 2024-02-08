@@ -29,7 +29,7 @@ The path is restricted to a limited set of characters (a-z, A-Z, 0-9, -, \_ ) an
 
 #### Macrons
 
-When a name contains macrons "Ōtorohanga" the macron is removed from the path but retained in the STAC Collection's Title / Description.
+When a name contains macrons, for example "Ōtorohanga", the macron is removed from the path but retained in the STAC Collection's Title / Description.
 
 #### Apostrophes
 
