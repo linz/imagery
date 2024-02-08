@@ -1,4 +1,4 @@
-# Imagery Naming Conventions
+# Imagery Dataset Naming Conventions
 
 Imagery dataset titles and S3 paths are constructed from metadata about each imagery survey so that they will be consistent and human readable. Imagery is stored according to the majority region that each dataset covers.
 
