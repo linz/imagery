@@ -1,14 +1,23 @@
 # Imagery Dataset Naming Conventions
 
-Imagery dataset titles and S3 paths are constructed from metadata about each imagery survey so that they will be consistent and human readable. Imagery is stored according to the majority region that each dataset covers.
+Imagery dataset titles and S3 paths are constructed from metadata about each imagery survey so that they will be consistent and human readable. Imagery is stored according to the main region that each dataset covers. Datasets that cover 2 or more full regions may instead be stored under `new-zealand`.
 
 ## Imagery Dataset Titles
 
 The imagery dataset title is constructed from metadata that is entered when an imagery dataset is processed.
 
 ```
-[<geographic_description>|<region>] <gsd>m [<geospatial_category>|<survey_number>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
+[<geographic_description>|<region>] <gsd>m [<survey_number>|<geospatial_category>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
 ```
+
+which can be broken down as:
+
+- if it exists, the <geographic_description> is used, if not, <region> is used instead (this would be the case where the imagery dataset contains full coverage of the region)
+- then <gsd> (which is always in metres)
+- if it exists, the <survey_number> is used, if not, <geospatial_category> is used instead
+- then <start_year> (using all four digits to indicate the year)
+- if the imagery dataset was captured over multiple years, include a hyphen and the <end_year> (using all four digits to indicate the year)
+- if the imagery dataset has been processed as a QC preview or if it only represents partial capture, include "- Preview" or "- Draft" at the end of the title
 
 ## Imagery Dataset S3 Paths
 
@@ -20,6 +29,17 @@ The imagery dataset S3 path is also constructed from similar metadata.
     <product>/
       <crs>/
 ```
+
+which can be broken down as:
+
+- the main <region> that the dataset covers
+- then if it exists, the <geographic_description> is used, if not, <region> is repeated instead (this would be the case where the imagery dataset contains full coverage of the region)
+- if it exists, the <survey_number> is used
+- then <start_year> (using all four digits to indicate the year)
+- if the imagery dataset was captured over multiple years, include a hyphen and the <end_year> (using all four digits to indicate the year)
+- then <gsd> (which is always in metres)
+- then <product> as multiple prodcuts may be created from the same imagery survey
+- then <crs> as we may store the data in different coordinate reference systems for different purposes
 
 ### S3 Path Restrictions
 
@@ -63,7 +83,7 @@ The GSD or spatial resolution is the area covered on the ground by a single pixe
 
 ### `lifecycle`
 
-If `lifecycle = preview` then ` - Draft` is appended to the end of the imagery dataset title. 
+If `lifecycle = preview` then ` - Preview` is appended to the end of the imagery dataset title and if `lifecycle = ongoing` then ` - Draft` is appended to the end of the imagery dataset title. For any other lifecycle values, nothing is appended.
 
 ### `product`
 
@@ -124,14 +144,14 @@ Path: s3://nz-imagery/waikato/waikato_2016-2019_0.3m/rgb/2193/collection.json
 
 ```
 Title: Ōtorohanga 0.1m Urban Aerial Photos (2021)
-Path: s3://nz-imagery/waikato/otorohanga_2021_0.1m/rgb/2193/rgb/2193/collection.json
+Path: s3://nz-imagery/waikato/otorohanga_2021_0.1m//rgb/2193/collection.json
 ```
 
 37.5cm Aerial RGB imagery covering Waikato (primarily) and the Bay of Plenty regions captured in 1981-1982 (scanned from the Crown Aerial Film Archive, recorded as SN5944)
 
 ```
 Title: Waikato / Bay of Plenty 0.375m SN5944 (1981-1982)
-Path: s3://nz-imagery/waikato/waikato_bay-of-plenty_sn5944_1981-1982_0.375m/rgb/2193/rgb/2193/collection.json
+Path: s3://nz-imagery/waikato/waikato_bay-of-plenty_sn5944_1981-1982_0.375m/rgb/2193/collection.json
 ```
 
 15cm Aerial RGB imagery covering Nelson (primarily) captured in 2022 
