@@ -43,7 +43,7 @@ EPSG Code for the coordinate reference system of the imagery. Generally this is 
 
 ### `geographic_description`
 
-This is free text and at the imagery maintainers discretion. A specific city or sub-region or event name may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the geographic description can be empty and the region will be used instead.
+This is free text and at the imagery maintainer's discretion. A specific city or sub-region or event name may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the geographic description can be empty and the region will be used instead.
 
 ### `geospatial_category`
 
