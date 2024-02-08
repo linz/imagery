@@ -38,7 +38,7 @@ which can be broken down as:
 - then <start_year> (using all four digits to indicate the year)
 - if the imagery dataset was captured over multiple years, include a hyphen and the <end_year> (using all four digits to indicate the year)
 - then <gsd> (which is always in metres)
-- then <product> as multiple prodcuts may be created from the same imagery survey
+- then <product> as multiple products may be created from the same imagery survey
 - then <crs> as we may store the data in different coordinate reference systems for different purposes
 
 ### S3 Path Restrictions
