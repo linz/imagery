@@ -33,7 +33,7 @@ When a name contains macrons, for example "Ōtorohanga", the macron is removed f
 
 #### Apostrophes
 
-Where a name contains an apostrophe "Hawke's Bay" the apostrophe is removed from the path but retained in the STAC Collection's Title / Description.
+Where a name contains an apostrophe, for example "Hawke's Bay", the apostrophe is removed from the path but retained in the STAC Collection's Title / Description.
 
 ## Title and S3 Path Components
 
