@@ -144,7 +144,7 @@ Path: s3://nz-imagery/waikato/waikato_2016-2019_0.3m/rgb/2193/collection.json
 
 ```
 Title: Ōtorohanga 0.1m Urban Aerial Photos (2021)
-Path: s3://nz-imagery/waikato/otorohanga_2021_0.1m//rgb/2193/collection.json
+Path: s3://nz-imagery/waikato/otorohanga_2021_0.1m/rgb/2193/collection.json
 ```
 
 37.5cm Aerial RGB imagery covering Waikato (primarily) and the Bay of Plenty regions captured in 1981-1982 (scanned from the Crown Aerial Film Archive, recorded as SN5944)
