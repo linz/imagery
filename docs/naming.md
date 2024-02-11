@@ -70,8 +70,6 @@ This is free text and at the imagery maintainer's discretion. A specific city or
 A general categorisation of imagery held within our archive that includes the following possible values:
 
 - Aerial Photos `aerial-photos`
-- DEM `dem` (only used in nz-elevation bucket)
-- DSM `dsm` (only used in nz-elevation bucket)
 - Rural Aerial Photos `rural-aerial-photos`
 - Scanned Aerial Photos `scanned-aerial-photos`
 - Satellite Imagery `satellite-imagery`
