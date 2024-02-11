@@ -1,6 +1,6 @@
 # Imagery Dataset Naming Conventions
 
-Imagery dataset titles and S3 paths are constructed from metadata about each imagery survey so that they will be consistent and human readable. Imagery is stored according to the main region that each dataset covers. Datasets that cover 2 or more full regions may instead be stored under `new-zealand`.
+Imagery dataset titles and S3 paths are constructed from metadata about each imagery survey so that they will be consistent and human readable. Imagery is stored according to the main region that each dataset covers. Datasets that cover two or more full regions may instead be stored under `new-zealand`.
 
 ## Imagery Dataset Titles
 
