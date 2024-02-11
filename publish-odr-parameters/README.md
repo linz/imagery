@@ -12,8 +12,10 @@ This process ensures that at least two sets of eyes review each dataset before i
 
 ```yaml
 source: 's3://linz-imagery-staging/test/'
-target: 's3://linz-imagery-staging/test/sample_target/'
+target_bucket_name: 'linz-imagery-staging'
 ```
+
+_nb: a [new script](https://github.com/linz/argo-tasks/blob/master/src/commands/path/path.generate.ts) has been created which automatically generates the target path using the collection metadata. In future, this release process will be refactored so that the target path can be visualised and accepted prior to being published to the ODR_
 
 Additional parameters can be added, more information can be found [here](https://github.com/linz/topo-workflows/tree/master/workflows/imagery#publish-odr).
 
