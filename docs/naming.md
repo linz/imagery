@@ -17,7 +17,7 @@ which can be broken down as:
 - if it exists, the `<survey_number>` is used, if not, `<geospatial_category>` is used instead
 - then `<start_year>` (using all four digits to indicate the year)
 - if the imagery dataset was captured over multiple years, include a hyphen and the `<end_year>` (using all four digits to indicate the year)
-- if the imagery dataset has been processed as a QC preview or if it only represents partial capture, include "- Preview" or "- Draft" at the end of the title, from the dataset `lifecycle`
+- if the imagery dataset has been processed as a QC preview or if it only represents partial capture, include "- Preview" or "- Draft" at the end of the title, from the dataset `<lifecycle>`
 
 ## Imagery Dataset S3 Paths
 
