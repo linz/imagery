@@ -118,7 +118,7 @@ Is taken from a list of regions:
 
 In both cases, the full four digits should be used. If the imagery dataset was entirely captured within one year, then only a `start_year` is provided.
 
-As imagery can be updated after it is "named" for initial processing the `end_year` or lack of an `end_year` may be incorrect in the S3 Path. It is best to use this as a rough guideline and then use the STAC Collection for a more precise capture timeframe.
+As imagery can be updated after it is "named" for initial processing, the `end_year` or lack of an `end_year` may be incorrect in the S3 Path. It is best to use this as a rough guideline and then use the STAC Collection for a more precise capture timeframe.
 
 ### `survey_number`
 
