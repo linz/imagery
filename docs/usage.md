@@ -1,10 +1,14 @@
-# Get the link to the TIFF
+# Usage
+
+Our public New Zealand Imagery bucket can be used with a number of applications, including [STAC Browser](#stac-browser), [s5cmd](#s5cmd), [GDAL](#gdal), [QGIS](#qgis), [ArcGIS Pro](#arcgis-pro) and [Cyberduck](#cyberduck).
+
+## Get the link to the TIFF
 
 The STAC Catalog, https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json, is the entry point of the LINZ imagery data. It points to the different STAC Collections representing a dataset.
 
 > **_Note:_** The files on the AWS S3 bucket `nz-imagery` can be accessible with a `s3` path `s3://nz-imagery` or a `https` URL `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
 
-## Manually navigate through the STAC Catalog to a get a TIFF
+### Manually navigate through the STAC Catalog to a get a TIFF
 
 This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" dataset.
 
@@ -39,11 +43,11 @@ This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" data
 
 > **_Note:_** Our TIFF files and STAC Item files use the same base name. Having the link to the STAC Item, you can determine the TIFF link by changing its suffix from `.json` to `.tiff`.
 
-## Using STAC Browser
+## STAC Browser
 
 This tool is described in [this page](tools.md).
 
-# s5cmd
+## s5cmd
 
 [s5cmd](https://github.com/peak/s5cmd) is a parallel file execution command-line interface tool. It is written in Go and the GitHub repository includes pre-built binaries for Windows, Mac and Linux. It supports public S3 buckets.
 
@@ -99,18 +103,18 @@ Copy all of the image files to a new target location.
 s5cmd --no-sign-request cp s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff <target_path>
 ```
 
-# GDAL
+## GDAL
 
 [GDAL](https://gdal.org/)
 
-## Virtual file system
+### Virtual file system
 
 GDAL allows you to run command on a file that is not on your local machine using a virtual file systems path:
 
 - `/vsicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
 - `/vsis3/s3://nz-imagery/[PATH]`
 
-## gdalinfo
+### gdalinfo
 
 ```bash
 gdalinfo /vsicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff
@@ -195,9 +199,9 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 </details>
 
-# QGIS
+## QGIS
 
-## Loading the TIFF
+### Loading the TIFF
 
 1. In QGIS, open the "Data Source Manager" (press `ctrl+L`)
 2. Select "Protocol: HTTP(S)" as the "Source Type"
@@ -208,9 +212,9 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
     ![Data Source Manager](img/usage/qgis_data-source-manager.png)
     ![QGIS View TIFF](img/usage/qgis_visualisation.png)
 
-# ArcGIS Pro
+## ArcGIS Pro
 
-## Connecting to a Public Bucket
+### Connecting to a Public Bucket
 
 1. On the "Insert" ribbon, select "Connections" then "Cloud Store" then "New Cloud Storage Connection".
 
@@ -224,11 +228,11 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
     ![ArcGIS Pro Catalog View](img/usage/arcgis_pro_catalog_view.png)
 5. From here you can add individual TIFFs to the map, export them to different image formats, etc.
 
-# Cyberduck
+## Cyberduck
 
 [Cyberduck](https://cyberduck.io/) is a free and open source cloud storage browser for Windows and Mac, with support for public S3 buckets.
 
-## Connecting to a Public Bucket
+### Connecting to a Public Bucket
 
 1. Select "Open Connection".
 2. Expand the "Connection Profiles" dropdown (that defaults to FTP) and select "More Options" at the bottom of the list. Search using "HTTPS" to find the `S3 (HTTPS)` connection profile. Select it, then close the "Preferences" window.
