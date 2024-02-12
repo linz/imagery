@@ -230,3 +230,18 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 ![ArcGIS Pro Catalog View](img/usage/arcgis_pro_catalog_view.png)
 
 5. From here you can add individual TIFFs to the map, export them to different image formats, etc.
+
+# [Cyberduck](https://cyberduck.io/)
+
+## Connecting to a Public Bucket
+
+1. Select "Open Connection".
+2. Add a "Server" of `s3-ap-southeast-2.amazonaws.com, check the "Anonymous Login" checkbox and add a "Path" of `nz-imagery`.
+
+![Cyberduck Open Connection](img/usage/cyberduck_open_connection.png)
+
+3. Click "Connect". The top level of the bucket will be displayed and can be explored.
+
+![Cyberduck Bucket View](img/usage/cyberduck_bucket_view.png)
+
+4. From here you can use "Get Info" to calculate the size of particular directories or datasets and right-click to Download or Synchronize.
