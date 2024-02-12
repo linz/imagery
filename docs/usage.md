@@ -230,7 +230,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 ## Cyberduck
 
-[Cyberduck](https://cyberduck.io/) is a free and open source cloud storage browser for Windows and Mac, with support for public S3 buckets.
+[Cyberduck](https://cyberduck.io/) is a free and open source cloud storage browser for Windows and Mac, with support for public S3 buckets. The instructions below are relevant on Windows, [Mac setup is different](https://github.com/iterate-ch/cyberduck/issues/12891).
 
 ### Connecting to a Public Bucket
 
