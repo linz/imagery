@@ -238,7 +238,8 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 ## Connecting to a Public Bucket
 
 1. Select "Open Connection".
-2. Add a "Server" of `s3-ap-southeast-2.amazonaws.com`, check the "Anonymous Login" checkbox and add a "Path" of `nz-imagery`.
+2. Expand the "Connection Profiles" dropdown (that defaults to FTP) and select "More Options" at the bottom of the list. Search using "HTTPS" to find the `S3 (HTTPS)` connection profile. Select it, then close the "Preferences" window.
+3. Add a "Server" of `s3-ap-southeast-2.amazonaws.com`, check the "Anonymous Login" checkbox and add a "Path" of `nz-imagery`.
 
 ![Cyberduck Open Connection](img/usage/cyberduck_open_connection.png)
 
