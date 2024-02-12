@@ -220,12 +220,12 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 ![ArcGIS Pro New Cloud Storage Connection](img/usage/arcgis_pro_new_cloud_connection.png)
 
-2. In the "Create Cloud Storage Connection" dialog, add a Connection File Name e.g. "New Zealand Imagery", Servicer Provider as "AMAZON", Bucket Name as `nz-imagery`, Region as "Asia Pacific (Sydney)" and Service Endpoint as `s3.ap-southeast-2.amazon.com`.
-3. Because this is a Public Bucket, add a Provider Option with Name of "AWS_NO_SIGN_REQUEST" and Value of "YES". This means that you won't need an Access Key ID or Secret Access Key.
+2. In the "Create Cloud Storage Connection" dialog, add a "Connection File Name" e.g. `New Zealand Imagery`, "Servicer Provider" as `AMAZON`, "Bucket Name" as `nz-imagery`, "Region" as `Asia Pacific (Sydney)` and "Service Endpoint" as `s3.ap-southeast-2.amazon.com`.
+3. Because this is a Public Bucket, add a "Provider Option" with "Name" of `AWS_NO_SIGN_REQUEST` and "Value" of `YES`. This means that you won't need an Access Key ID or Secret Access Key.
 
 ![ArcGIS Pro Cloud Storage Connection Details](img/usage/arcgis_pro_connection_details.png)
 
-4. Click OK. The cloud storage connection will appear in the Catalog, where the bucket structure can be explored.
+4. Click "OK". The cloud storage connection will appear in the "Catalog" pane, where the bucket structure can be explored.
 
 ![ArcGIS Pro Catalog View](img/usage/arcgis_pro_catalog_view.png)
 
@@ -236,7 +236,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 ## Connecting to a Public Bucket
 
 1. Select "Open Connection".
-2. Add a "Server" of `s3-ap-southeast-2.amazonaws.com, check the "Anonymous Login" checkbox and add a "Path" of `nz-imagery`.
+2. Add a "Server" of `s3-ap-southeast-2.amazonaws.com`, check the "Anonymous Login" checkbox and add a "Path" of `nz-imagery`.
 
 ![Cyberduck Open Connection](img/usage/cyberduck_open_connection.png)
 
@@ -244,4 +244,4 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 ![Cyberduck Bucket View](img/usage/cyberduck_bucket_view.png)
 
-4. From here you can use "Get Info" to calculate the size of particular directories or datasets and right-click to Download or Synchronize.
+4. From here you can use "Get Info" to calculate the size of particular directories or datasets and right-click to "Download" or "Synchronize".
