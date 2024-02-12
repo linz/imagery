@@ -231,7 +231,9 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 5. From here you can add individual TIFFs to the map, export them to different image formats, etc.
 
-# [Cyberduck](https://cyberduck.io/)
+# Cyberduck
+
+[Cyberduck](https://cyberduck.io/) is a free and open source cloud storage browser for Windows and Mac, with support for public S3 buckets.
 
 ## Connecting to a Public Bucket
 
