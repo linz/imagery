@@ -45,7 +45,7 @@ which can be broken down as:
 
 #### Characters
 
-The path is restricted to a limited set of characters (a-z, A-Z, 0-9, -, \_ ) and no whitespace.
+The path is restricted to a limited set of characters with no whitespace: lowercase "a through "z", uppercase "A" through "Z", numbers "0" through "9", hyphen ("-"), and underscore ("_").
 
 #### Macrons
 
