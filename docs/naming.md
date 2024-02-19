@@ -43,17 +43,31 @@ which can be broken down as:
 
 ### S3 Path Restrictions
 
-#### Characters
+The _path_ is restricted to a limited set of characters with no whitespace: lowercase "a through "z", numbers "0" through "9", hyphen ("-"), and underscore ("_"). When generating a [dataset S3 path](#imagery-dataset-s3-paths), the system will pass through these characters unchanged to the path, and will transform many others to allowed characters - see the subsections for details. Any characters not mentioned in this section or subsections will result in an error.
 
-The path is restricted to a limited set of characters with no whitespace: lowercase "a through "z", numbers "0" through "9", hyphen ("-"), and underscore ("_").
+#### Uppercase characters
 
-#### Macrons
+Uppercase characters are changed to lowercase. For example, "Wellington" is changed to "wellington".
 
-When a name contains macrons, for example "Ōtorohanga", the macron is removed from the path but retained in the STAC Collection's Title / Description.
+#### Diacritics
+
+Characters with [diacritics](https://www.compart.com/en/unicode/block/U+0300), such as macrons ("ā", "ē", etc), are transliterated into Latin script. For example, a dataset with "Ōmāpere" in the title would have "omapere" in the path.
+
+#### Spaces, commas, and slashes
+
+These characters are replaced with a hyphen. For example, "Tikitapu/Blue Lake" is changed to "tikitapu-blue-lake".
 
 #### Apostrophes
 
-Where a name contains an apostrophe, for example "Hawke's Bay", the apostrophe is removed from the path but retained in the STAC Collection's Title / Description.
+These are *removed,* so "Hawke's Bay" is changed to "hawkes-bay".
+
+#### Ampersands
+
+These are replaced with "-and-", so "Gore A&P Showgrounds" is changed to "gore-a-and-p-showgrounds".
+
+#### Other characters
+
+"ø" is transliterated to "o", so "Mount Brøgger" is changed to "mount-brogger".
 
 ## Title and S3 Path Components
 
