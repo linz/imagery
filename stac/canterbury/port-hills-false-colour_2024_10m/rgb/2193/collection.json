@@ -1,0 +1,41 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01HPZCWZTDZRG0CWV5PGMTSNDE",
+  "title": "Port Hills False Colour 10m Satellite Imagery (2024)",
+  "description": "Satellite imagery within the Canterbury region captured in 2024.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    { "rel": "item", "href": "./BX24.json", "type": "application/json" }
+  ],
+  "providers": [
+    { "name": "European Space Agency", "roles": ["producer"] },
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["licensor", "host", "processor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "satellite-imagery",
+  "linz:region": "canterbury",
+  "linz:security_classification": "unclassified",
+  "linz:geographic_description": "Port Hills False Colour",
+  "extent": {
+    "spatial": { "bbox": [[172.5527303, -43.7669516, 172.8517065, -43.4420347]] },
+    "temporal": { "interval": [["2024-02-17T11:00:00Z", "2024-02-17T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12206f2b2c5327d97ad5a5a1e03315d33c86d08a905549dc29b897211b2cff44ca95",
+      "file:size": 302
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
