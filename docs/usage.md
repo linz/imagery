@@ -6,7 +6,7 @@ Our public New Zealand Imagery bucket can be used with a number of applications,
 
 The STAC Catalog, https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json, is the entry point of the LINZ imagery data. It points to the different STAC Collections representing a dataset.
 
-> **_Note:_** The files on the AWS S3 bucket `nz-imagery` can be accessible with a `s3` path `s3://nz-imagery` or a `https` URL `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
+> **_Note:_** The files on the AWS S3 bucket `nz-imagery` can be accessed with a `s3` path `s3://nz-imagery` or a `https` URL `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
 
 ### Manually navigate through the STAC Catalog to a get a TIFF
 
@@ -23,12 +23,12 @@ This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" data
       "file:size": 172494
     }
     ```
-2. The Collection can be accessible from this GitHub repository, `stac/wellington/wellington_2021_0.075m/rgb/2193/collection.json` or from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/collection.json`. From the Collection get an Item link in the `links` list:
+2. The Collection can be accessed from this GitHub repository, `stac/wellington/wellington_2021_0.075m/rgb/2193/collection.json` or from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/collection.json`. From the Collection get an Item link in the `links` list:
 
     ```json
     { "rel": "item", "href": "./BQ31_500_040071.json", "type": "application/json" }
     ```
-3. The Item can be accessible from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.json`. A list of assets can be found:
+3. The Item can be accessed from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.json`. A list of assets can be found:
 
     ```json
     "assets": {
@@ -39,7 +39,7 @@ This is an example using the "Wellington 0.075m Urban Aerial Photos (2021)" data
       }
     }
     ```
-4. In this case, the TIFF can be accessible from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
+4. In this case, the TIFF can be accessed from `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/wellington/wellington_2021_0.075m/rgb/2193/BQ31_500_040071.tiff`
 
 > **_Note:_** Our TIFF files and STAC Item files use the same base name. Having the link to the STAC Item, you can determine the TIFF link by changing its suffix from `.json` to `.tiff`.
 
@@ -219,7 +219,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 1. On the "Insert" ribbon, select "Connections" then "Cloud Store" then "New Cloud Storage Connection".
 
     ![ArcGIS Pro New Cloud Storage Connection](img/usage/arcgis_pro_new_cloud_connection.png)
-2. In the "Create Cloud Storage Connection" dialog, add a "Connection File Name" e.g. `New Zealand Imagery`, "Servicer Provider" as `AMAZON`, "Bucket Name" as `nz-imagery`, "Region" as `Asia Pacific (Sydney)` and "Service Endpoint" as `s3.ap-southeast-2.amazon.com`.
+2. In the "Create Cloud Storage Connection" dialog, add a "Connection File Name" e.g. `New Zealand Imagery`, "Service Provider" as `AMAZON`, "Bucket Name" as `nz-imagery`, "Region" as `Asia Pacific (Sydney)` and "Service Endpoint" as `s3.ap-southeast-2.amazon.com`.
 3. Because this is a Public Bucket, add a "Provider Option" with "Name" of `AWS_NO_SIGN_REQUEST` and "Value" of `YES`. This means that you won't need an Access Key ID or Secret Access Key.
 
     ![ArcGIS Pro Cloud Storage Connection Details](img/usage/arcgis_pro_connection_details.png)
