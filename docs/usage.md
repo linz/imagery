@@ -6,7 +6,7 @@ Our public New Zealand Imagery bucket can be used with a number of applications,
 
 The STAC Catalog, https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json, is the entry point of the LINZ imagery data. It points to the different STAC Collections representing a dataset.
 
-> **_Note:_** The files on the AWS S3 bucket `nz-imagery` can be accessed with a `s3` path `s3://nz-imagery` or a `https` URL `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
+> **_Note:_** The files in the *nz-imagery* bucket can be accessed via `s3://nz-imagery` or `https://nz-imagery.s3-ap-southeast-2.amazonaws.com/`.
 
 ### Manually navigate through the STAC Catalog to a get a TIFF
 
@@ -109,7 +109,7 @@ s5cmd --no-sign-request cp s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2
 
 ### Virtual file system
 
-GDAL allows you to run command on a file that is not on your local machine using a virtual file systems path:
+GDAL allows you to run commands on a file that is not on your local machine using a virtual file system path:
 
 - `/vsicurl/https://nz-imagery.s3-ap-southeast-2.amazonaws.com/[PATH]`
 - `/vsis3/s3://nz-imagery/[PATH]`
