@@ -35,7 +35,7 @@ jobs:
         run: docker run --volume="${PWD}:/repo" --workdir=/repo actionlint -color
 
   deploy-prod:
-    name: Publish STAC
+    name: Publish ODR & Sync STAC
     runs-on: ubuntu-latest
     concurrency: publish-${{ github.ref }}
     needs: main
