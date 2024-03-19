@@ -9,7 +9,7 @@ file: 's3://path/to/manifest.json'
 ```
 
 > [!NOTE]
-> This process has recently undergone significant changes, some parameter files, saved here are now outdated.
+> This process has recently undergone significant changes. Some parameter files saved here are now outdated.
 
 ## How it Works:
 
