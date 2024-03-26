@@ -106,6 +106,7 @@ jobs:
 
       - name: Submit Added/Changed Parameter Files
         id: modified-files
+        if: ${{ !contains(github.event.head_commit.message, '[skip-argo]')}}
         run: |
           # AM = Include: Added, Modified
           mapfile -d '' modified_parameter_files < <(git diff --name-only --diff-filter=AM -z ${{ github.event.before }} ${{ github.event.after }} -- "publish-odr-parameters/*.yaml")
@@ -131,6 +132,7 @@ jobs:
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
+        if: ${{ !contains(github.event.head_commit.message, '[skip-sync]')}}
         uses: docker://ghcr.io/linz/argo-tasks:v3
         with:
           args: stac-sync /github/workspace/stac/ s3://nz-imagery/
