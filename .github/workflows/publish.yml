@@ -111,7 +111,7 @@ jobs:
           mapfile -d '' modified_parameter_files < <(git diff --name-only --diff-filter=AM -z ${{ github.event.before }} ${{ github.event.after }} -- "publish-odr-parameters/*.yaml")
 
           for file in "${modified_parameter_files[@]}"; do
-            ./argo-linux-amd64 submit --wait --from wftmpl/copy -n argo -f "$file" -p aws_role_config_path="s3://linz-bucket-config/config-write.open-data-registry.json" -p exclude="collection.json$" --generate-name "publish-odr-"
+            ./argo-linux-amd64 submit --wait --from wftmpl/copy -n argo -f "$file" -p aws_role_config_path="s3://linz-bucket-config/config-write.open-data-registry.json" -p exclude="collection.json$" --generate-name "publish-odr-file-copy-"
           done
 
       - name: AWS Configure
