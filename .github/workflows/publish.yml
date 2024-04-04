@@ -11,23 +11,6 @@ jobs:
     steps:
       - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
 
-      # FIXME: catalog.json is not pushed to the repository (temporary solution)
-      - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
-        with:
-          args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
-
-      - name: Validate STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
-        with:
-          args: stac-validate /github/workspace/stac/catalog.json
-
-      - name: Validate STAC Collections
-        run: |
-          # Enable double star operator
-          shopt -s globstar
-          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v3 stac-validate "$PWD"/stac/**/collection.json
-
       - name: Download actionlint
         run: docker build --tag actionlint - < .github/workflows/actionlint.dockerfile
 
