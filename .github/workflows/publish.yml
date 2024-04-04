@@ -6,7 +6,6 @@ jobs:
   main:
     name: Validate STAC
     runs-on: ubuntu-latest
-    concurrency: validate-${{ github.ref }}
 
     steps:
       - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
