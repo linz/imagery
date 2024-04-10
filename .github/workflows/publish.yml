@@ -33,8 +33,8 @@ jobs:
       - name: Run actionlint to check workflow files
         run: docker run --volume="${PWD}:/repo" --workdir=/repo actionlint -color
 
-  deploy-prod:
-    name: Publish ODR & Sync STAC
+  publish-odr:
+    name: Publish ODR
     runs-on: ubuntu-latest
     needs: main
     if: ${{ github.ref == 'refs/heads/master' }}
@@ -122,7 +122,7 @@ jobs:
     name: Sync STAC files
     runs-on: ubuntu-latest
     concurrency: publish-${{ github.ref }}
-    needs: deploy-prod
+    needs: publish-odr
     if: ${{ github.ref == 'refs/heads/master' }}
 
     environment:
