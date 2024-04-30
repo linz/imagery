@@ -19,7 +19,7 @@ jobs:
       - name: Validate STAC Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v3
         with:
-          args: stac-validate stac/catalog.json
+          args: stac-validate /github/workspace/stac/catalog.json
 
       - name: Validate STAC Collections
         run: |
@@ -138,4 +138,4 @@ jobs:
         if: ${{ !contains(github.event.head_commit.message, '[skip-sync]')}}
         uses: docker://ghcr.io/linz/argo-tasks:v3
         with:
-          args: stac-sync stac/ s3://nz-imagery/
+          args: stac-sync /github/workspace/stac/ s3://nz-imagery/
