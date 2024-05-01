@@ -6,7 +6,6 @@ jobs:
   main:
     name: Validate STAC
     runs-on: ubuntu-latest
-    concurrency: validate-${{ github.ref }}
 
     steps:
       - uses: linz/action-typescript@dee99184c4305aea6c380a52db9b2d7abaaa3e78 # v3
@@ -34,10 +33,9 @@ jobs:
       - name: Run actionlint to check workflow files
         run: docker run --volume="${PWD}:/repo" --workdir=/repo actionlint -color
 
-  deploy-prod:
-    name: Publish ODR & Sync STAC
+  publish-odr:
+    name: Publish ODR
     runs-on: ubuntu-latest
-    concurrency: publish-${{ github.ref }}
     needs: main
     if: ${{ github.ref == 'refs/heads/master' }}
 
@@ -59,23 +57,6 @@ jobs:
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
           node-version: '18.x'
-
-      # FIXME: catalog.json is not pushed to the repository (temporary solution)
-      - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
-        with:
-          args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
-
-      - name: Validate STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
-        with:
-          args: stac-validate /github/workspace/stac/catalog.json
-
-      - name: Validate STAC Collections
-        run: |
-          # Enable double star operator
-          shopt -s globstar
-          docker run -v "${PWD}:${PWD}" ghcr.io/linz/argo-tasks:v3 stac-validate "$PWD"/stac/**/collection.json
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@901a10e89ea615cf61f57ac05cecdf23e7de06d8 # v3
@@ -115,6 +96,23 @@ jobs:
             ./argo-linux-amd64 submit --wait --from wftmpl/copy -n argo -f "$file" -p aws_role_config_path="s3://linz-bucket-config/config-write.open-data-registry.json" -p exclude="collection.json$" --generate-name "publish-odr-file-copy-"
           done
 
+  sync-stac:
+    name: Sync STAC files
+    runs-on: ubuntu-latest
+    concurrency: publish-${{ github.ref }}
+    needs: publish-odr
+    if: ${{ github.ref == 'refs/heads/master' }}
+
+    environment:
+      name: prod
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@010d0da01d0b5a38af31e9c3470dbfdabdecca3a # v4
         with:
@@ -129,6 +127,11 @@ jobs:
           mask-aws-account-id: true
           role-to-assume: ${{ secrets.AWS_ODR_DATA_MANAGER_ROLE }}
           role-chaining: true
+
+      - name: Create STAC Catalog
+        uses: docker://ghcr.io/linz/argo-tasks:v3
+        with:
+          args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
