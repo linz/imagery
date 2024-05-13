@@ -1,6 +1,6 @@
 name: Publish
 
-on: [ push ]
+on: [push]
 
 jobs:
   main:
@@ -12,12 +12,12 @@ jobs:
 
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
+        uses: docker://ghcr.io/linz/argo-tasks:v4
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
       - name: Validate STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
+        uses: docker://ghcr.io/linz/argo-tasks:v4
         with:
           args: stac-validate /github/workspace/stac/catalog.json
 
@@ -25,7 +25,7 @@ jobs:
         run: |
           # Enable double star operator
           shopt -s globstar
-          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v3 stac-validate "$PWD"/stac/**/collection.json
+          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v4 stac-validate "$PWD"/stac/**/collection.json
 
       - name: Download actionlint
         run: docker build --tag actionlint - < .github/workflows/actionlint.dockerfile
@@ -129,13 +129,13 @@ jobs:
           role-chaining: true
 
       - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v3
+        uses: docker://ghcr.io/linz/argo-tasks:v4
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
         if: ${{ !contains(github.event.head_commit.message, '[skip-sync]')}}
-        uses: docker://ghcr.io/linz/argo-tasks:v3
+        uses: docker://ghcr.io/linz/argo-tasks:v4
         with:
           args: stac-sync /github/workspace/stac/ s3://nz-imagery/
