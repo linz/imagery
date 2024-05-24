@@ -100,7 +100,7 @@ s5cmd --no-sign-request du --humanize s3://nz-imagery/canterbury/canterbury_2022
 Copy all of the image files to a new target location.
 
 ```shell
-s5cmd --no-sign-request cp s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff <target_path>
+s5cmd --no-sign-request cp --show-progress s3://nz-imagery/canterbury/canterbury_2022_0.3m/rgb/2193/*.tiff <target_path>
 ```
 
 ## GDAL
