@@ -43,7 +43,7 @@ which can be broken down as:
 
 ### S3 Path Restrictions
 
-The _path_ is restricted to a limited set of characters with no whitespace: lowercase "a through "z", numbers "0" through "9", hyphen ("-"), and underscore ("_"). When generating a [dataset S3 path](#imagery-dataset-s3-paths), the system will pass through these characters unchanged to the path, and will transform many others to allowed characters - see the subsections for details. Any characters not mentioned in this section or subsections will result in an error.
+The _path_ is restricted to a limited set of characters with no whitespace: lowercase "a through "z", numbers "0" through "9", hyphen ("-"), and underscore ("\_"). When generating a [dataset S3 path](#imagery-dataset-s3-paths), the system will pass through these characters unchanged to the path, and will transform many others to allowed characters - see the subsections for details. Any characters not mentioned in this section or subsections will result in an error.
 
 #### Uppercase characters
 
@@ -59,7 +59,7 @@ These characters are replaced with a hyphen. For example, "Tikitapu/Blue Lake" i
 
 #### Apostrophes
 
-These are *removed,* so "Hawke's Bay" is changed to "hawkes-bay".
+These are _removed,_ so "Hawke's Bay" is changed to "hawkes-bay".
 
 #### Ampersands
 
@@ -166,7 +166,7 @@ Title: Waikato / Bay of Plenty 0.375m SN5944 (1981-1982)
 Path: s3://nz-imagery/waikato/waikato_bay-of-plenty_sn5944_1981-1982_0.375m/rgb/2193/collection.json
 ```
 
-15cm Aerial RGB imagery covering Nelson (primarily) captured in 2022 
+15cm Aerial RGB imagery covering Nelson (primarily) captured in 2022
 
 ```
 Title: Top of the South Flood 0.15m Aerial Photos (2022)
