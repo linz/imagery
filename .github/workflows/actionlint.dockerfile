@@ -1,4 +1,4 @@
 # Workaround for https://github.com/dependabot/dependabot-core/issues/8362.
 # Once that is fixed, remove this file and replace the Docker build and run
 # lines in `.github/workflows/*.yml` with a `uses: docker://rhysd/…` line.
-FROM rhysd/actionlint:1.7.0@sha256:5acca218639222e4afbc82fc6e9ef56cbe646ade3b07f3f5ec364b638258a244
+FROM rhysd/actionlint:1.7.1@sha256:435ecdb63b1169e80ca3e136290072548c07fc4d76a044cf5541021712f8f344
