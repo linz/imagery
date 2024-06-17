@@ -13,12 +13,12 @@ To enable ease of access Imagery is [standardized](https://github.com/linz/topo-
 
 LINZ's imagery archive consists of
 
-- 1 band 8bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
-- 3 band 8bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
-- 4 band 8bit RGB-NiR aerial imagery (Sometimes with `NO_DATA`) - Not currently published
+- 1-band 8-bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
+- 3-band 8-bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
+- 4-band 8-bit RGB-NiR aerial imagery (Sometimes with `NO_DATA`) - Not currently published
 
 Other types
-- 16bit 4band+ RGB+ satellite imagery - Not currently published
+- 4-band+ 16-bit  RGB+ satellite imagery - Not currently published
 
 
 ### Goals
