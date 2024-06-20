@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: linz/action-typescript@9bf69b0f313b3525d3ba3116f26b1aff7eb7a6c0 # v3
         with:
-          node-version: 20.x
+          node-version: 22.x
       # FIXME: catalog.json is not pushed to the repository (temporary solution)
       - name: Create STAC Catalog
         uses: docker://ghcr.io/linz/argo-tasks:v4
@@ -39,14 +39,13 @@ jobs:
     steps:
       - uses: linz/action-typescript@9bf69b0f313b3525d3ba3116f26b1aff7eb7a6c0 # v3
         with:
-          node-version: 20.x
+          node-version: 22.x
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
           fetch-depth: 0
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+      - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
-          node-version: '18.x'
+          node-version: '22.x'
       - name: Setup kubectl
         uses: azure/setup-kubectl@3e0aec4d80787158d308d7b364cb1b702e7feb7f # v4.0.0
         with:
