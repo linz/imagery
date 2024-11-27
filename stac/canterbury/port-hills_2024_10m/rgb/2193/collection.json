@@ -12,7 +12,12 @@
       "type": "application/json"
     },
     { "rel": "self", "href": "./collection.json", "type": "application/json" },
-    { "rel": "item", "href": "./BX24.json", "type": "application/json" }
+    {
+      "rel": "item",
+      "href": "./BX24.json",
+      "type": "application/json",
+      "file:checksum": "1220bb94648ce45f36e8be938d777058d119e4ce3c06df6a3c15823ea890a9bc2202"
+    }
   ],
   "providers": [
     { "name": "European Space Agency", "roles": ["producer"] },
@@ -38,5 +43,7 @@
       "file:size": 302
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "created": "2024-02-19T03:39:52Z",
+  "updated": "2024-11-14T01:59:24Z"
 }
