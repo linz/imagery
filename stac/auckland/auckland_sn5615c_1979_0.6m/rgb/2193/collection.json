@@ -1,0 +1,69 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01JWTCX7PD5TMXQGR2KZZTCN8S",
+  "title": "Auckland 0.6m SN5615C (1979)",
+  "description": "Scanned aerial imagery within the Auckland region captured in 1979.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./AY33_10000_0401.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122093567c47642be7f0b189deedcbff68af7dfb60005bf00f8d463ef62baa7e29fa"
+    },
+    {
+      "href": "./AY33_10000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204c19eb880a2cc825aaca5c791bff96495f2983c13977528375b6a3d7b1455d08"
+    },
+    {
+      "href": "./AY33_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220767cd88fbbe0bbb4116f6e3c6347480e5ae04f26acd5db497b5d74e100291209"
+    },
+    {
+      "href": "./AY33_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220209667c01575249aa4284dab7fa6680024f87f483ddc500c6f6fff59f845fab5"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Auckland Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "auckland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "auckland_sn5615c_1979_0.6m",
+  "created": "2025-06-03T08:00:47Z",
+  "updated": "2025-06-03T08:00:47Z",
+  "linz:historic_survey_number": "SN5615C",
+  "extent": {
+    "spatial": { "bbox": [[175.0011049, -36.2892865, 175.1628784, -36.1576674]] },
+    "temporal": { "interval": [["1979-10-23T12:00:00Z", "1979-10-23T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220faa41fbf26ef4eb9793e0bae6cec6d42acc1634243f316c17de967c955bb65df",
+      "file:size": 11992
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
