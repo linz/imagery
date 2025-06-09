@@ -1,0 +1,129 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01JWTD23799NE4MWYAEQ5JZN25",
+  "title": "Auckland 0.05m SN5645 (1980)",
+  "description": "Scanned aerial imagery within the Auckland region captured in 1980.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./AZ31_1000_3841.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220f621be4d4fd9ac3c0d4c1cf729aa68fd062bb475c43ae25a958f3d97e6caf2fb"
+    },
+    {
+      "href": "./AZ31_1000_3842.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220cddc581c29c3a39b37ca5777f783ad762dc06dfc50c2a7f06b3229743efa305e"
+    },
+    {
+      "href": "./AZ31_1000_3843.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202d02f9169d59ad19e9eaf04271e74092ea90501be6e4bb589d4582af76b6c95a"
+    },
+    {
+      "href": "./AZ31_1000_3844.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205bce2591b2fd935f0fdf29e5759f384e84c7e04102ac6f8fe413058198c74907"
+    },
+    {
+      "href": "./AZ31_1000_3845.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204da868babddf5bd97d8f8a66c9c81f9b18182db2afb95202e23ec45f9f194958"
+    },
+    {
+      "href": "./AZ31_1000_3941.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12203c85fa42cdfc3a157c1eb9bcefa44fb2198fbcbebd485cfe244ffc88f13e2a0a"
+    },
+    {
+      "href": "./AZ31_1000_3942.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12207123c2ec305f2e330a96588dac80e74f58c65a628080023771150ced23f5feac"
+    },
+    {
+      "href": "./AZ31_1000_3943.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204cc861db3e2708b3ad825e96150386a0c128fc5e63d13cb4c41e6dbe5893faf8"
+    },
+    {
+      "href": "./AZ31_1000_3944.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220861e92c42da29631a0acfee96dc62a244dfd58568ac78c585f582173824c6147"
+    },
+    {
+      "href": "./AZ31_1000_3945.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d239539c4c24b42b7467278560b3de5666e58b754d39ee8d3eced5959fc4e196"
+    },
+    {
+      "href": "./AZ31_1000_4042.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12201bfb451343da2c40a9b02138472bec89048b0e0a3249a187356fd095609045b1"
+    },
+    {
+      "href": "./AZ31_1000_4043.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220048f796921ef9799a57af36bae8836f1f27835ceae8caed92cdec13b33ff3a1c"
+    },
+    {
+      "href": "./AZ31_1000_4044.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205f34986fc8ac17b6e390bc59e07dae22e23663c722871c7d7f7dab0acf4cd584"
+    },
+    {
+      "href": "./AZ31_1000_4045.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b2789a4ba253253836e10e57ef6fb8bc667146d5193015a59d8afe8c5862823c"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Auckland Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "auckland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "auckland_sn5645_1980_0.05m",
+  "created": "2025-06-03T08:03:26Z",
+  "updated": "2025-06-03T08:03:26Z",
+  "linz:historic_survey_number": "SN5645",
+  "extent": {
+    "spatial": { "bbox": [[174.689036, -36.5545919, 174.7162656, -36.5348211]] },
+    "temporal": { "interval": [["1980-01-03T11:00:00Z", "1980-01-03T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12201ce5cbba994af9a1ffe96fcb80f97021f2b00f1ef8e3ec5cfc833bb8a543e785",
+      "file:size": 7684
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
