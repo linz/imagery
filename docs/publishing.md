@@ -1,6 +1,6 @@
 # Publishing
 
-This documentation intends to describe our data publishing process. This process involves multiple parts of our system and it can be useful to understand how each piece is chained together to go from the data that is supplied to LINZ to the standardised data that is publicly published on the AWS Registry of Open Data (ODR - `s3://nz-imagery/`)
+This documentation intends to describe our system that publish data from the supply to the publication into the [AWS Registry of Open Data (ODR)](https://registry.opendata.aws/).
 
 ![publishing](img/publishing/publishing_to_odr.png)
 
