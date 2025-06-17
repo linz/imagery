@@ -1,6 +1,7 @@
 # Publishing
 
-This documentation intends to describe our system that publishes data, from the supply to the publication into the [AWS Registry of Open Data (ODR)](https://registry.opendata.aws/).
+This documentation intends to describe our system that publishes data, from the verified supplied data to the publication into the [AWS Registry of Open Data (ODR)](https://registry.opendata.aws/).
+It does not describe the amazing job that does our data analysts prior to sending the data through the processing/publishing pipeline.
 
 ![publishing](img/publishing/publishing_to_odr.png)
 
