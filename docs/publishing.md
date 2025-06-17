@@ -3,7 +3,7 @@
 This documentation intends to describe our system that publishes data, from the verified supplied data to publication into the [AWS Registry of Open Data](https://registry.opendata.aws/).
 It does not describe the amazing job that our data analysts do prior to sending the data through to the processing/publishing pipeline.
 
-![publishing](img/publishing/publishing_to_odr.png)
+![publishing](img/publishing/publishing_to_odr.excalidraw.png)
 
 ## Processing the data
 
