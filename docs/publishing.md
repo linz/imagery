@@ -1,6 +1,6 @@
 # Publishing
 
-This documentation intends to describe our system that publish data from the supply to the publication into the [AWS Registry of Open Data (ODR)](https://registry.opendata.aws/).
+This documentation intends to describe our system that publishes data, from the supply to the publication into the [AWS Registry of Open Data (ODR)](https://registry.opendata.aws/).
 
 ![publishing](img/publishing/publishing_to_odr.png)
 
@@ -12,10 +12,10 @@ It is initiated by a user (data manager) triggering an [`imagery-standardising` 
 
 ### GitHub Pull Request
 
-It is either triggered by the same workflow that process the data as an extra step, or by a stand alone workflow [`publish-odr`](https://github.com/linz/topo-workflows/tree/master/workflows/raster#publish-odr).
-This workflow create a GitHub Pull Request on this repository. This PR is used as a quality checking tool: the STAC Catalog is re-generated and the STAC Collection validated, the data can be viewed served by [`linz/basemaps`](https://basemaps.linz.govt.nz) through the link in the PR description and the STAC Collection can be view and amended as a PR file. The PR also contains an [Argo Workflows parameter](https://argo-workflows.readthedocs.io/en/latest/walk-through/parameters/) file that will be use to copy the data to its published location. Once the data has been checked and is ready to go, the reviewer can click on the merging button to trigger publishing the dataset to the Registry of Open Data via GitHub Actions.
+It is either triggered by the same workflow that processes the data, as an extra step, or by a stand alone workflow [`publish-odr`](https://github.com/linz/topo-workflows/tree/master/workflows/raster#publish-odr).
+This workflow creates a GitHub Pull Request (PR) on this repository. This PR is used as a quality checking tool: the STAC Catalog is re-generated and the STAC Collection validated, the data can be viewed served by [`linz/basemaps`](https://basemaps.linz.govt.nz) through the link in the PR description and the STAC Collection can be view and amended as a PR file. The PR also contains an [Argo Workflows parameter](https://argo-workflows.readthedocs.io/en/latest/walk-through/parameters/) file that will be use to copy the data to its published location. Once the data has been checked and is ready to go, the reviewer can click on the merging button to trigger publishing the dataset to the ODR via GitHub Actions.
 
 ### GitHub Actions
 
-The Publish GitHub Actions (`publish.yml`) is triggered when the PR is merged to the `master` branch.
-This Action through the [`publish-odr` step](https://github.com/linz/imagery/blob/38c525f3e9f3b10c2b32753c92009f204b8ee74c/.github/workflows/publish.yml#L37) will trigger a [`copy` workflow](https://github.com/linz/topo-workflows/tree/master/workflows/storage#copy) using the parameter file of the PR to copy the dataset over the ODR bucket. [STAC Sync](https://github.com/linz/argo-tasks/tree/master/src/commands/stac-sync#stac-sync) is used to copy separately the Collection of the dataset as we want to keep a sync between this GH repository and the ODR bucket, and the Catalog which is re-generated for each new/modified dataset (for technical purposes: checksum links).
+The [Publish GitHub Actions (`publish.yml`)](https://github.com/linz/imagery/blob/master/.github/workflows/publish.yml) is triggered when the PR is merged to the `master` branch.
+This Action, through the [`publish-odr` step](https://github.com/linz/imagery/blob/38c525f3e9f3b10c2b32753c92009f204b8ee74c/.github/workflows/publish.yml#L37), will trigger a [`copy` workflow](https://github.com/linz/topo-workflows/tree/master/workflows/storage#copy) using the parameter file of the PR to copy the dataset over the ODR bucket. [STAC Sync](https://github.com/linz/argo-tasks/tree/master/src/commands/stac-sync#stac-sync) is used to copy separately the Collection of the dataset as we want to keep a sync between this GH repository and the ODR bucket, and the Catalog which is re-generated for each new/modified dataset (for technical purposes: checksum links).
