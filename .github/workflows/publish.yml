@@ -83,7 +83,7 @@ jobs:
 
       - name: Install Argo
         run: |
-          curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.4.11/argo-linux-amd64.gz
+          curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.6.12/argo-linux-amd64.gz
           gunzip argo-linux-amd64.gz
           chmod +x argo-linux-amd64
           ./argo-linux-amd64 version
