@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KBBPD0A8WNDGXC8305SJ1E44",
+  "title": "Bay of Plenty 0.25m SN1840 (1966-1970)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1966-1970.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BF38_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220591f76f5771ab2fecf686f744d15d2b4d93ec895dde86e97ca9f9199e5ec3dc3"
+    },
+    {
+      "href": "./BF38_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12209fc308257097eef47ed2abdf31d8235647d2689c43716ee2059847dc94014f4c"
+    },
+    {
+      "href": "./BF39_10000_0401.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220a021c7c12ffd221c311311f71a6af00a9b8c4f00b5d38ba1a51021a28a007788"
+    },
+    {
+      "href": "./BF39_10000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e53223177c6f24187c485691adbb1b86db2f9b731c9cc7d519b8c3e61b63025b"
+    },
+    {
+      "href": "./BF39_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204a3a85fc1a99b2b30af467f3cf15f7790512a200a9c086f84f42151960d5f8d1"
+    },
+    {
+      "href": "./BF39_10000_0404.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e8d4e960caa7e8dec45ef71c09275c320b6d03eca22031158937d16496918bb4"
+    },
+    {
+      "href": "./BF39_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202794ca80030d88e31342a2560af0aa314e561085362137495a203d5406cb97d7"
+    },
+    {
+      "href": "./BF39_10000_0501.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c0c77e363e975131bd034365d87b1e946d2a3a28c04f034c0359b3fbc4016a20"
+    },
+    {
+      "href": "./BF39_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122057163150736a2c95e6935422d7fb8fbf9e4f8e6a8c8b06e99f1940061011da7e"
+    },
+    {
+      "href": "./BF39_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220eb9a3f0fa833f418907d5d143292242e1c2dcc296c321331fe776449b6cd3c10"
+    },
+    {
+      "href": "./BF39_10000_0504.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204463cb32110d70d627ddbfbb1950de9fd4a55a829e65709feff8b5ac9c561212"
+    },
+    {
+      "href": "./BF39_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12207e635dcd9bf2dda5afda0313328d52bc18a611dcca94fbb071b734238aff7a55"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Bay of Plenty Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn1840_1966-1970_0.25m",
+  "gsd": 0.25,
+  "created": "2025-12-01T00:53:31Z",
+  "updated": "2025-12-01T00:53:31Z",
+  "linz:historic_survey_number": "SN1840",
+  "extent": {
+    "spatial": { "bbox": [[176.6546, -38.5211801, 176.9907657, -38.3809342]] },
+    "temporal": { "interval": [["1966-03-23T12:00:00Z", "1970-04-17T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220c6b667ef06c28dc16d85c2f62f15b6666d50c57180066321537cca740bbd358d",
+      "file:size": 19152
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
