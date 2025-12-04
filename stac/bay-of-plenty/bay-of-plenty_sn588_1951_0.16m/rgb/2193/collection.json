@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KBBRYVH9K391JZ78DVRBY5Q7",
+  "title": "Bay of Plenty 0.16m SN588 (1951)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1951.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE37_5000_0803.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d3ed95d4f52b032c0b639d41f0b140486aa700860e9e8974ca3e315bcd016be2"
+    },
+    {
+      "href": "./BE37_5000_0804.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220ec9217f45adbe456189f142f240a59383ad239c53a976ae3f662091eefb2ef0f"
+    },
+    {
+      "href": "./BE37_5000_0805.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204608da1674a2175630898ad79d9c0be539cc1c629e3129b75f31f213ab1543e4"
+    },
+    {
+      "href": "./BE37_5000_0806.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220646f4772d52cb7296942a732523a103800c235fb5c4ab2e6a68ef25c08e4da63"
+    },
+    {
+      "href": "./BE37_5000_0903.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220239ba5d50dc75c1eec2c158083f9d18edfc068a5d900b60d8c6a43343e137737"
+    },
+    {
+      "href": "./BE37_5000_0904.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12208497c4ec54cb813baf8b5cd63d2951d1c52efa9bebbcd9ef8b33baaead7cf1a2"
+    },
+    {
+      "href": "./BE37_5000_0905.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b9a0bb082f9f0b07f121d9394194c54b8bbbdd9e218d8cebe4dadafff0cda4f6"
+    },
+    {
+      "href": "./BE37_5000_0906.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122087d447e2aebb98809048566fb0d13ee99eb353557991bf5156cbe925958a4016"
+    },
+    {
+      "href": "./BE37_5000_1003.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220bab39aaa90e99ec8af5f6600fb05955252120656df48891a5d5d030b26ca3010"
+    },
+    {
+      "href": "./BE37_5000_1004.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12208b82197a1503cb7e8e2bb39afee9953a489426575c5322cd05071fd5311cb50f"
+    },
+    {
+      "href": "./BE37_5000_1005.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122097c7ef05cec546190a7d9846d17bce17552828969fd8fed5b2c6126cbc0eac1d"
+    },
+    {
+      "href": "./BE37_5000_1006.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12209c470e707b680dbb199673ad3ade238969445c7b4d851c7259596a025bdcec6d"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Bay of Plenty Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn588_1951_0.16m",
+  "gsd": 0.16,
+  "created": "2025-12-01T01:38:14Z",
+  "updated": "2025-12-01T01:38:14Z",
+  "linz:historic_survey_number": "SN588",
+  "extent": {
+    "spatial": { "bbox": [[176.2027957, -38.2101873, 176.3165304, -38.1099689]] },
+    "temporal": { "interval": [["1951-05-09T12:00:00Z", "1951-05-09T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220d1d5b289d80bdb092bb05611e98f830446791af01d4e2a3dcb9ca39a3cd6fb6e",
+      "file:size": 8750
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
