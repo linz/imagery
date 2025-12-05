@@ -1,0 +1,76 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KBKQSHQVVSQWX163BDNM1MD3",
+  "title": "Bay of Plenty 0.15m SN8925 (20 February 1988)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1988.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE39_5000_0904.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c2db23f84a21e1b8a6c0d6a988bdadbb2b970dab459ee4cca570c77b979cb6f3"
+    },
+    {
+      "href": "./BE39_5000_0905.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e94f36f8f252cf206ce01ae628bb9f1f58339e7234ab2e5e928096092ee81dcf"
+    },
+    {
+      "href": "./BE39_5000_0906.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c368bdcfa2b94e1f412422064218e22b6643e2b55d64828f65d866ba0a820446"
+    },
+    {
+      "href": "./BE39_5000_1005.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220cc7f3a0601061143a2512bca36bd417a616248c8ca950451d15f88768181bd3d"
+    },
+    {
+      "href": "./BE39_5000_1006.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205ebcde5cb223bc8fec812244885b3f09e408ece51001e08ea6ca3dc1a51200f3"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Bay of Plenty Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn8925_19880220_0.15m",
+  "gsd": 0.15,
+  "created": "2025-12-04T03:51:47Z",
+  "updated": "2025-12-04T03:51:47Z",
+  "linz:historic_survey_number": "SN8925",
+  "extent": {
+    "spatial": { "bbox": [[176.7782621, -38.1921802, 176.863648, -38.1256473]] },
+    "temporal": { "interval": [["1988-02-19T12:00:00Z", "1988-02-19T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220c50347583d8be1971eb1cc4676ae2f3723f82ef53712327b229e6994bd0f6725",
+      "file:size": 2021
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
