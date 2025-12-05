@@ -1,0 +1,100 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KBNZGEQEB8Y56Y2JNDJK4E2N",
+  "title": "Bay of Plenty 0.15m SN8925 (1988)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1988.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE39_5000_0804.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220483e630a4d2337823c4426c4d1f92a9339cb49a5d6e9b76a73e6f6dc92e2f0fd"
+    },
+    {
+      "href": "./BE39_5000_0805.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12201f54191af1c68731e21db863f78bc4d6d0825e19beba4095810d1b6dc2155f27"
+    },
+    {
+      "href": "./BE39_5000_0904.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204739b52f215e852f2937bcffacfdcc3116d7e887e1f123131b8797dcf04f6eb1"
+    },
+    {
+      "href": "./BE39_5000_0905.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c46e7cd269309db6133114f328e8f47c941fafeb04b0d868fe39d5d7d33551c0"
+    },
+    {
+      "href": "./BE39_5000_0906.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122004be0bf2267ae1145fc06f67946f6d4c8ac1a5a2a2e1e74fa9d7a627af06dc3b"
+    },
+    {
+      "href": "./BE39_5000_1005.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122084d179a87a3065b6060997639d67e969dc92de8393e0a3bf82ff1da81cd1d8b1"
+    },
+    {
+      "href": "./BE39_5000_1006.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12209cdd95507c5891c8c0be1fc6c435a61e813969451fb1aa2d6df942e89cd42a49"
+    },
+    {
+      "href": "./BF39_5000_0105.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122034d68013a2fe6f5aa4d896e244474d5ec5fb6a605f08ebf7effbc69e38438d43"
+    },
+    {
+      "href": "./BF39_5000_0106.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220881a6529888ee53a261147e111f9b22d76324aecc726a13305d48d272a3fe300"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Bay of Plenty Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn8925_1988_0.15m",
+  "gsd": 0.15,
+  "created": "2025-12-05T00:45:08Z",
+  "updated": "2025-12-05T00:45:08Z",
+  "linz:historic_survey_number": "SN8925",
+  "extent": {
+    "spatial": { "bbox": [[176.7765922, -38.2245536, 176.865362, -38.0941701]] },
+    "temporal": { "interval": [["1988-03-03T11:00:00Z", "1988-03-03T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "122086d7bfd33f2a9cf8079691f9ce8dcca750e5477fa0d2fee17a24c7de1e347a5b",
+      "file:size": 8991
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
