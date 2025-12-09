@@ -13,12 +13,12 @@ jobs:
           node-version: 20.x
 
       - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v4
+        uses: docker://ghcr.io/linz/argo-tasks:v5
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
       - name: Validate STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v4
+        uses: docker://ghcr.io/linz/argo-tasks:v5
         with:
           args: stac-validate /github/workspace/stac/catalog.json
 
@@ -26,7 +26,7 @@ jobs:
         run: |
           # Enable double star operator
           shopt -s globstar
-          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v4 stac-validate "$PWD"/stac/**/collection.json
+          docker run -v "$PWD:$PWD" ghcr.io/linz/argo-tasks:v5 stac-validate "$PWD"/stac/**/collection.json
 
       - name: Download actionlint
         run: docker build --tag actionlint - < .github/workflows/actionlint.dockerfile
@@ -59,12 +59,12 @@ jobs:
       - name: Use Node.js 18.x
         uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
         with:
-          node-version: '18.x'
+          node-version: "18.x"
 
       - name: Setup kubectl
         uses: azure/setup-kubectl@3e0aec4d80787158d308d7b364cb1b702e7feb7f # v4.0.0
         with:
-          version: 'latest'
+          version: "latest"
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@010d0da01d0b5a38af31e9c3470dbfdabdecca3a # v4
@@ -134,13 +134,13 @@ jobs:
           role-chaining: true
 
       - name: Create STAC Catalog
-        uses: docker://ghcr.io/linz/argo-tasks:v4
+        uses: docker://ghcr.io/linz/argo-tasks:v5
         with:
           args: stac-catalog --output stac/catalog.json --template template/catalog.json /github/workspace/stac/
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
         if: ${{ !contains(github.event.head_commit.message, '[skip-sync]')}}
-        uses: docker://ghcr.io/linz/argo-tasks:v4
+        uses: docker://ghcr.io/linz/argo-tasks:v5
         with:
           args: stac-sync /github/workspace/stac/ s3://nz-imagery/
