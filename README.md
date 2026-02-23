@@ -29,7 +29,7 @@ aws s3 ls --no-sign-request s3://nz-imagery/
 
 ## Related
 
-For access to LINZ's elevation data see [linz/elevation](https://github.com/linz/elevation)
+For access to LINZ's elevation data see [linz/elevation](https://github.com/linz/elevation) and for access to LINZ's coastal data see [linz/coastal](https://github.com/linz/coastal).
 
 ## License
 

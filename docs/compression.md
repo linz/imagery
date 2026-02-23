@@ -15,23 +15,19 @@ LINZ's imagery archive consists of
 
 - 1-band 8-bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
 - 3-band 8-bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
-- 4-band 8-bit RGB-NiR aerial imagery (Sometimes with `NO_DATA`) - Not currently published
-
-Other types
-- 4-band+ 16-bit  RGB+ satellite imagery - Not currently published
-
+- 4-band 8-bit RGBNIR aerial imagery (Sometimes with `NO_DATA`) - started being published from January 2026
 
 ### Goals
 
-As most of the imagery we are working on right now is RGB, the following document is mostly related to 8bit RGB imagery.
+LINZ uses GDAL for processing [Cloud-Optimised GeoTIFFs](https://gdal.org/drivers/raster/cog.html) which offers support for the following compressions: LZW, DEFLATE, LERC, ZSTD and JPEG-XL.
 
-LINZ uses GDAL for processing [COGs](https://gdal.org/drivers/raster/cog.html) which limits the compression types to LZW, DEFLATE, LERC, ZSTD and JPEG-XL
+We want an aerial imagery archive that utilises the most appropriate compression format for the data type, to ensure that file sizes are reduced for transfer over the internet, while remaining lossless.
 
-At the time of testing JPEG XL is not supported by most of the tools LINZ uses and until the support improves it cannot be recommended as our archive compression format.
+At the time of testing (June 2024), JPEG-XL is not supported by most of the tools LINZ uses and until the support improves it cannot be recommended as our archive compression format.
 
 ## Testing
 
-The imagery compression needs to be lossless, converting to the format and back should create the exact same tiff.
+The imagery compression needs to be lossless, compressing and decompressing should result in the exact same TIFF.
 
 ### Process
 
@@ -71,28 +67,26 @@ sha256sum /output/${compression}_predictor-${predictor}_level-${level}_error-${e
 
 ## Results
 
-To start all tiffs were compressed as LZW to create a baseline
+To start all TIFFs were compressed as LZW to create a baseline.
 
 The output data can be found in [compression-output.tsv](./data/compression-output.tsv)
 
 Below is a table showing the relative file sizes, 63% means the file is 63% of the size of the LZW source image.
 
-| Imagery Type | LZW  | Zstd | WebP | Lerc |
-|--------------|------|------|------|------|
-| Grayscale    | 100% | 87%  | 63%  | 79%  |
-| RGB (8bit)   | 100% | 66%  | 34%  | 57%  |
-| RGBi (8bit)  | 100% | 79%  | NA   | 63%  |
+| Imagery Type  | LZW  | ZSTD | WebP  | LERC |
+|---------------|------|------|-------|------|
+| Grayscale     | 100% | 87%  | 63%   | 79%  |
+| RGB (8bit)    | 100% | 66%  | 34%   | 57%  |
+| RGBNIR (8bit) | 100% | 79%  | N/A   | 63%  |
 
 Some key results:
 
-RGB - WebP lossless is significantly better than all other types
-Grayscale - WebP lossless beats all other compressions tested
-RGBI - JPEG XL creates almost 50% smaller files than other compression types
+RGB - WebP Lossless is significantly better than all other types
+Grayscale - WebP Lossless beats all other compressions tested
+RGBNIR - WebP Lossless does not support 4 bands (R/G/B/NIR). JPEG-XL creates almost 50% smaller files than other compression types but has limited uptake. ZSTD can achieve better results at the cost of compression time, e.g. using ZSTD Level 17 achieves closer sizes to LERC compression but takes 5x longer than the default ZSTD Level 3.
 
 ## Recommendation
 
-With RGB and Grayscale imagery: WebP lossless is by far the best compression to use.
+With RGB and Grayscale imagery: WebP Lossless is by far the best compression to use.
 
-WebP does not support 4 band imagery so cannot be used on RGBi, More investigation needs to be done on RGBi and high bit count imagery, JPEG XL could be very good for these use cases.
-
-
+WebP does not support 4 band imagery so cannot be used on RGBNIR. ZSTD has broader support than LERC and can be tuned to achieve similar levels of compression. We also use ZSTD for Deep Glacier archive storage so it is part of our data processing workflows. RGBNIR aerial imagery will be published using ZSTD compression.
