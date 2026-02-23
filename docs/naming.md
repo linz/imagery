@@ -84,6 +84,7 @@ This is free text and at the imagery maintainer's discretion. A specific city or
 A general categorisation of imagery held within our archive that includes the following possible values:
 
 - Aerial Photos `aerial-photos`
+- Near-Infrared Aerial Photos `near-infrared-aerial-photos`
 - Rural Aerial Photos `rural-aerial-photos`
 - Scanned Aerial Photos `scanned-aerial-photos`
 - Satellite Imagery `satellite-imagery`
@@ -99,7 +100,7 @@ If `lifecycle = preview` then ` - Preview` is appended to the end of the imagery
 
 ### `product`
 
-Imagery product type, generally this is `rgb` as it is the primary imagery type for LINZ. Black and white imagery scanned from the Crown Aerial Film Archive is still stored as RGB, given that WEBP Lossless compression is more effective on 3-band RGB than other compression options that support single-band TIFFs.
+Imagery product type, generally this is `rgb` as it is the primary imagery type for LINZ. Black and white imagery scanned from the Crown Aerial Film Archive is still stored as RGB, given that WEBP Lossless compression is more effective on 3-band RGB than other compression options that support single-band TIFFs. Near-infrared aerial imagery started to be published from January 2026 using `rgbnir` as the path component. `rgbnir` should always sit alongside an `rgb` directory, with both imagery products created from the same survey.
 
 ### `region`
 
@@ -150,6 +151,13 @@ Path: s3://nz-imagery/waikato/hamilton_2023_0.05m/rgb/2193/collection.json
 ```
 Title: Waikato 0.3m Rural Aerial Photos (2016-2019)
 Path: s3://nz-imagery/waikato/waikato_2016-2019_0.3m/rgb/2193/collection.json
+```
+
+10cm Aerial RGBNIR imagery covering Tauranga within the Waikato region captured in 2025
+
+```
+Title: Tauranga 0.1m Near-Infrared Aerial Photos (2025)
+Path: s3://nz-imagery/waikato/tauranga_2025_0.1m/rgbnir/2193/collection.json
 ```
 
 10cm Aerial RGB imagery covering Ōtorohanga in the Waikato region captured in 2021 (macron removed in imagery dataset path)
