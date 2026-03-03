@@ -1,0 +1,89 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KJRM6T89DCMXPZ4R8Q04SHF3",
+  "title": "Wairoa Flood 0.1m Near-Infrared Aerial Photos (2024)",
+  "description": "Near-infrared orthophotography within the Hawke's Bay region captured in the 2024 flying season, published as a record of the Wairoa Flood event.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BH41_5000_0704.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122087b16078456ee9a37dad0645f005ae9c0b56b00ae3c1a32dc6ff70d381a21a27"
+    },
+    {
+      "href": "./BH41_5000_0705.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122030efa41b5054b07bbf252b6d3a1161fff5012e30cf1335d44534742198d7321a"
+    },
+    {
+      "href": "./BH41_5000_0706.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220da7d26f09c693101d847a69922cb555745d8132449936a351661c576eb7c1cf8"
+    },
+    {
+      "href": "./BH41_5000_0803.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12207dd07d9903d431dc26213fa35b567f2fa9ebba9a1edb41642696394a2783b683"
+    },
+    {
+      "href": "./BH41_5000_0804.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e3191f0c8eb02cadc9ef0a1a9ce9368d9226b7999bf75419d74ac41c91e42133"
+    },
+    {
+      "href": "./BH41_5000_0805.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b2423c76c64b966ed42cf84770cc026403f0ea3b21b8792d7c45641ce0547751"
+    },
+    {
+      "href": "./BH41_5000_0806.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d259a377672be11e2273a77f71d730cac5f8de87ff276580077ffe80aad00319"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYCAN", "roles": ["producer"] },
+    { "name": "Hawke's Bay Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "near-infrared-aerial-photos",
+  "linz:region": "hawkes-bay",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "wairoa-flood_2024_0.1m",
+  "gsd": 0.1,
+  "created": "2026-03-03T01:15:12Z",
+  "updated": "2026-03-03T01:15:12Z",
+  "linz:event_name": "Wairoa Flood",
+  "linz:geographic_description": "Wairoa Flood",
+  "extent": {
+    "spatial": { "bbox": [[177.3535638, -39.0809659, 177.4662138, -39.0120878]] },
+    "temporal": { "interval": [["2024-07-09T12:00:00Z", "2024-07-09T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220740f07b29cd9a80de9687d726cc3dc1facde8ee2f7bfb06e6698586a6d69a262",
+      "file:size": 1310
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
