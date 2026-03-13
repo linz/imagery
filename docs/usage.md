@@ -234,7 +234,17 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
    ![ArcGIS Pro Catalog View](img/usage/arcgis_pro_catalog_view.png)
 
-5. From here you can add individual TIFFs to the map, export them to different image formats, etc.
+5. From here you can add individual TIFFs to the map, export them to different image formats, etc. Where datasets have a Near-Infrared band available, this may not be immediately obvious. The TIFFs have 5 bands (Red/Green/Blue/NIR (Near-Infrared)/Alpha, for example this South Wairarapa 7.5cm Urban Aerial Imagery (2025) dataset:
+
+   ![ArcGIS Pro RGBNIR Catalog](img/usage/arcgis_pro_rgbnir_catalog.png)
+
+6. When added to the Map, by default this will appear as a regular Red/Green/Blue TIFF, but selecting it in the Contents pane and then using the "Raster Layer" ribbon to select a "Band Combination" of "Color Infrared" will render the TIFF using Near-Infrared/Red/Green instead.
+
+   ![ArcGIS Pro RGBNIR Catalog](img/usage/arcgis_pro_color_infrared.png)
+
+7. NDVI outputs are also possible using "Raster Functions".
+
+   ![ArcGIS Pro NDVI](img/usage/arcgis_pro_ndvi.png)
 
 ## Cyberduck
 
