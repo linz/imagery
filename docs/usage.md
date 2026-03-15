@@ -219,7 +219,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 ### Connecting to a Public Bucket
 
-1. On the "Browser" panel, right-click "Cloud" then "New Connection" then "AWS S3...".
+1. On the "Browser" panel, right-click "Cloud" then "New Connection" then "AWS S3...". Cloud connections are available from QGIS 3.40+.
 
    ![QGIS New Cloud Connection](img/usage/qgis_new_cloud_connection.png)
 
