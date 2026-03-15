@@ -217,6 +217,33 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
    ![Data Source Manager](img/usage/qgis_data-source-manager.png)
    ![QGIS View TIFF](img/usage/qgis_visualisation.png)
 
+### Connecting to a Public Bucket
+
+1. On the "Browser" panel, right-click "Cloud" then "New Connection" then "AWS S3...".
+
+   ![QGIS New Cloud Connection](img/usage/qgis_new_cloud_connection.png)
+
+2. In the "New AWS S3 Connection" dialog, add a "Name" e.g. `New Zealand Imagery` and "Bucket or container" as `nz-imagery`.
+3. Because this is a Public Bucket, add "Credentials" with "Key" of `AWS_NO_SIGN_REQUEST` and "Value" of `YES`. This means that you won't need an Access Key ID or Secret Access Key.
+
+   ![QGIS Cloud Connection Details](img/usage/qgis_connection_details.png)
+
+4. Click "OK". The cloud connection will appear in the "Browser" panel, where the bucket structure can be explored.
+
+   ![QGIS Catalog View](img/usage/qgis_catalog_view.png)
+
+5. From here you can add individual TIFFs to the map, export them to different image formats, etc.
+
+### Rendering Near-Infrared TIFFs
+
+1. Where datasets have a Near-Infrared band available, this may not be immediately obvious. The TIFFs have 5 bands (Red/Green/Blue/NIR (Near-Infrared)/Alpha, for example this South Wairarapa 7.5cm Urban Aerial Imagery (2025) dataset:
+
+   ![QGIS RGBNIR Catalog](img/usage/qgis_rgbnir_catalog.png)
+
+2. When added to the Map, by default this will appear as a regular Red/Green/Blue TIFF, but selecting it in the Browser panel, opening the Layer Styling panel and then using the "Multiband color" rendering option to change the "Red band" to "Band 4 (Near InfraRed (NIR))", the "Green band" to "Band 1 (Red)" and the "Blue band" to "Band 2 (Green)" will render the TIFF as Colour Infrared using the Near-Infrared/Red/Green band combination instead.
+
+   ![QGIS Color Infrared](img/usage/qgis_color_infrared.png)
+
 ## ArcGIS Pro
 
 ### Connecting to a Public Bucket
@@ -244,7 +271,7 @@ Band 4 Block=512x512 Type=Byte, ColorInterp=Alpha
 
 2. When added to the Map, by default this will appear as a regular Red/Green/Blue TIFF, but selecting it in the Contents pane and then using the "Raster Layer" ribbon to select a "Band Combination" of "Color Infrared" will render the TIFF using Near-Infrared/Red/Green instead.
 
-   ![ArcGIS Pro RGBNIR Catalog](img/usage/arcgis_pro_color_infrared.png)
+   ![ArcGIS Pro Color Infrared](img/usage/arcgis_pro_color_infrared.png)
 
 3. NDVI outputs are also possible using "Raster Functions".
 
