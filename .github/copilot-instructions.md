@@ -20,7 +20,7 @@ This repository contains STAC Collection metadata for New Zealand aerial imagery
 - If the title contains `"Draft"`, `linz:lifecycle` must be `"ongoing"`.
 - If the title contains `"Near-Infrared"` then the repository path must be `stac/{region}/{survey}/rgbnir/`.
 - If the repository path is `stac/{region}/{survey}/rgbnir/` then the title must contain `"Near-Infrared"`.
-- If the title contains a survey number, it must match one of the following forms: SN or SNC followed by 1 to 5 digits (e.g. SN167, SNC144, SN11624, SNC25049). Any value that looks like a survey number but does not match this pattern (e.g. SNCC100, SN4637C, SN1234567) should be flagged.
+- If the title contains a survey number, it must match one of the following forms: `SN` or `SNC` followed by 1 to 5 digits (e.g. `SN167`, `SNC144`, `SN11624`, `SNC25049`). Any value that looks like a survey number but does not match this pattern (e.g. `SNCC100`, `SN4637C`, `SN1234567`) should be flagged.
 
 ## Links
 
