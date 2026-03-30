@@ -19,7 +19,7 @@ This repository contains STAC Collection metadata for New Zealand aerial imagery
 - The title must include a year or year range in parentheses, e.g. `(2026)` or `(2024-2025)`. Temporal extents are stored in UTC but titles reflect NZDT (UTC+13), so a 1-day difference between the temporal extent and the title at year boundaries is acceptable.
 - If the title contains `"Draft"`, `linz:lifecycle` must be `"ongoing"`.
 - If the title contains `"Near-Infrared"` then the repository path must be `stac/{region}/{survey}/rgbnir/`.
-- If the product directory name in the repository path (`stac/{region}/{survey}/{product}/` is `rgbnir` then the title must contain `"Near-Infrared"`.
+- If the repository path is `stac/{region}/{survey}/rgbnir/` then the title must contain `"Near-Infrared"`.
 - If the title contains a survey number, it must match one of the following forms: SN or SNC followed by 1 to 5 digits (e.g. SN167, SNC144, SN11624, SNC25049). Any value that looks like a survey number but does not match this pattern (e.g. SNCC100, SN4637C, SN1234567) should be flagged.
 
 ## Links
