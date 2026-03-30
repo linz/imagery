@@ -4,12 +4,10 @@ This repository contains STAC Collection metadata for New Zealand aerial imagery
 
 ## General Fields
 
-- `type` must be present and must be exactly `"Collection"`.
-- `stac_version` must be present and match the pattern `\d+\.\d+` (e.g. `"1.0.0"`).
 - `id` must be a valid ULID: 26 characters using Crockford base32 (`[0-9A-HJKMNP-TV-Z]`). It must be unique across all collections in the repository.
 - The `id` of a dataset must not change.
 - `stac_extensions` must be present and must be an array (use `[]` if no extensions apply).
-- `license` must be present and must be exactly `"CC-BY-4.0"`.
+- `license` must be exactly `"CC-BY-4.0"`.
 - `gsd` should not contain units of measurement.
 - The `created` and `updated` datetimes must be present and valid and must not be future datetimes. The `created` date cannot be after the `updated` date.
 
@@ -24,7 +22,6 @@ This repository contains STAC Collection metadata for New Zealand aerial imagery
 
 ## Links
 
-- `links` must be a non-empty array.
 - There must be a link with `rel: "root"` and a link with `rel: "self"`.
 - There must be at least one link with `rel: "item"`.
 - All link `href` values must start with `https` or `./`.
