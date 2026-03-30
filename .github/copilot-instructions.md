@@ -4,7 +4,7 @@ This repository contains STAC Collection metadata and data publishing configurat
 
 ## publish-odr-parameters
 
-When aerial imagery is published to the Registry of Open Data on AWS, a configuration file is created here containing some parameters for the publishing process.
+When aerial imagery is published to the Registry of Open Data on AWS, a configuration file is created here containing some parameters for the publishing process. When reviewing changes to `publish-odr-parameters` files, check the following rules.
 
 ### Parameter Files
 
