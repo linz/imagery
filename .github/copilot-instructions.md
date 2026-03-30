@@ -53,7 +53,7 @@ This repository contains STAC Collection metadata for New Zealand aerial imagery
 - If `linz:lifecycle` is `"ongoing"`, the title must contain `"Draft"`.
 - `linz:region` must be present and must match the region directory name in the repository path `stac/{region}/`.
 - `linz:security_classification` must be present and must be exactly `"unclassified"`.
-- `linz:slug` must be present and must match the 
+- `linz:slug` must be present and must match the survey directory name in the repository path `stac/{region}/{survey}/.
 - `linz:geographic_description`, if present, must be consistent with the same field in other collections. Avoid very-near-duplicate values that differ only by minor spelling or punctuation — use the form that appears most frequently across the repository.
 - If `linz:geospatial_category` is `"urban-aerial-photos"` and a `gsd` field is present, the value must be less than `0.2` (20 cm).
 - If the `gsd` field is less than `0.2` and a `linz:geographic_description` is present, the `linz:geospatial_category` should be `"urban-aerial-photos"`.
