@@ -1,6 +1,6 @@
 # GitHub Copilot Review Instructions
 
-This repository contains STAC Collection metadata for New Zealand aerial imagery datasets. It also contains configuration files for data publishing
+This repository contains STAC Collection metadata and data publishing configuration files for New Zealand aerial imagery datasets.
 
 ## publish-odr-parameters
 
