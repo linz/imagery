@@ -2,6 +2,8 @@
 
 This repository contains STAC Collection metadata and data publishing configuration files for New Zealand aerial imagery datasets.
 
+There is no need to add a Pull Request overview beyond confirming how many new or changed files were reviewed. Inline comments and/or suggestions where discrepancies are identified are the priority.
+
 ## publish-odr-parameters
 
 When aerial imagery is published to the Registry of Open Data on AWS, a configuration file is created here containing some parameters for the publishing process. When reviewing changes to `publish-odr-parameters` files, check the following rules.
@@ -12,7 +14,7 @@ When aerial imagery is published to the Registry of Open Data on AWS, a configur
 - There should be a maximum of one new `publish-odr-parameters` file added per Pull Request. If there is more than one, older parameter files should be deleted. There can also be zero parameter files, if only `collection.json` metadata is being updated.
 - The `target` is `"s3://nz-imagery/{region}/{survey}/{product}/{projection}/"` which should align to the dataset metadata stored in this repository at `stac/{region}/{survey}/{product}/{projection}/collection.json`.
 - The `region` in the parameter file must match the region directory name in the repository path `stac/{region}/`.
-- The `copy_option` should be `--force-no-clobber` if there are any `file:checksum` values being modified in the `collection.json` file within the same Pull Request. If the Pull Request only contains links to new items with new `file:checksum` values, then the `copy_option` should be `--no-clobber`.
+- Check whether any `file:checksum` values are being changed within a `collection.json` file in this Pull Request. The `copy_option` in the parameter file should be `--force-no-clobber` if any `file:checksum` values have changed. If the `collection.json` is a newly added file, if it only contains links to new items with new `file:checksum` values, or if `collection.json` changes do not modify any `file:checksum` values, then the `copy_option` should be `--no-clobber`.
 
 ## stac
 
