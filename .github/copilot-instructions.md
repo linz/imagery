@@ -2,7 +2,7 @@
 
 This repository contains STAC Collection metadata and data publishing configuration files for New Zealand aerial imagery datasets.
 
-There is no need add a pull request overview beyond confirming how many new or changed files were reviewed. Inline comments and/or suggestions where discrepancies are identified are the priority.
+There is no need to add a pull request overview beyond confirming how many new or changed files were reviewed. Inline comments and/or suggestions where discrepancies are identified are the priority.
 
 ## publish-odr-parameters
 
