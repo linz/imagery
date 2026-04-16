@@ -11,11 +11,7 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    {
-      "rel": "self",
-      "href": "./collection.json",
-      "type": "application/json"
-    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
     {
       "href": "./BE32_1000_1407.json",
       "rel": "item",
@@ -720,25 +716,9 @@
     }
   ],
   "providers": [
-    {
-      "name": "Toitū Te Whenua Land Information New Zealand",
-      "roles": [
-        "host",
-        "processor"
-      ]
-    },
-    {
-      "name": "Landpro",
-      "roles": [
-        "producer"
-      ]
-    },
-    {
-      "name": "CoLAB",
-      "roles": [
-        "licensor"
-      ]
-    }
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Landpro", "roles": ["producer"] },
+    { "name": "CoLAB", "roles": ["licensor"] }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -750,24 +730,8 @@
   "updated": "2026-04-16T00:07:47Z",
   "linz:geographic_description": "Ōtorohanga",
   "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          174.8005252,
-          -38.2075793,
-          175.2578636,
-          -37.9995767
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          "2021-02-17T11:00:00Z",
-          "2021-02-17T11:00:00Z"
-        ]
-      ]
-    }
+    "spatial": { "bbox": [[174.8005252, -38.2075793, 175.2578636, -37.9995767]] },
+    "temporal": { "interval": [["2021-02-17T11:00:00Z", "2021-02-17T11:00:00Z"]] }
   },
   "assets": {
     "capture_area": {
@@ -775,14 +739,10 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": [
-        "metadata"
-      ],
+      "roles": ["metadata"],
       "file:checksum": "1220c829a786036f017ed9ee435efdb58fc859189ce4c8274076fb4d64a424512648",
       "file:size": 2010
     }
   },
-  "stac_extensions": [
-    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
-  ]
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
 }
