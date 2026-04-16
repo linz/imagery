@@ -16038,11 +16038,22 @@
     "temporal": { "interval": [["2019-02-06T11:00:00Z", "2021-02-19T11:00:00Z"]] }
   },
   "created": "2023-09-09T00:00:00Z",
-  "updated": "2026-04-13T01:04:56Z",
+  "updated": "2026-04-16T02:15:02Z",
   "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
   "gsd": 0.3,
   "linz:security_classification": "unclassified",
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
-  "linz:region": "otago"
+  "linz:region": "otago",
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "122073feabc9f2063c6edfdca8b4c721cc0db6d8247b694b1e64ace97503efcd1a7c",
+      "file:size": 9048
+    }
+  }
 }
