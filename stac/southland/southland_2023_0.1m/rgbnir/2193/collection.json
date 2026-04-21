@@ -1,0 +1,57 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KPPNJ3PBQX5ZFM3VWTWFDF5S",
+  "title": "Southland 0.1m Near-Infrared Aerial Photos (2023)",
+  "description": "Near-infrared orthophotography within the Southland region captured in the 2023 flying season.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CD11_5000_0701.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220470228bbc2b89e860fd0456f1bbb3db2997fe6ee628a4090fdc280fc58007a54"
+    },
+    {
+      "href": "./CD11_5000_0702.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204fce987627f742f1c6958ad6c8bba255dac6da16fd0eedc6a8a26b18211ecec0"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Landpro", "roles": ["producer"] },
+    { "name": "Environment Southland", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "near-infrared-aerial-photos",
+  "linz:region": "southland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "southland_2023_0.1m",
+  "gsd": 0.1,
+  "created": "2026-04-21T00:03:10Z",
+  "updated": "2026-04-21T00:03:10Z",
+  "extent": {
+    "spatial": { "bbox": [[168.5434666, -45.5297082, 168.6072718, -45.4950231]] },
+    "temporal": { "interval": [["2023-01-07T11:00:00Z", "2023-04-29T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "122086cd85517f01a8b8be818f90069da7b06b2eb7b2c20cd1ba5c923c28d0841e99",
+      "file:size": 329
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
