@@ -35,6 +35,7 @@ jobs:
       - name: Download actionlint
         run: docker build --tag actionlint - < .github/workflows/actionlint.dockerfile
 
+        # ignore 'unexpected key "queue" for "concurrency" section' as new label not yet in schema
       - name: Run actionlint to check workflow files
         run: docker run --volume="${PWD}:/repo" --workdir=/repo actionlint -ignore 'unexpected key "queue" for "concurrency" section' -color
 
