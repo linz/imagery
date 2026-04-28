@@ -3,6 +3,10 @@ on:
   push:
   workflow_dispatch:
 
+concurrency:
+  group: publish-queue
+  queue: max
+
 jobs:
   main:
     name: Validate STAC
