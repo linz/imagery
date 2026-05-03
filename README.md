@@ -6,9 +6,9 @@
 
 Toitū Te Whenua Land Information New Zealand makes New Zealand's most up-to-date publicly owned aerial imagery freely available to use under an open licence. You can access this through the [LINZ Data Service](https://data.linz.govt.nz/data/category/aerial-photos/?s=n), [LINZ Basemaps](https://basemaps.linz.govt.nz/#@-41.8899962,174.0492437,z5) or the [Registry of Open Data on AWS](https://registry.opendata.aws/nz-imagery/).
 
-This repository contains a copy of the STAC Collection metadata for each aerial imagery dataset, as well as some guidance documentation.
+This repository contains a copy of the [STAC](https://stacspec.org/) Collection metadata for each aerial imagery dataset, as well as some guidance documentation.
 
-When a new aerial imagery dataset is published by Toitū Te Whenua Land Information New Zealand, the first step is always that a new Pull Request is opened on this repository, adding a STAC Collection for the new dataset. When this Pull Request is reviewed and merged, a data copying task will automatically be kicked off that moves the data and metadata for that new dataset from internal storage into the s3://nz-imagery public bucket. From here, the dataset may also be published on the LINZ Data Service and/or LINZ Basemaps. The top-level catalog.json is also updated to link to the new dataset after the copy task completes.
+When a new aerial imagery dataset is published by Toitū Te Whenua Land Information New Zealand, the first step is always that a new Pull Request is opened on this repository, adding a STAC Collection for the new dataset. When this Pull Request is reviewed and merged, a data copying task will automatically be kicked off that moves the data and metadata for that new dataset from internal storage into the `s3://nz-imagery` public bucket. From here, the dataset may also be published on the LINZ Data Service and/or LINZ Basemaps. The top-level [STAC Catalog](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json) is also updated to link to the new dataset after the copy task completes.
 
 ## Quickstart
 
@@ -26,8 +26,8 @@ aws s3 ls --no-sign-request s3://nz-imagery/
 
 For more information on interacting with the metadata and data in `s3://nz-imagery`, see further guidance:
 
-- [Tools](docs/tools.md) covers some of the STAC ecosystem tools that can be used to interact with our STAC Catalog
-- [Usage](docs/usage.md) shows how TIFFs can be interacted with from S3 using GDAL, QGIS, etc
+- [Tools](docs/tools.md) covers some of the STAC ecosystem tools that can be used to interact with our STAC Catalog.
+- [Usage](docs/usage.md) shows how TIFFs can be interacted with from S3 using GDAL, QGIS, etc.
 
 ## Data Overview
 
@@ -47,11 +47,11 @@ Generally procured to better specifications (e.g. higher resolution) than the na
 
 ### Historical Scanned Aerial Imagery
 
-From 2014 to 2023, Toitū Te Whenua Land Information New Zealand led a collaborative programme to digitise film negatives in the Crown Aerial Film Library. In some cases these have then also been georeferenced, orthorectified and made available in `s3://nz-imagery`. All scanned aerial imagery includes a survey number reference starting with `SN` in its title.
+From 2014 to 2023, Toitū Te Whenua Land Information New Zealand led a collaborative programme to digitise film negatives in the [Crown Aerial Film Library](https://www.linz.govt.nz/products-services/data/types-linz-data/aerial-imagery/historical-aerial-imagery). In some cases these have then also been georeferenced, orthorectified and made available in `s3://nz-imagery`. All scanned aerial imagery includes a survey number reference starting with `SN` in its title.
 
 ### Emergency Response Imagery
 
-Some imagery has been captured to assist with emergency response and post-event recovery. This is designated with `"linz:event_name"` in the STAC Collection metadata.
+Some imagery has been captured to assist with [emergency response and post-event recovery](https://www.linz.govt.nz/our-work/location-information/geospatial-support-emergency). This is designated with `"linz:event_name"` in the STAC Collection metadata.
 
 ### Annual Cloudfree Satellite Imagery Mosaics
 
@@ -63,8 +63,8 @@ Annual satellite imagery mosaics are created from data from the European Space A
 
 ## Related
 
-- For access to LINZ's elevation data see [linz/elevation](https://github.com/linz/elevation)
-- For access to LINZ's coastal elevation data see [linz/coastal](https://github.com/linz/coastal/)
+- For access to LINZ's elevation data see [linz/elevation](https://github.com/linz/elevation).
+- For access to LINZ's coastal elevation data see [linz/coastal](https://github.com/linz/coastal/).
 
 ## License
 
