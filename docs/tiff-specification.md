@@ -13,7 +13,7 @@ Cloud-Optimised GeoTIFFs and the specific compressions used for storage are not 
 
 ## Imagery Data Storage Specification
 
-Applies to all Imagery published in s3://nz-imagery after being processed by Toitū Te Whenua Land Information New Zealand.
+Applies to all Imagery published in `s3://nz-imagery` after being processed by Toitū Te Whenua Land Information New Zealand.
 
 For data processing scripts, see [`linz/topo-imagery`](https://github.com/linz/topo-imagery).  
 For workflow configuration, see [`linz/topo-workflows`](https://github.com/linz/topo-workflows). 
