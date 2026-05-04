@@ -10,6 +10,15 @@ This repository contains a copy of the [STAC](https://stacspec.org/) Collection 
 
 When a new aerial imagery dataset is published by Toitū Te Whenua Land Information New Zealand, the first step is always that a new Pull Request is opened on this repository, adding a STAC Collection for the new dataset. When this Pull Request is reviewed and merged, a data copying task will automatically be kicked off that moves the data and metadata for that new dataset from internal storage into the `s3://nz-imagery` public bucket. From here, the dataset may also be published on the LINZ Data Service and/or LINZ Basemaps. The top-level [STAC Catalog](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json) is also updated to link to the new dataset after the copy task completes.
 
+```mermaid
+flowchart LR
+    A["New aerial imagery dataset standardised"] -.->|auto| B["Pull Request opened, adding STAC Collection metadata"]
+    B --> C["Pull Request reviewed and merged"]
+    C -.->|auto| D["Data and STAC Collection copied to s3://nz-imagery"]
+    D -.->|auto| E["STAC Catalog updated"]
+    D --> F["Published on LINZ Data Service and LINZ Basemaps, as appropriate"]
+```
+
 ## Quickstart
 
 Browse the archive with [STAC Browser](https://radiantearth.github.io/stac-browser/#/external/nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json) or access the catalog directly [https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/catalog.json)
@@ -33,29 +42,47 @@ For more information on interacting with the metadata and data in `s3://nz-image
 
 The `s3://nz-imagery` bucket comprises of a variety of different imagery types, captured for different purposes. [Naming](docs/naming.md) covers the `s3://nz-imagery` bucket structure.
 
+### Urban Aerial Photos
+
+Generally procured to better specifications (e.g. higher resolution) than other imagery types but with smaller town and city scale coverage. Procured and owned by the local territorial authority.
+
+   ![Urban Example](docs/img/data-overview/urban-waimakariri.jpg)  
+   Example: **Waimakariri 0.04m Urban Aerial Photos (2025)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/canterbury/waimakariri_2025_0.04m/rgb/2193/collection.json) | [LINZ Basemaps](https://basemaps.linz.govt.nz/@-43.2913856,172.6032637,z17.75?i=waimakariri-2025-0.04m) | [LINZ Data Service](https://data.linz.govt.nz/layer/122655-waimakariri-004m-urban-aerial-photos-2025/)
+
 ### Rural Aerial Photos
 
 Datasets that provide regional coverage are procured according to the [National Aerial Imagery Base Specification](https://www.linz.govt.nz/products-services/data/types-linz-data/aerial-imagery/national-imagery-base-specification) and are typically 20-30cm resolution.
 
+   ![Rural Example](docs/img/data-overview/rural-bay-of-plenty.jpg)  
+   Example: **Bay of Plenty West 0.2m Rural Aerial Photos (2024-2025)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/bay-of-plenty/bay-of-plenty_2024_0.2m/rgb/2193/collection.json) | [LINZ Basemaps](https://basemaps.linz.govt.nz/@-37.8401749,176.0642663,z14.82?i=bay-of-plenty-2024-0.2m) | [LINZ Data Service](https://data.linz.govt.nz/layer/120065-bay-of-plenty-west-02m-rural-aerial-photos-2024-2025/)
+
+### Annual Cloudfree Satellite Imagery Mosaics
+
+Annual satellite imagery mosaics are created from data from the European Space Agency's Sentinel-2 satellites. These are cloudfree mosaics comprising data collected over several months. See `s3://nz-imagery/new-zealand/`.
+
+   ![Satellite Mosaic Example](docs/img/data-overview/satellite-mosaic-queenstown.jpg)  
+   Example: **New Zealand 10m Satellite Imagery (2024-2025)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/new-zealand/new-zealand_2024-2025_10m/rgb/2193/collection.json) | [LINZ Basemaps](https://basemaps.linz.govt.nz/@-45.0334616,168.6989573,z11.64?i=new-zealand-2024-2025-10m) | [LINZ Data Service](https://data.linz.govt.nz/layer/123125-new-zealand-10m-satellite-imagery-2024-2025/)
+
 ### Near-Infrared Aerial Photos
 
-The addition of a near-infrared band is required under the base specification and commonly included in other imagery procurements as well. We always publish RGB TIFFs and RGBNIR TIFFs as two separate products alongside each other, in surveys where near-infrared data is available.
+The addition of a near-infrared band is required under the base specification and commonly included in other imagery procurements as well. RGB TIFFs and Near-Infrared TIFFs are published as two separate data products for surveys where near-infrared data is available.
 
-### Urban Aerial Photos
-
-Generally procured to better specifications (e.g. higher resolution) than the national base specification but with smaller town and city scale coverage. Procured, provided and owned by the local territorial authority.
+   ![Near-Infrared Example](docs/img/data-overview/near-infrared-auckland.jpg)  
+   Example: **Auckland 0.075m Near-Infrared Aerial Photos (2024-2025)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/auckland/auckland_2024_0.075m/rgbnir/2193/collection.json) | *Not currently published on LINZ Basemaps or the LINZ Data Service*
 
 ### Historical Scanned Aerial Imagery
 
 From 2014 to 2023, Toitū Te Whenua Land Information New Zealand led a collaborative programme to digitise film negatives in the [Crown Aerial Film Library](https://www.linz.govt.nz/products-services/data/types-linz-data/aerial-imagery/historical-aerial-imagery). In some cases these have then also been georeferenced, orthorectified and made available in `s3://nz-imagery`. All scanned aerial imagery includes a survey number reference starting with `SN` in its title.
 
+   ![Historical Scanned Example](docs/img/data-overview/historical-scanned-auckland.jpg)  
+   Example: **Auckland 0.04m SN2714 (1974)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/auckland/auckland_sn2714_1974_0.04m/rgb/2193/collection.json) | [LINZ Basemaps](https://basemaps.linz.govt.nz/@-36.8245334,174.7473735,z17.19?i=auckland-sn2714-1974-0.04m) | *Not currently published on the LINZ Data Service*
+
 ### Emergency Response Imagery
 
 Some imagery has been captured to assist with [emergency response and post-event recovery](https://www.linz.govt.nz/our-work/location-information/geospatial-support-emergency). This is designated with `"linz:event_name"` in the STAC Collection metadata.
 
-### Annual Cloudfree Satellite Imagery Mosaics
-
-Annual satellite imagery mosaics are created from data from the European Space Agency's Sentinel-2 satellites. These are cloudfree mosaics comprising data collected over several months. See `s3://nz-imagery/new-zealand/`.
+   ![Emergency Response Example](docs/img/data-overview/emergency-response-gabrielle.jpg)  
+   Example: **Gisborne 0.2m Cyclone Gabrielle Aerial Photos (2023)** | [STAC Collection](https://nz-imagery.s3-ap-southeast-2.amazonaws.com/gisborne/gisborne-cyclone-gabrielle_2023_0.2m/rgb/2193/collection.json) | [LINZ Basemaps](https://basemaps.linz.govt.nz/@-38.7034667,177.6789055,z15.87?i=gisborne-cyclone-gabrielle-2023-0.2m) | [LINZ Data Service](https://data.linz.govt.nz/layer/112864-gisborne-02m-cyclone-gabrielle-aerial-photos-2023/)
 
 ### Other Imagery
 
