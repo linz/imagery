@@ -1,10 +1,13 @@
 name: Publish
 on:
   push:
+    branches-ignore:
+      - gh-readonly-queue/**
   workflow_dispatch:
 
 concurrency:
-  group: publish-queue
+  # Queue master branch, but let all other branch actions execute independently.
+  group: ${{ github.ref == 'refs/heads/master' && 'publish-queue' || format('validate-{0}', github.run_id) }}
   queue: max
 
 jobs:
@@ -60,7 +63,7 @@ jobs:
       - name: Setup kubectl
         uses: azure/setup-kubectl@3e0aec4d80787158d308d7b364cb1b702e7feb7f # v4.0.0
         with:
-          version: "latest"
+          version: 'latest'
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@010d0da01d0b5a38af31e9c3470dbfdabdecca3a # v4
@@ -86,7 +89,7 @@ jobs:
 
       - name: Submit Added/Changed Parameter Files
         id: modified-files
-        if: ${{ !contains(github.event.head_commit.message, '[skip-argo]')}}
+        if: ${{ !contains(github.event.head_commit.message, '[skip-argo]') && github.ref == 'refs/heads/master' }}
         run: |
           # AM = Include: Added, Modified
           mapfile -d '' modified_parameter_files < <(git diff --name-only --diff-filter=AM -z ${{ github.event.before }} ${{ github.event.after }} -- "publish-odr-parameters/*.yaml")
@@ -98,7 +101,6 @@ jobs:
   sync-stac:
     name: Sync STAC files
     runs-on: ubuntu-latest
-    concurrency: publish-${{ github.ref }}
     needs: publish-odr
     if: ${{ github.ref == 'refs/heads/master' }}
 
@@ -112,7 +114,7 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
-          ref: master # Ensure only the latest STAC documents are synced into S3
+          ref: ${{ github.sha }} # Sync the STAC for the commit that triggered the Publish ODR workflow run
 
       - name: AWS Configure
         uses: aws-actions/configure-aws-credentials@010d0da01d0b5a38af31e9c3470dbfdabdecca3a # v4
@@ -136,7 +138,7 @@ jobs:
 
       # Sync STAC files only on push to 'master'
       - name: Sync STAC
-        if: ${{ !contains(github.event.head_commit.message, '[skip-sync]')}}
+        if: ${{ !contains(github.event.head_commit.message, '[skip-sync]') && github.ref == 'refs/heads/master' }}
         uses: docker://ghcr.io/linz/argo-tasks:v5
         with:
           args: stac-sync /github/workspace/stac/ s3://nz-imagery/
