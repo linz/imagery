@@ -7080,12 +7080,23 @@
     "temporal": { "interval": [["2022-12-28T11:00:00Z", "2023-03-01T11:00:00Z"]] }
   },
   "created": "2023-11-14T22:33:12Z",
-  "updated": "2026-05-06T22:31:13Z",
+  "updated": "2026-06-01T23:55:41Z",
   "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
   "gsd": 0.075,
   "linz:security_classification": "unclassified",
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
   "linz:region": "canterbury",
-  "linz:geographic_description": "Timaru"
+  "linz:geographic_description": "Timaru",
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12201d51d7fa0634d799e4fa453410f7c4e9ee9dd474d917a4bc34b28693325ef8dd",
+      "file:size": 7931
+    }
+  }
 }
