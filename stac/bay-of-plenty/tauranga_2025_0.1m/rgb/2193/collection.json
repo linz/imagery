@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01JVX3T4HBTVB6KYS6N50T729C",
   "title": "Tauranga 0.1m Urban Aerial Photos (2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BD36_1000_1250.json",
       "rel": "item",
@@ -5426,9 +5431,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Woolpert", "roles": ["producer"] },
-    { "name": "BOPLASS", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Woolpert",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "BOPLASS",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -5439,8 +5460,24 @@
   "updated": "2025-05-22T23:03:51Z",
   "linz:geographic_description": "Tauranga",
   "extent": {
-    "spatial": { "bbox": [[176.0145482, -37.8388559, 176.4273057, -37.6205734]] },
-    "temporal": { "interval": [["2025-02-11T11:00:00Z", "2025-03-01T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          176.0145482,
+          -37.8388559,
+          176.4273057,
+          -37.6205734
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-02-11T11:00:00Z",
+          "2025-03-01T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -5448,10 +5485,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220a51b70726580c1494fcdc656cf997831e245a4dff7c97366892807bad80b0416",
       "file:size": 3936
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

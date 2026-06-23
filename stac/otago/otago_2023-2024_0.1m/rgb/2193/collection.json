@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01J45S8NX2Y1S1S78PAC9KK5VV",
   "title": "Otago 0.1m Urban Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./CB13_1000_4508.json",
@@ -9740,9 +9745,25 @@
     }
   ],
   "providers": [
-    { "name": "Woolpert", "roles": ["producer"] },
-    { "name": "Otago Regional Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Woolpert",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Otago Regional Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -9752,18 +9773,38 @@
   "updated": "2024-11-14T01:59:24Z",
   "linz:slug": "otago_2023-2024_0.1m",
   "extent": {
-    "spatial": { "bbox": [[169.138494, -45.9774145, 170.7406305, -44.9625898]] },
-    "temporal": { "interval": [["2023-10-24T11:00:00Z", "2024-02-17T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          169.138494,
+          -45.9774145,
+          170.7406305,
+          -44.9625898
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-24T11:00:00Z",
+          "2024-02-17T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12202ca84d3989901fb332891d91778036574b9a62b29a5a76d02271ff29696c217e",
       "file:size": 13788
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

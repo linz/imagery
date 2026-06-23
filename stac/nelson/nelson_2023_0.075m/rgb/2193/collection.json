@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01K469640RS9XT94V06Y5SEMKF",
   "title": "Nelson 0.075m Urban Aerial Photos (2023)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BP26_1000_4848.json",
       "rel": "item",
@@ -5996,9 +6001,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Nelson City Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Nelson City Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -6008,8 +6029,24 @@
   "created": "2025-09-02T22:36:29Z",
   "updated": "2025-09-02T22:36:29Z",
   "extent": {
-    "spatial": { "bbox": [[173.1834789, -41.3934951, 173.5661143, -41.1006647]] },
-    "temporal": { "interval": [["2023-10-24T11:00:00Z", "2023-11-11T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.1834789,
+          -41.3934951,
+          173.5661143,
+          -41.1006647
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-24T11:00:00Z",
+          "2023-11-11T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -6017,10 +6054,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220edfb27df419d9bf68bff5112165a6fb88b04808655306f1cf6952e2b2065f2c8",
       "file:size": 5935
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

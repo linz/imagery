@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.75,
   "stac_version": "1.0.0",
   "id": "01K1W3MVH1SKG7SX1W0NEQA640",
   "title": "Otago 0.75m Rural Aerial Photos (2005-2011)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BY13_5000_1010.json",
       "rel": "item",
@@ -24176,9 +24181,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Terralink International", "roles": ["producer"] },
-    { "name": "Otago Regional Council, Terralink International", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Terralink International",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Otago Regional Council, Terralink International",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -24188,8 +24209,24 @@
   "created": "2025-08-05T03:15:53Z",
   "updated": "2025-08-05T03:15:53Z",
   "extent": {
-    "spatial": { "bbox": [[168.1009665, -46.6590479, 171.1755056, -43.9421577]] },
-    "temporal": { "interval": [["2005-02-21T11:00:00Z", "2011-01-23T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          168.1009665,
+          -46.6590479,
+          171.1755056,
+          -43.9421577
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2005-02-21T11:00:00Z",
+          "2011-01-23T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -24197,10 +24234,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220a80768b5bb0a7b4152e3fa3edd35bb453dc2d925b62c9111c838aab7ff9bd2b9",
       "file:size": 7834
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

@@ -1,9 +1,10 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01HSVVXF1EFY32RYYBR0X612ZS",
   "title": "Tararua 0.1m Urban Aerial Photos (2024)",
-  "description": "Orthophotography within the Manawatū-Whanganui region captured in the 2024 flying season.",
+  "description": "Orthophotography within the Manawat\u016b-Whanganui region captured in the 2024 flying season.",
   "license": "CC-BY-4.0",
   "links": [
     {
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BL36_1000_3644.json",
@@ -3212,9 +3217,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Tararua District Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Tararua District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -3223,20 +3244,40 @@
   "linz:geographic_description": "Tararua",
   "linz:slug": "tararua_2024_0.1m",
   "extent": {
-    "spatial": { "bbox": [[175.6788062, -40.6752192, 176.5749061, -40.0578804]] },
-    "temporal": { "interval": [["2024-02-03T11:00:00Z", "2024-02-04T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.6788062,
+          -40.6752192,
+          176.5749061,
+          -40.0578804
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-02-03T11:00:00Z",
+          "2024-02-04T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12206e6d2863467020af4cc0f83a966a4c026b0229a1fd9e75259407777ea457d0b9",
       "file:size": 13992
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-03-28T03:20:23Z",
   "updated": "2024-11-14T01:59:24Z"
 }

@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.05,
   "stac_version": "1.0.0",
   "id": "01JT7503F5W6CYZ60HZF6E2RNF",
   "title": "Napier 0.05m Urban Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BJ39_500_074043.json",
       "rel": "item",
@@ -3194,9 +3199,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Napier City Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Napier City Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -3207,8 +3228,24 @@
   "updated": "2025-05-02T00:05:34Z",
   "linz:geographic_description": "Napier",
   "extent": {
-    "spatial": { "bbox": [[176.8275888, -39.5632851, 176.927647, -39.3990781]] },
-    "temporal": { "interval": [["2024-12-12T11:00:00Z", "2025-02-24T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          176.8275888,
+          -39.5632851,
+          176.927647,
+          -39.3990781
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-12-12T11:00:00Z",
+          "2025-02-24T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -3216,10 +3253,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220bd0cbbfea3a2d09c9f62f70fdbc0231c3170b56000b3394a0b888821ff1accc4",
       "file:size": 3612
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

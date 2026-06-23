@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.3,
   "stac_version": "1.0.0",
   "id": "01J2FQTMWYT28ATBZW1508TAF4",
   "title": "Northland 0.3m Rural Aerial Photos (2023-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./AT24_5000_0203.json",
       "rel": "item",
@@ -11438,9 +11443,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Landpro", "roles": ["producer"] },
-    { "name": "National Institute of Water and Atmospheric Research", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Landpro",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National Institute of Water and Atmospheric Research",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -11450,8 +11471,24 @@
   "updated": "2025-05-27T01:26:00Z",
   "linz:slug": "northland_2023-2024_0.3m",
   "extent": {
-    "spatial": { "bbox": [[172.6079116, -36.4324847, 174.8084793, -34.3593284]] },
-    "temporal": { "interval": [["2023-11-12T11:00:00Z", "2025-03-24T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          172.6079116,
+          -36.4324847,
+          174.8084793,
+          -34.3593284
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-11-12T11:00:00Z",
+          "2025-03-24T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -11459,10 +11496,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220d4336652fb315093bc9468dd1abc507cd48a5995eb5190d368af9f23aa0ec248",
       "file:size": 8014
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

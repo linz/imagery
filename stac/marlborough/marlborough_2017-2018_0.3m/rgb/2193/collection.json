@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.3,
   "stac_version": "1.0.0",
   "id": "01JABJJBESZJTWKQTB5KGCJ1BP",
   "title": "Marlborough 0.3m Rural Aerial Photos (2017-2018)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BN28_5000_0509.json",
       "rel": "item",
@@ -4094,9 +4099,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Marlborough District Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Marlborough District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -4106,8 +4127,24 @@
   "updated": "2024-11-14T01:59:24Z",
   "linz:slug": "marlborough_2017-2018_0.3m",
   "extent": {
-    "spatial": { "bbox": [[173.0287974, -41.6921453, 174.4582684, -40.6499379]] },
-    "temporal": { "interval": [["2017-12-01T11:00:00Z", "2018-03-10T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.0287974,
+          -41.6921453,
+          174.4582684,
+          -40.6499379
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-12-01T11:00:00Z",
+          "2018-03-10T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -4115,10 +4152,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220749c2070832a3d645f98ef47a512b87ffe11565d150f61f52c346de9d1de7345",
       "file:size": 13500
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

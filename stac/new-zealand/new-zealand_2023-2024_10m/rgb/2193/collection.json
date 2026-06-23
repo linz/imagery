@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 10.0,
   "stac_version": "1.0.0",
   "id": "01J92MHX8KJ0NEXYEN5XGSJ04F",
   "title": "New Zealand 10m Satellite Imagery (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./AS21.json",
       "rel": "item",
@@ -2714,9 +2719,25 @@
     }
   ],
   "providers": [
-    { "name": "European Space Agency", "roles": ["producer"] },
-    { "name": "Planet", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "European Space Agency",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Planet",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "satellite-imagery",
@@ -2726,18 +2747,38 @@
   "updated": "2024-11-14T01:59:24Z",
   "linz:slug": "new-zealand_2023-2024_10m",
   "extent": {
-    "spatial": { "bbox": [[166.3157485, -47.5345307, 178.6357959, -34.0291036]] },
-    "temporal": { "interval": [["2023-08-31T12:00:00Z", "2024-04-29T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          166.3157485,
+          -47.5345307,
+          178.6357959,
+          -34.0291036
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-08-31T12:00:00Z",
+          "2024-04-29T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220a23cd056919e015ae815eb9049a86cb4fce06abd18d52cc8f464b9ca696b428d",
       "file:size": 6107
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

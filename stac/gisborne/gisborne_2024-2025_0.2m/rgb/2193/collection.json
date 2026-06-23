@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.2,
   "stac_version": "1.0.0",
   "id": "01JMGSDZN3YEJ0KPM3NSCXD15S",
   "title": "Gisborne 0.2m Rural Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BD43_1000_1742.json",
       "rel": "item",
@@ -42284,9 +42289,25 @@
     }
   ],
   "providers": [
-    { "name": "Landpro", "roles": ["producer"] },
-    { "name": "Gisborne District Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Landpro",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Gisborne District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -42296,8 +42317,24 @@
   "created": "2025-02-20T04:21:41Z",
   "updated": "2025-02-20T04:21:41Z",
   "extent": {
-    "spatial": { "bbox": [[177.1156421, -38.6618607, 178.5838495, -37.5284958]] },
-    "temporal": { "interval": [["2024-09-28T12:00:00Z", "2025-01-07T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          177.1156421,
+          -38.6618607,
+          178.5838495,
+          -37.5284958
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-09-28T12:00:00Z",
+          "2025-01-07T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -42305,10 +42342,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220044189ff03ae036677541cc720f4b26b853200e5c78a9b79613fd45ff9b69481",
       "file:size": 14589
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

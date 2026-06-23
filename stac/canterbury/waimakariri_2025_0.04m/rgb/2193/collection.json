@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.04,
   "stac_version": "1.0.0",
   "id": "01JZ1E46S9GSYBBFB13QRDNNKT",
   "title": "Waimakariri 0.04m Urban Aerial Photos (2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BW22_500_049084.json",
       "rel": "item",
@@ -23330,9 +23335,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Waimakariri District Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Waimakariri District Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -23343,8 +23364,24 @@
   "updated": "2025-06-30T22:08:08Z",
   "linz:geographic_description": "Waimakariri",
   "extent": {
-    "spatial": { "bbox": [[172.1417287, -43.4101301, 172.7427244, -43.2572206]] },
-    "temporal": { "interval": [["2025-02-08T11:00:00Z", "2025-02-16T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          172.1417287,
+          -43.4101301,
+          172.7427244,
+          -43.2572206
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-02-08T11:00:00Z",
+          "2025-02-16T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -23352,10 +23389,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12209400f1ddf852e7d6311e7a6b09ac1ab18c5e665ca05a42ac4f9e6346f7d40c30",
       "file:size": 3713
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

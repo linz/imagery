@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 10.0,
   "stac_version": "1.0.0",
   "id": "01K5FSBSYJ1987S9DFQCNJTM5G",
   "title": "New Zealand 10m Satellite Imagery (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./AS21.json",
       "rel": "item",
@@ -3068,9 +3073,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "European Space Agency", "roles": ["producer"] },
-    { "name": "Planet", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "European Space Agency",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Planet",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "satellite-imagery",
@@ -3080,8 +3101,24 @@
   "created": "2025-09-19T01:28:04Z",
   "updated": "2025-09-19T01:28:04Z",
   "extent": {
-    "spatial": { "bbox": [[166.2762613, -47.5487027, 178.8832065, -34.0291036]] },
-    "temporal": { "interval": [["2024-08-31T12:00:00Z", "2025-04-29T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          166.2762613,
+          -47.5487027,
+          178.8832065,
+          -34.0291036
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-08-31T12:00:00Z",
+          "2025-04-29T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -3089,10 +3126,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220c26197eaeab7a17fc4208e136f0a4fe01e0937daca803d5949b32c754f550bfc",
       "file:size": 6022
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

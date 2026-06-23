@@ -1,9 +1,10 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01JYQMG4MYHQ3BB0PKC4DR34GR",
   "title": "Whanganui River Catchment 0.1m Rural Aerial Photos (2025)",
-  "description": "Orthophotography within the Manawatū-Whanganui region captured in the 2025 flying season.",
+  "description": "Orthophotography within the Manawat\u016b-Whanganui region captured in the 2025 flying season.",
   "license": "CC-BY-4.0",
   "links": [
     {
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BF33_5000_1010.json",
       "rel": "item",
@@ -6338,9 +6343,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Landpro", "roles": ["producer"] },
-    { "name": "Ngā Tāngata Tiaki o Whanganui", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Landpro",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Ng\u0101 T\u0101ngata Tiaki o Whanganui",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -6351,8 +6372,24 @@
   "updated": "2025-08-17T22:54:01Z",
   "linz:geographic_description": "Whanganui River Catchment",
   "extent": {
-    "spatial": { "bbox": [[174.738873, -40.0524505, 175.7160195, -38.4525977]] },
-    "temporal": { "interval": [["2025-02-07T11:00:00Z", "2025-06-29T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.738873,
+          -40.0524505,
+          175.7160195,
+          -38.4525977
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-02-07T11:00:00Z",
+          "2025-06-29T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -6360,10 +6397,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12208d9a0589b3e6c6c17f0cf6b3a984fcbda565a14752400df1764bbbd966a232f9",
       "file:size": 21404
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.78,
   "stac_version": "1.0.0",
   "id": "01GYXV1TY5B8C1HWF3CAGQPWRD",
   "title": "Northland 0.78m Rural Aerial Photos (2004)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./AU26_5000_0603.json",
@@ -1778,10 +1783,31 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Terralink International Ltd", "roles": ["producer"] },
-    { "name": "Northland Regional Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Terralink International Ltd",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Northland Regional Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -1789,10 +1815,28 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "northland_2004_0.78m",
   "extent": {
-    "spatial": { "bbox": [[173.1837629, -36.5286135, 174.3916578, -34.8460299]] },
-    "temporal": { "interval": [["2004-03-01T11:00:00Z", "2005-02-02T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.1837629,
+          -36.5286135,
+          174.3916578,
+          -34.8460299
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2004-03-01T11:00:00Z",
+          "2005-02-02T11:00:00Z"
+        ]
+      ]
+    }
   },
   "created": "2023-09-09T00:00:00Z",
   "updated": "2026-05-05T00:00:00Z",
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

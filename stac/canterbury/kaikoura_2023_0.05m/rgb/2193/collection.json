@@ -1,8 +1,9 @@
 {
   "type": "Collection",
+  "gsd": 0.05,
   "stac_version": "1.0.0",
   "id": "01J4GVCC82ZYV2J5Y01BN1JH25",
-  "title": "Kaikōura 0.05m Urban Aerial Photos (2023)",
+  "title": "Kaik\u014dura 0.05m Urban Aerial Photos (2023)",
   "description": "Orthophotography within the Canterbury region captured in the 2023 flying season.",
   "license": "CC-BY-4.0",
   "links": [
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BT27_500_071083.json",
@@ -644,10 +649,31 @@
     }
   ],
   "providers": [
-    { "name": "SKYCAN", "roles": ["producer"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Environment Canterbury", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "SKYCAN",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Environment Canterbury",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -655,21 +681,41 @@
   "linz:security_classification": "unclassified",
   "created": "2024-08-06T23:40:05Z",
   "updated": "2026-05-06T03:00:00Z",
-  "linz:geographic_description": "Kaikōura",
+  "linz:geographic_description": "Kaik\u014dura",
   "linz:slug": "kaikoura_2023_0.05m",
   "extent": {
-    "spatial": { "bbox": [[173.6386994, -42.4261794, 173.7088714, -42.3710316]] },
-    "temporal": { "interval": [["2023-12-14T11:00:00Z", "2023-12-14T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.6386994,
+          -42.4261794,
+          173.7088714,
+          -42.3710316
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-12-14T11:00:00Z",
+          "2023-12-14T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12200ed597c0bf1d3480e7937651098855c692cfc2595342d4efce3795456e03f609",
       "file:size": 2359
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

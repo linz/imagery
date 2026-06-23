@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.05,
   "stac_version": "1.0.0",
   "id": "01HHK73XJPH6P621W9HZXM4JK6",
   "title": "Auckland Coast 0.05m Urban Aerial Photos (2022-2023) - Draft",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./AY30_1000_4150.json",
@@ -27164,9 +27169,25 @@
     }
   ],
   "providers": [
-    { "name": "Dimap", "roles": ["producer"] },
-    { "name": "Auckland Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Dimap",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Auckland Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "ongoing",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -27176,20 +27197,40 @@
   "linz:geographic_description": "Auckland Coast",
   "linz:slug": "auckland-coast_2022-2023_0.05m",
   "extent": {
-    "spatial": { "bbox": [[174.1568679, -37.3015115, 175.5557893, -36.0426247]] },
-    "temporal": { "interval": [["2022-11-25T11:00:00Z", "2023-01-22T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.1568679,
+          -37.3015115,
+          175.5557893,
+          -36.0426247
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-11-25T11:00:00Z",
+          "2023-01-22T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220c95401ecbad93214bac82e1aadba5db1f0dabdb0c28965c872babf6dadc2f6f2",
       "file:size": 618676
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-01-04T01:23:16Z",
   "updated": "2024-11-14T01:59:24Z"
 }

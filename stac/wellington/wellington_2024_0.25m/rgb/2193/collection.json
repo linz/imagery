@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.25,
   "stac_version": "1.0.0",
   "id": "01J02EMN2CKQ5WNDN1901NN8BN",
   "title": "Wellington 0.25m Rural Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BN34_5000_0610.json",
       "rel": "item",
@@ -4040,9 +4045,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "National Institute of Water and Atmospheric Research", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National Institute of Water and Atmospheric Research",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -4052,8 +4073,24 @@
   "updated": "2025-05-05T02:24:40Z",
   "linz:slug": "wellington_2024_0.25m",
   "extent": {
-    "spatial": { "bbox": [[175.095257, -41.6383317, 176.3804297, -40.6091576]] },
-    "temporal": { "interval": [["2024-04-02T11:00:00Z", "2025-03-02T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.095257,
+          -41.6383317,
+          176.3804297,
+          -40.6091576
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-04-02T11:00:00Z",
+          "2025-03-02T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -4061,10 +4098,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "122012802f0ac2ad78d03193250e71a11f30013f77fc16b81fbddff9225703d93c90",
       "file:size": 3601
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

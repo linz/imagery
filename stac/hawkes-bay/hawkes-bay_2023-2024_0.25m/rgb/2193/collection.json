@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.25,
   "stac_version": "1.0.0",
   "id": "01HKXHZ2JGKTMS7XDRWXAHFNMY",
   "title": "Hawke's Bay 0.25m Rural Aerial Photos (2023-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BG37_5000_1003.json",
       "rel": "item",
@@ -11612,9 +11617,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "National Institute of Water and Atmospheric Research", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National Institute of Water and Atmospheric Research",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -11624,8 +11645,24 @@
   "updated": "2025-04-28T04:46:01Z",
   "linz:slug": "hawkes-bay_2023-2024_0.25m",
   "extent": {
-    "spatial": { "bbox": [[176.0343987, -40.4678951, 178.0260432, -38.5360339]] },
-    "temporal": { "interval": [["2023-02-20T11:00:00Z", "2025-02-24T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          176.0343987,
+          -40.4678951,
+          178.0260432,
+          -38.5360339
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-02-20T11:00:00Z",
+          "2025-02-24T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -11633,10 +11670,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220689ba887c82b80b9c2dc76eba2d7a30ad0bf964d34a80567008db4f4173e5be6",
       "file:size": 7331
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01GSR3FCJE4TBXZ2YD5D0ZCYGJ",
   "title": "Christchurch 0.075m Urban Aerial Photos (2015-2016)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BW23_500_098097.json",
@@ -41972,9 +41977,25 @@
     }
   ],
   "providers": [
-    { "name": "Christchurch City Council", "roles": ["licensor"] },
-    { "name": "AAM NZ", "roles": ["producer"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Christchurch City Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "AAM NZ",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -41982,10 +42003,28 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "christchurch_2015-2016_0.075m",
   "extent": {
-    "spatial": { "bbox": [[172.3917526, -43.8350827, 173.1013443, -43.3877866]] },
-    "temporal": { "interval": [["2016-01-21T11:00:00Z", "2016-02-19T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          172.3917526,
+          -43.8350827,
+          173.1013443,
+          -43.3877866
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-01-21T11:00:00Z",
+          "2016-02-19T11:00:00Z"
+        ]
+      ]
+    }
   },
   "created": "2023-09-09T00:00:00Z",
   "updated": "2026-05-05T00:00:00Z",
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

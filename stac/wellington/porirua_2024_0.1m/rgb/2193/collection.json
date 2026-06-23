@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01HTKDF33772FMWCBZV6MCZ8QQ",
   "title": "Porirua 0.1m Urban Aerial Photos (2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BP31_1000_3250.json",
@@ -4016,9 +4021,25 @@
     }
   ],
   "providers": [
-    { "name": "Landpro", "roles": ["producer"] },
-    { "name": "Porirua City Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Landpro",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Porirua City Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -4027,20 +4048,40 @@
   "linz:geographic_description": "Porirua",
   "linz:slug": "porirua_2024_0.1m",
   "extent": {
-    "spatial": { "bbox": [[174.7657337, -41.1656353, 175.0006802, -41.0012497]] },
-    "temporal": { "interval": [["2024-01-06T11:00:00Z", "2024-01-07T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.7657337,
+          -41.1656353,
+          175.0006802,
+          -41.0012497
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-06T11:00:00Z",
+          "2024-01-07T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220187153a41264ebdacaec4982feb70e2822f8c26e0542f3a66a14a845ff0588e8",
       "file:size": 2488
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-04-04T22:56:59Z",
   "updated": "2024-11-14T01:59:24Z"
 }

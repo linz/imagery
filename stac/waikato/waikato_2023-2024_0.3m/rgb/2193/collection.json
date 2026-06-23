@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.3,
   "stac_version": "1.0.0",
   "id": "01J1XK7BHH54N78JMN435D6F7S",
   "title": "Waikato 0.3m Rural Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./AZ34_5000_0402.json",
@@ -12554,9 +12559,25 @@
     }
   ],
   "providers": [
-    { "name": "Landpro", "roles": ["producer"] },
-    { "name": "National Institute of Water and Atmospheric Research", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Landpro",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National Institute of Water and Atmospheric Research",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -12566,18 +12587,38 @@
   "updated": "2024-11-14T01:59:24Z",
   "linz:slug": "waikato_2023-2024_0.3m",
   "extent": {
-    "spatial": { "bbox": [[174.5731104, -38.8237518, 176.1276692, -36.3811521]] },
-    "temporal": { "interval": [["2023-11-08T11:00:00Z", "2024-03-18T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.5731104,
+          -38.8237518,
+          176.1276692,
+          -36.3811521
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-11-08T11:00:00Z",
+          "2024-03-18T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12205b4ccbd51586bfa2a3a1844960001e33d517eabd5873b4a2679fd4d9ae777f2c",
       "file:size": 7581
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

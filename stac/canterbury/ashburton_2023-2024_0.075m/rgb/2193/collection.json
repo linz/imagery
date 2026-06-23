@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01J4GVCC8RAHM9JBS97RHTDT41",
   "title": "Ashburton 0.075m Urban Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BX18_500_055091.json",
@@ -18458,10 +18463,31 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "SKYCAN", "roles": ["producer"] },
-    { "name": "Environment Canterbury", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "SKYCAN",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Environment Canterbury",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -18472,18 +18498,38 @@
   "linz:geographic_description": "Ashburton",
   "linz:slug": "ashburton_2023-2024_0.075m",
   "extent": {
-    "spatial": { "bbox": [[171.0367883, -44.1917453, 172.1991728, -43.5126799]] },
-    "temporal": { "interval": [["2023-12-19T11:00:00Z", "2024-02-13T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          171.0367883,
+          -44.1917453,
+          172.1991728,
+          -43.5126799
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-12-19T11:00:00Z",
+          "2024-02-13T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220aa6b431c1ee06a7225a98a145d33eed1b396a692de040625442f1f749cd41aaf",
       "file:size": 12517
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

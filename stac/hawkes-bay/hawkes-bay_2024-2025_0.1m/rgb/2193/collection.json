@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01JT75PVA0CWXTAPZT6ET3YWYN",
   "title": "Hawke's Bay 0.1m Urban Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BJ39_1000_2524.json",
       "rel": "item",
@@ -13112,11 +13117,37 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Napier City Council", "roles": ["licensor"] },
-    { "name": "Central Hawke's Bay District Council", "roles": ["licensor"] },
-    { "name": "Hastings District Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Napier City Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Central Hawke's Bay District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Hastings District Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -13126,8 +13157,24 @@
   "created": "2025-05-02T00:17:59Z",
   "updated": "2025-05-02T00:17:59Z",
   "extent": {
-    "spatial": { "bbox": [[176.3122772, -40.3198799, 177.0370161, -39.3171429]] },
-    "temporal": { "interval": [["2024-12-12T11:00:00Z", "2025-02-24T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          176.3122772,
+          -40.3198799,
+          177.0370161,
+          -39.3171429
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-12-12T11:00:00Z",
+          "2025-02-24T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -13135,10 +13182,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12202bc4934c8e12618ccba4c0a738643702f6fa2e9a461c2e4ff7062e9ddc037734",
       "file:size": 13148
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }
