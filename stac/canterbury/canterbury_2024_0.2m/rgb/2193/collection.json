@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.2,
   "stac_version": "1.0.0",
   "id": "01JDTSPDZ8HP8YGVVK8KHXXWZA",
   "title": "Canterbury 0.2m Rural Aerial Photos (2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BU21_5000_0907.json",
       "rel": "item",
@@ -10526,9 +10531,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Environment Canterbury", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Environment Canterbury",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -10538,8 +10559,24 @@
   "created": "2024-11-29T02:38:44Z",
   "updated": "2024-12-10T01:32:57Z",
   "extent": {
-    "spatial": { "bbox": [[170.8013469, -44.5310251, 172.7333572, -42.7240017]] },
-    "temporal": { "interval": [["2024-01-10T11:00:00Z", "2024-04-19T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          170.8013469,
+          -44.5310251,
+          172.7333572,
+          -42.7240017
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-10T11:00:00Z",
+          "2024-04-19T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -10547,10 +10584,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12203748bbd12a8223ea8bb08a119f57177ece3e7049f7891019fe21f828b5090907",
       "file:size": 6404
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

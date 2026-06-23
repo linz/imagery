@@ -1,9 +1,10 @@
 {
   "type": "Collection",
+  "gsd": 0.4,
   "stac_version": "1.0.0",
   "id": "01K1Y760FQN8W50AWSG2P723RA",
-  "title": "Manawatū-Whanganui 0.4m Rural Aerial Photos (2010-2011)",
-  "description": "Orthophotography within the Manawatū-Whanganui region captured in the 2010-2011 flying season.",
+  "title": "Manawat\u016b-Whanganui 0.4m Rural Aerial Photos (2010-2011)",
+  "description": "Orthophotography within the Manawat\u016b-Whanganui region captured in the 2010-2011 flying season.",
   "license": "CC-BY-4.0",
   "links": [
     {
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BF33_5000_1010.json",
       "rel": "item",
@@ -17564,9 +17569,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "NZ Aerial Mapping", "roles": ["producer"] },
-    { "name": "Manawatū-Whanganui LASS", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "NZ Aerial Mapping",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Manawat\u016b-Whanganui LASS",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -17575,10 +17596,26 @@
   "linz:slug": "manawatu-whanganui_2010-2011_0.4m",
   "created": "2025-08-05T22:56:11Z",
   "updated": "2025-08-05T22:56:11Z",
-  "linz:geographic_description": "Manawatū-Whanganui",
+  "linz:geographic_description": "Manawat\u016b-Whanganui",
   "extent": {
-    "spatial": { "bbox": [[174.6649364, -40.8034341, 176.681633, -38.4532011]] },
-    "temporal": { "interval": [["2010-11-30T11:00:00Z", "2011-04-29T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.6649364,
+          -40.8034341,
+          176.681633,
+          -38.4532011
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2010-11-30T11:00:00Z",
+          "2011-04-29T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -17586,10 +17623,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12206f3fff45512523892423c1384300bea392d6260c3a8ab12d5fb98fe5ce2980b5",
       "file:size": 6993
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01HRTPH0AAX7XTJX3BZ2B9SSJC",
   "title": "Tasman 0.075m Urban Aerial Photos (2023)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BQ25_1000_2650.json",
@@ -704,9 +709,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Tasman District Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Tasman District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -714,20 +735,40 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "tasman_2023_0.075m",
   "extent": {
-    "spatial": { "bbox": [[173.1319672, -41.3678355, 173.2237921, -41.3158095]] },
-    "temporal": { "interval": [["2023-10-10T11:00:00Z", "2023-10-27T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.1319672,
+          -41.3678355,
+          173.2237921,
+          -41.3158095
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-10-10T11:00:00Z",
+          "2023-10-27T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220ebce625b8cd2f1761b4c33a79f5661fed5ec2f1e6d1a9e4240345d187be1d4eb",
       "file:size": 696
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-03-14T08:54:30Z",
   "updated": "2024-11-14T01:59:24Z"
 }

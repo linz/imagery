@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.05,
   "stac_version": "1.0.0",
   "id": "01K4RN7MFWNFHZR9477YTC0XQR",
   "title": "Hamilton 0.05m Urban Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BD33_1000_0921.json",
       "rel": "item",
@@ -8834,9 +8839,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Woolpert", "roles": ["producer"] },
-    { "name": "Hamilton City Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Woolpert",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Hamilton City Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -8847,8 +8868,24 @@
   "updated": "2025-09-10T01:53:21Z",
   "linz:geographic_description": "Hamilton",
   "extent": {
-    "spatial": { "bbox": [[175.1272909, -37.9068966, 175.3957647, -37.6369305]] },
-    "temporal": { "interval": [["2024-12-17T11:00:00Z", "2024-12-27T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.1272909,
+          -37.9068966,
+          175.3957647,
+          -37.6369305
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-12-17T11:00:00Z",
+          "2024-12-27T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -8856,10 +8893,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220670dccdbab866186278c29f359b02e60eca4479a49751b0c9606d4d92e24de88",
       "file:size": 1998
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

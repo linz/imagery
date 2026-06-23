@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01JMWYKCHN35W88BJ5YV4M79AM",
   "title": "Auckland 0.075m Urban Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./AY30_1000_4447.json",
       "rel": "item",
@@ -106448,9 +106453,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Auckland Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Auckland Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -106460,8 +106481,24 @@
   "created": "2025-02-24T21:42:53Z",
   "updated": "2025-07-16T03:32:07Z",
   "extent": {
-    "spatial": { "bbox": [[174.1568679, -37.2950242, 175.5557893, -36.0230606]] },
-    "temporal": { "interval": [["2024-01-31T11:00:00Z", "2025-03-05T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          174.1568679,
+          -37.2950242,
+          175.5557893,
+          -36.0230606
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-31T11:00:00Z",
+          "2025-03-05T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -106469,10 +106506,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220fe6357590d3ee173daa293660c45134e7ecbb30c8f9d9d44ef02fd87b82c18bf",
       "file:size": 40743
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

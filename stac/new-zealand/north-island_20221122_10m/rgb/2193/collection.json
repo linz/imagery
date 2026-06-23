@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 10.0,
   "stac_version": "1.0.0",
   "id": "01GT993WNC9H1MRT337X2MDBAC",
   "title": "North Island 10m Pre-Cyclone Gabrielle Satellite Imagery (2022)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BA33.json",
@@ -974,8 +979,20 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["licensor", "host", "processor"] },
-    { "name": "European Space Agency", "roles": ["producer"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "licensor",
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "European Space Agency",
+      "roles": [
+        "producer"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "satellite-imagery",
@@ -984,10 +1001,28 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "north-island_20221122_10m",
   "extent": {
-    "spatial": { "bbox": [[173.4291746, -41.8210614, 178.3861945, -36.5982342]] },
-    "temporal": { "interval": [["2022-11-21T11:00:00Z", "2022-11-21T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.4291746,
+          -41.8210614,
+          178.3861945,
+          -36.5982342
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-11-21T11:00:00Z",
+          "2022-11-21T11:00:00Z"
+        ]
+      ]
+    }
   },
   "created": "2023-09-09T00:00:00Z",
   "updated": "2026-05-06T03:00:00Z",
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

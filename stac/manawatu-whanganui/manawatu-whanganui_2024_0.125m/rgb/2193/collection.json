@@ -1,9 +1,10 @@
 {
   "type": "Collection",
+  "gsd": 0.125,
   "stac_version": "1.0.0",
   "id": "01HXTBF6ZTBQR729YM36K4WHTK",
-  "title": "Manawatū-Whanganui 0.125m Rural Aerial Photos (2024)",
-  "description": "Orthophotography within the Manawatū-Whanganui region captured in the 2024 flying season.",
+  "title": "Manawat\u016b-Whanganui 0.125m Rural Aerial Photos (2024)",
+  "description": "Orthophotography within the Manawat\u016b-Whanganui region captured in the 2024 flying season.",
   "license": "CC-BY-4.0",
   "links": [
     {
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BK35_1000_3832.json",
@@ -7844,9 +7849,25 @@
     }
   ],
   "providers": [
-    { "name": "Woolpert", "roles": ["producer"] },
-    { "name": "Regional Software Holdings Limited", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Woolpert",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Regional Software Holdings Limited",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -7854,20 +7875,40 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "manawatu-whanganui_2024_0.125m",
   "extent": {
-    "spatial": { "bbox": [[175.4766374, -40.1074229, 176.1423073, -39.7248805]] },
-    "temporal": { "interval": [["2024-02-14T11:00:00Z", "2024-03-09T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.4766374,
+          -40.1074229,
+          176.1423073,
+          -39.7248805
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-02-14T11:00:00Z",
+          "2024-03-09T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "122002c65b715274dc5cffdb8499b30bfe5069d4bb02a0a551ede1faa77636a5bd31",
       "file:size": 6104
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-05-14T23:00:59Z",
   "updated": "2024-11-14T01:59:24Z"
 }

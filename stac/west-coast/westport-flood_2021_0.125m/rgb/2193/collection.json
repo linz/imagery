@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.125,
   "stac_version": "1.0.0",
   "id": "01HQPB3A2D8X7EVMYFY8VYGDQ2",
   "title": "Westport Flood 0.125m Urban Aerial Photos (2021)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BR20_1000_3731.json",
@@ -644,8 +649,20 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["licensor", "host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "licensor",
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -654,20 +671,40 @@
   "linz:geographic_description": "Westport Flood",
   "linz:slug": "westport-flood_2021_0.125m",
   "extent": {
-    "spatial": { "bbox": [[171.5843058, -41.8072992, 171.6378063, -41.72239]] },
-    "temporal": { "interval": [["2021-07-23T12:00:00Z", "2021-07-23T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          171.5843058,
+          -41.8072992,
+          171.6378063,
+          -41.72239
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-07-23T12:00:00Z",
+          "2021-07-23T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "122091c84acf64fa8390618ba93c608da567455200e54bd68e8bf49c8da1a0a26a05",
       "file:size": 507
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-02-29T00:57:59Z",
   "updated": "2024-11-14T01:59:24Z"
 }

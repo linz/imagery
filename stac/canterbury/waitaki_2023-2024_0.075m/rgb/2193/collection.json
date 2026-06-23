@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01J4GVX6P1JA7735MW949QB4P7",
   "title": "Waitaki 0.075m Urban Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./CA15_500_030051.json",
@@ -9176,10 +9181,31 @@
     }
   ],
   "providers": [
-    { "name": "SKYCAN", "roles": ["producer"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Environment Canterbury", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "SKYCAN",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Environment Canterbury",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -9190,18 +9216,38 @@
   "linz:geographic_description": "Waitaki",
   "linz:slug": "waitaki_2023-2024_0.075m",
   "extent": {
-    "spatial": { "bbox": [[169.9540169, -45.4977508, 171.1020316, -44.4694063]] },
-    "temporal": { "interval": [["2023-12-13T11:00:00Z", "2024-02-17T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          169.9540169,
+          -45.4977508,
+          171.1020316,
+          -44.4694063
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-12-13T11:00:00Z",
+          "2024-02-17T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220e363202f82c3c3a2140916dc5bab3e8c1f9b2e7e6de55e6949c19c8a21e7d4ee",
       "file:size": 7223
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

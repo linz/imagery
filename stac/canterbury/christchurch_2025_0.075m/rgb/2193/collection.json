@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.075,
   "stac_version": "1.0.0",
   "id": "01K5WQYE366PEEAT62GQJXV78T",
   "title": "Christchurch 0.075m Urban Aerial Photos (2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BW23_500_095100.json",
       "rel": "item",
@@ -49106,9 +49111,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Environment Canterbury", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Environment Canterbury",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "urban-aerial-photos",
@@ -49119,8 +49140,24 @@
   "updated": "2025-09-24T02:13:25Z",
   "linz:geographic_description": "Christchurch",
   "extent": {
-    "spatial": { "bbox": [[172.3769515, -43.6822319, 172.8424045, -43.3712458]] },
-    "temporal": { "interval": [["2025-03-14T11:00:00Z", "2025-03-15T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          172.3769515,
+          -43.6822319,
+          172.8424045,
+          -43.3712458
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-03-14T11:00:00Z",
+          "2025-03-15T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -49128,10 +49165,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "122058ce76ad29814be82d42f3a6acc4fc393a95bd2c70760312f0568203742213d7",
       "file:size": 6310
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

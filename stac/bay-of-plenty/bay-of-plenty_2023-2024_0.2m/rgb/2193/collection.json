@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.2,
   "stac_version": "1.0.0",
   "id": "01HTNPANWSRJKV8VS62H8XD5K1",
   "title": "Bay of Plenty 0.2m Rural Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "rel": "item",
       "href": "./BC36_5000_0502.json",
@@ -2246,9 +2251,25 @@
     }
   ],
   "providers": [
-    { "name": "Woolpert", "roles": ["producer"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "National Institute of Water and Atmospheric Research", "roles": ["licensor"] }
+    {
+      "name": "Woolpert",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "National Institute of Water and Atmospheric Research",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -2256,20 +2277,40 @@
   "linz:security_classification": "unclassified",
   "linz:slug": "bay-of-plenty_2023-2024_0.2m",
   "extent": {
-    "spatial": { "bbox": [[175.8730667, -38.1777928, 177.6669085, -37.3727916]] },
-    "temporal": { "interval": [["2023-12-14T11:00:00Z", "2024-01-25T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.8730667,
+          -38.1777928,
+          177.6669085,
+          -37.3727916
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-12-14T11:00:00Z",
+          "2024-01-25T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12201c1897f5c9267848e4d1600f7cf66c1e614e380c81df013ecc70a388f9a82fb5",
       "file:size": 5189
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ],
   "created": "2024-04-17T23:58:59Z",
   "updated": "2024-11-14T01:59:24Z"
 }

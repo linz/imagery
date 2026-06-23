@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.2,
   "stac_version": "1.0.0",
   "id": "01J7CCR8WWE0BJG8GJV1M9W6VK",
   "title": "Bay of Plenty West 0.2m Rural Aerial Photos (2024-2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BC35_2000_1822.json",
       "rel": "item",
@@ -32042,9 +32047,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "BOPLASS", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "BOPLASS",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -32055,8 +32076,24 @@
   "updated": "2025-03-21T01:01:33Z",
   "linz:geographic_description": "Bay of Plenty West",
   "extent": {
-    "spatial": { "bbox": [[175.784855, -39.0226788, 176.7342564, -37.3345833]] },
-    "temporal": { "interval": [["2024-01-25T11:00:00Z", "2025-01-13T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          175.784855,
+          -39.0226788,
+          176.7342564,
+          -37.3345833
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-25T11:00:00Z",
+          "2025-01-13T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -32064,10 +32101,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220be547481b63743b2f3f655d8ab0debae2054f1613167ba0eb6b20109b42875e5",
       "file:size": 9758
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

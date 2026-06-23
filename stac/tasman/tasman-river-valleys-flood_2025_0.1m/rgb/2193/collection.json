@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.1,
   "stac_version": "1.0.0",
   "id": "01K1EW5DA1KZYAWG14FG88E4E0",
   "title": "Tasman River Valleys Flood 0.1m Aerial Photos (2025)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BP25_1000_3431.json",
       "rel": "item",
@@ -11756,9 +11761,25 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Tasman District Council", "roles": ["licensor"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    },
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Tasman District Council",
+      "roles": [
+        "licensor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "aerial-photos",
@@ -11770,8 +11791,24 @@
   "linz:event_name": "Tasman River Valleys Flood",
   "linz:geographic_description": "Tasman River Valleys Flood",
   "extent": {
-    "spatial": { "bbox": [[172.7010767, -41.6336342, 173.1721822, -41.0630769]] },
-    "temporal": { "interval": [["2025-07-16T12:00:00Z", "2025-07-16T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          172.7010767,
+          -41.6336342,
+          173.1721822,
+          -41.0630769
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-07-16T12:00:00Z",
+          "2025-07-16T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -11779,10 +11816,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220d0828dd74605637c55b00a210209e563e2461b144765e4f0120dacfba411f424",
       "file:size": 27638
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

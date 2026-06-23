@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.5,
   "stac_version": "1.0.0",
   "id": "01K1YN4X177BTF0DAMKZH6BTHR",
   "title": "Nearshore Islands 0.5m Satellite Imagery (2010-2021)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./AS21_5000_0508.json",
       "rel": "item",
@@ -482,8 +487,20 @@
     }
   ],
   "providers": [
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "licensor", "processor"] },
-    { "name": "Maxar", "roles": ["producer"] }
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "licensor",
+        "processor"
+      ]
+    },
+    {
+      "name": "Maxar",
+      "roles": [
+        "producer"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "satellite-imagery",
@@ -494,8 +511,24 @@
   "updated": "2025-08-06T03:00:13Z",
   "linz:geographic_description": "Nearshore Islands",
   "extent": {
-    "spatial": { "bbox": [[166.8283863, -46.8541067, 176.5649961, -34.1286928]] },
-    "temporal": { "interval": [["2009-12-31T11:00:00Z", "2021-12-30T11:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          166.8283863,
+          -46.8541067,
+          176.5649961,
+          -34.1286928
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2009-12-31T11:00:00Z",
+          "2021-12-30T11:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
@@ -503,10 +536,14 @@
       "title": "Capture area",
       "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "12204b9fb1598d912325e7766b449e678c657550fb6de2b41f80276343e86c0e2d38",
       "file:size": 5086
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "type": "Collection",
+  "gsd": 0.25,
   "stac_version": "1.0.0",
   "id": "01H6AJ03DP580PNHNSBHQRJF06",
   "title": "Marlborough 0.25m Rural Aerial Photos (2023-2024)",
@@ -11,7 +12,11 @@
       "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
       "type": "application/json"
     },
-    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
     {
       "href": "./BN28_2000_1125.json",
       "rel": "item",
@@ -21428,9 +21433,25 @@
     }
   ],
   "providers": [
-    { "name": "Aerial Surveys", "roles": ["producer"] },
-    { "name": "Marlborough District Council", "roles": ["licensor"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    {
+      "name": "Aerial Surveys",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "Marlborough District Council",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "name": "Toit\u016b Te Whenua Land Information New Zealand",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "rural-aerial-photos",
@@ -21440,18 +21461,38 @@
   "updated": "2024-11-14T01:59:24Z",
   "linz:slug": "marlborough_2023_0.25m",
   "extent": {
-    "spatial": { "bbox": [[173.0057635, -41.6921534, 174.4466921, -40.649988]] },
-    "temporal": { "interval": [["2023-01-19T11:00:00Z", "2024-09-10T12:00:00Z"]] }
+    "spatial": {
+      "bbox": [
+        [
+          173.0057635,
+          -41.6921534,
+          174.4466921,
+          -40.649988
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-01-19T11:00:00Z",
+          "2024-09-10T12:00:00Z"
+        ]
+      ]
+    }
   },
   "assets": {
     "capture_area": {
       "href": "./capture-area.geojson",
       "title": "Capture area",
       "type": "application/geo+json",
-      "roles": ["metadata"],
+      "roles": [
+        "metadata"
+      ],
       "file:checksum": "1220e1757fcf5b602d9ef18b1d91d2ef7c2e383330c7e2d4169e2b5aec60b3a341d7",
       "file:size": 8187
     }
   },
-  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+  ]
 }
