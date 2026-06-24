@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KVVWN8Y2B1YCBJE7T3ABH826",
+  "title": "Waikato 0.12m SN1057 (1958)",
+  "description": "Scanned aerial imagery within the Waikato region captured in 1958.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE33_5000_0806.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122055782de186fa2088c285cf5235801104bef499b6a92ae0cf08ea0fe24b18c0ab"
+    },
+    {
+      "href": "./BE33_5000_0906.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220602f1df371e9c7d57a1dc6b7739dd8252405c6c40ee6cd71478d32178173e715"
+    },
+    {
+      "href": "./BE33_5000_0907.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122038e2ccfce80a4c7014af31ce9cd3b55aa407d294278ffe2b120ce49942e8f35d"
+    },
+    {
+      "href": "./BE33_5000_0908.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220717ae0e4cb0e655c34b355350af8ab7e626d74708510fc43438ff2ff2595bd1d"
+    },
+    {
+      "href": "./BE33_5000_1006.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122005d1d6be3ace2d3d3081927235c787f7335b9eeadde69719516579d45bc90682"
+    },
+    {
+      "href": "./BE33_5000_1007.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220bdbd424e19007f714811493393d646bc332cdec9161ebcf0c98cbd13846d51f7"
+    },
+    {
+      "href": "./BF33_5000_0106.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122005c9b7da6f796ccbfe90854ee5078c84d3b86b01ae76675902890175d48f7770"
+    },
+    {
+      "href": "./BF33_5000_0304.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220037cf8bacaa2c0ebd1f34e89a888d36be781c0d4ad2164b2a0d9184970db17a9"
+    },
+    {
+      "href": "./BF33_5000_0305.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122059dba700af9b0c6f7fe8c0ef71fb5d302806c7df77d6f80e0f9eb0cd4047b0b1"
+    },
+    {
+      "href": "./BF33_5000_0404.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205ecd678ff3cf89a22544a25fee5d601e155fb492a0fb6d17bc93b9f1af666cf3"
+    },
+    {
+      "href": "./BF33_5000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220670db69fad56f289888d9e2af2509d36c19382b89b263962a3c7bb49d767a2cc"
+    },
+    {
+      "href": "./BF33_5000_0406.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12206061f3214fd576c80015d44ca05014675c900c32e0e54349736625ca0e5714d9"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "licensor", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Waikato Regional Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "waikato",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "waikato_sn1057_1958_0.12m",
+  "gsd": 0.12,
+  "created": "2026-06-24T04:01:54Z",
+  "updated": "2026-06-24T04:01:54Z",
+  "linz:historic_survey_number": "SN1057",
+  "extent": {
+    "spatial": { "bbox": [[175.1407993, -38.3642168, 175.2748977, -38.1357378]] },
+    "temporal": { "interval": [["1958-02-28T12:00:00Z", "1958-02-28T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12204d649eed15b37f82358c4412160a18a3cdfa989d2deb4ed560a888f5b8260862",
+      "file:size": 5848
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
