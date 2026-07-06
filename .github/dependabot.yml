@@ -4,11 +4,20 @@ updates:
     directory: '/.github/workflows'
     schedule:
       interval: daily
+    cooldown:
+      default-days: 15
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: daily
+    ignore:
+      - dependency-name: pkg:localrepo/localrepo/local?repository_url=target
+      - dependency-name: pkg:localrepo/localrepo/local?repository_url=target
+    cooldown:
+      default-days: 15
   - package-ecosystem: npm
     directory: '/'
     schedule:
       interval: daily
+    cooldown:
+      default-days: 15
