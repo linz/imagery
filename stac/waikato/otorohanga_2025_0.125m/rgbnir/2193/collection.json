@@ -1,0 +1,94 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KY182MM61TSD7Z8V74HK1C20",
+  "title": "Ōtorohanga 0.125m Near-Infrared Aerial Photos (2025)",
+  "description": "Near-infrared orthophotography within the Waikato region captured in the 2025 flying season.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE32_5000_0302.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12200304ab364b337e26e7e6c4bb54727e687613363a0fff728a6d3e0248b7eabbdf"
+    },
+    {
+      "href": "./BE32_5000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220724070ce427eeb983ae5479ee5925fe9644d58290a848f3d5e0ed371cbe71b55"
+    },
+    {
+      "href": "./BE32_5000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122024dcf1bac00da69fc937cfa871d0a01be9466950eb4cb230b4498b207f3ceedf"
+    },
+    {
+      "href": "./BE32_5000_0602.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202116c8296e5f53dbe54dcaac4e8a84edb45a31c4039efb86caad29510c2e37c0"
+    },
+    {
+      "href": "./BE33_5000_0905.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122074ea1201de0bf75de8bb00d999ef15722112bd5bfe90165b9cae336b1e959f8b"
+    },
+    {
+      "href": "./BE33_5000_0906.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12200def5c535da474c21766f5c5ca51bdfadaac87ff63e9a90aa49b3ebc8f1ae3c5"
+    },
+    {
+      "href": "./BE33_5000_0907.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220aff0973bba7c04fe90a11d79b4789cf0c383234b64fe19be6c9e7899bde51599"
+    },
+    {
+      "href": "./BE33_5000_1006.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220f92e4b0a84e1489d1a9fe965c632a5231e81e51a549770987fb91329ba1c1d81"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Aerial Surveys", "roles": ["producer"] },
+    { "name": "CoLAB", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "near-infrared-aerial-photos",
+  "linz:region": "waikato",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "otorohanga_2025_0.125m",
+  "gsd": 0.125,
+  "created": "2026-07-21T02:29:02Z",
+  "updated": "2026-07-21T02:29:02Z",
+  "linz:geographic_description": "Ōtorohanga",
+  "extent": {
+    "spatial": { "bbox": [[174.8036077, -38.2335165, 175.2475089, -37.980204]] },
+    "temporal": { "interval": [["2025-12-05T11:00:00Z", "2025-12-05T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12205d9db640b71fd260e2b4a071ddf7937f592f88ee13c857064c34fb2f9df11177",
+      "file:size": 1087
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
