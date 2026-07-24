@@ -1,0 +1,112 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KY8VTSCVJE32RQ79E7FP0Y31",
+  "title": "Southland 0.15m SN11887A (1991)",
+  "description": "Scanned aerial imagery within the Southland region captured in 1991.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CD18_5000_0104.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122084b71cb5125323c5a4be2619433ca0159b27ad1338379b1df495927f97c44add"
+    },
+    {
+      "href": "./CD18_5000_0105.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220f676a40d986fab7126e38903a47ac37cac6d440d9be307b7237720ac8ae33fa8"
+    },
+    {
+      "href": "./CD18_5000_0106.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e0b49358a2af13a713ad4ccbe4b83a3df1c51cbdac282f82238c66c629971615"
+    },
+    {
+      "href": "./CD18_5000_0205.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220afae50dc79d59e3b002c4e328581b5939165cc517b1efbc5305db505e676ca76"
+    },
+    {
+      "href": "./CD18_5000_0206.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12206f02eb2cd29e4406842c6af6c5624ad9f3a4db09145c5fb45139c81e6d3456c5"
+    },
+    {
+      "href": "./CF14_5000_0910.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220fe9aadfd818bd844a266bed50e194df664d28c4ef4d32939c8f35d64cef2ef14"
+    },
+    {
+      "href": "./CF14_5000_1010.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122056cfc1fcce0170b62d422a3f15308afb9c70ff46fed58edc19a0d967a3b4a97d"
+    },
+    {
+      "href": "./CF15_5000_0901.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12201688adcb9dddf35c89df0299fc3a9c448db5b1559930163073b309c3f9b422ae"
+    },
+    {
+      "href": "./CF15_5000_1001.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d7e5065dc62c46a12a2be81de3fec3b65890e42c06ecc237a12f04c2a665135f"
+    },
+    {
+      "href": "./CF15_5000_1002.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12207e08d939605cf93b6d89606479890681ca73b3a055d8e1384a15106c623c7fe1"
+    },
+    {
+      "href": "./CF15_5000_1003.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220f2883f42fada570132a52aa8b3e324324bb48eff0eedbed47881f779d23149af"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Aerial Surveys", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "southland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "southland_sn11887a_1991_0.15m",
+  "gsd": 0.15,
+  "created": "2026-07-24T01:28:57Z",
+  "updated": "2026-07-24T01:28:57Z",
+  "linz:historic_survey_number": "SN11887A",
+  "extent": {
+    "spatial": { "bbox": [[169.6958591, -46.3153446, 170.8853014, -45.3661972]] },
+    "temporal": { "interval": [["1991-10-24T11:00:00Z", "1991-10-24T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "122061f91290115a5801c94f53247868e774456d611ac95118bbb81ad8e85e073f17",
+      "file:size": 3799
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
