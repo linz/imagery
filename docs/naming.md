@@ -90,7 +90,6 @@ A general categorisation of imagery held within our archive that includes the fo
 
 - Ancillary Aerial Photos `ancillary-aerial-photos`
 - Ancillary Near-Infrared Aerial Photos `ancillary-near-infrared-aerial-photos`
-- Aerial Photos `aerial-photos`
 - Near-Infrared Aerial Photos `near-infrared-aerial-photos`
 - Rural Aerial Photos `rural-aerial-photos`
 - Scanned Aerial Photos `scanned-aerial-photos`
