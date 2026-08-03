@@ -7,12 +7,13 @@ Imagery dataset titles and S3 paths are constructed from metadata about each ima
 The imagery dataset title is constructed from metadata that is entered when an imagery dataset is processed.
 
 ```
-[<geographic_description>|<region>] <gsd>m [<survey_number>|<geospatial_category>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
+[<geographic_description>|<region>[ <event_name>?]] <gsd>m [<survey_number>|<geospatial_category>] (<start_year>[-<end_year>?])[ - <lifecycle>?]
 ```
 
 which can be broken down as:
 
 - if it exists, the `<geographic_description>` is used, if not, `<region>` is used instead (this would be the case where the imagery dataset contains full coverage of the region)
+- if it exists, the `<event_name>` is included, but any duplication with the `<geographic_description>` is removed 
 - then `<gsd>` (which is always in metres)
 - if it exists, the `<survey_number>` is used, if not, `<geospatial_category>` is used instead
 - then `<start_year>` (using all four digits to indicate the year)
@@ -75,20 +76,28 @@ These are replaced with "-and-", so "Gore A&P Showgrounds" is changed to "gore-a
 
 EPSG Code for the coordinate reference system of the imagery. Generally this is [`2193`](https://epsg.io/2193) as it is the primary projection for most of LINZ's imagery.
 
+### `event_name`
+
+Some aerial imagery is captured to assist with the response to an emergency event. This is free text and provided at the imagery maintainer's discretion, but is intended to be a commonly used name for the related event.
+
 ### `geographic_description`
 
-This is free text and at the imagery maintainer's discretion. A specific city or sub-region or event name may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the geographic description can be empty and the region will be used instead.
+This is free text and at the imagery maintainer's discretion. A specific city or sub-region may be used to help describe the imagery capture area. The [Gazetteer](https://gazetteer.linz.govt.nz/) is referenced to ensure official names with correct spelling are used. If the region has full coverage, then the geographic description can be empty and the region will be used instead.
 
 ### `geospatial_category`
 
 A general categorisation of imagery held within our archive that includes the following possible values:
 
+- Ancillary Aerial Photos `ancillary-aerial-photos`
+- Ancillary Near-Infrared Aerial Photos `ancillary-near-infrared-aerial-photos`
 - Aerial Photos `aerial-photos`
 - Near-Infrared Aerial Photos `near-infrared-aerial-photos`
 - Rural Aerial Photos `rural-aerial-photos`
 - Scanned Aerial Photos `scanned-aerial-photos`
 - Satellite Imagery `satellite-imagery`
 - Urban Aerial Photos `urban-aerial-photos`
+
+Ancillary imagery is imagery that was not captured to the national aerial imagery base specification. This is commonly project-specific, flown to coincide with LiDAR capture or flown to assist with an emergency event. If imagery is flown for one of these purposes but was also captured to the national specification, it will not be listed as ancillary. Imagery categorised as ancillary may have data quality issues that are rarely present in other categories.
 
 ### `gsd`
 
@@ -174,16 +183,16 @@ Title: Waikato / Bay of Plenty 0.375m SN5944 (1981-1982)
 Path: s3://nz-imagery/waikato/waikato_bay-of-plenty_sn5944_1981-1982_0.375m/rgb/2193/collection.json
 ```
 
-15cm Aerial RGB imagery covering Nelson (primarily) captured in 2022
+15cm Aerial RGB imagery covering Nelson (primarily) captured in 2022 (title contains event_name, which itself contains the geographic_description)
 
 ```
 Title: Top of the South Flood 0.15m Aerial Photos (2022)
 Path: s3://nz-imagery/nelson/top-of-the-south-flood_2022_0.15m/rgb/2193/collection.json
 ```
 
-50cm Satellite RGB imagery covering a large part of the North Island captured in 2023
+50cm Satellite RGB imagery covering a large part of the North Island captured in 2023 (title contains geographic_description and event_name)
 
 ```
-Title: Cyclone Gabrielle North Island 0.5m Satellite Imagery (2023)
+Title: North Island Cyclone Gabrielle 0.5m Satellite Imagery (2023)
 Path: s3://nz-imagery/new-zealand/cyclone-gabrielle-north-island_2023_0.5m/rgb/2193/collection.json
 ```
