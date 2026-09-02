@@ -1880,9 +1880,8 @@
     }
   ],
   "providers": [
-    { "name": "Chang Guang Satellite Technology", "roles": ["licensor"] },
-    { "name": "Chang Guang Satellite Technology", "roles": ["producer"] },
-    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] }
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Chang Guang Satellite Technology", "roles": ["licensor", "producer"] }
   ],
   "linz:lifecycle": "completed",
   "linz:geospatial_category": "satellite-imagery",
@@ -1895,8 +1894,19 @@
     "spatial": { "bbox": [[175.2700705, -41.6259979, 178.5669558, -37.5202786]] },
     "temporal": { "interval": [["2023-02-20T11:00:00Z", "2023-03-07T11:00:00Z"]] }
   },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12209c4b44660f1534cce1a0a673e6c7cec89f3cbd4398b2da802616a4fedfff9452",
+      "file:size": 1103863
+    }
+  },
   "created": "2023-09-09T00:00:00Z",
-  "updated": "2026-07-31T03:39:57Z",
+  "updated": "2026-09-01T22:55:00Z",
   "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"],
   "gsd": 0.5
 }
