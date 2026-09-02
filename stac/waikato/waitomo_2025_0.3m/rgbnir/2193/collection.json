@@ -1,0 +1,70 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01KY3ZH2MA665V4XGKJ3VVNXF4",
+  "title": "Waitomo 0.3m Near-Infrared Aerial Photos (2025)",
+  "description": "Near-infrared orthophotography within the Waikato region captured in the 2025 flying season.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BX24_10000_0203.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b575021870950352a6de93ca7897becd42752cdd7aea0c5b165d85fc08bb4db1"
+    },
+    {
+      "href": "./BX24_10000_0204.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220252c2398d08af9320f06a4f19b504f715d5bc277d3b0ad449d618d5f81f51364"
+    },
+    {
+      "href": "./BX24_10000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c827a4de00643c2efc9e7863fa703447e2f1f1a8a0b160164971f4a6cc31a753"
+    },
+    {
+      "href": "./BX24_10000_0304.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e9d3f269ee2ec7afe3e3c67aa972ff8db5838b9725ad3c712b1ebf46626dcc8d"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "Aerial Surveys", "roles": ["producer"] },
+    { "name": "Waitaki District Council", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "near-infrared-aerial-photos",
+  "linz:region": "waikato",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "waitomo_2025_0.3m",
+  "gsd": 0.3,
+  "created": "2026-07-22T03:57:21Z",
+  "updated": "2026-07-22T03:57:21Z",
+  "linz:geographic_description": "Waitomo",
+  "extent": {
+    "spatial": { "bbox": [[172.672706, -43.6372018, 172.7921674, -43.5072648]] },
+    "temporal": { "interval": [["2025-12-05T11:00:00Z", "2025-12-12T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220b62d9fab7602e844f0998a16c637b3c154efd6f4a396e0e6d3f4a09265252556",
+      "file:size": 297
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
