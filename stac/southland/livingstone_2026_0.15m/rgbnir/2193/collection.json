@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M2KJED158JWZTBATSRTFZCYA",
+  "title": "Livingstone 0.15m Ancillary Near-Infrared Aerial Photos (2026)",
+  "description": "Ancillary near-infrared orthophotography within the Southland region captured in the 2026 flying season.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CB09_5000_0904.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220185f91662871af466f77ca9a909bf091ce743e401db3c6774e0beabb323fcb9a"
+    },
+    {
+      "href": "./CB09_5000_0905.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122097188a4cc527e70e656e8b43f4b9ce07139622f1080c73ae2690bcf97cba46e9"
+    },
+    {
+      "href": "./CB09_5000_1003.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e7d4bf8a010f0d8fb7ef51c158c0f4eaa86d97985606c3afa8df74ac54143342"
+    },
+    {
+      "href": "./CB09_5000_1004.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220a1077db029114d72ac0326419f2b8983f256ea834dbc0573ca85e7e793339e28"
+    },
+    {
+      "href": "./CB09_5000_1005.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c91b80b0702a254977ac361602e2030f3253a577da6f9d2c17516f31aa3431e6"
+    },
+    {
+      "href": "./CC09_5000_0103.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220190a4682cd3d533638421730ff35350c8152aec1af179738186858084df0d726"
+    },
+    {
+      "href": "./CC09_5000_0104.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220a51c85df2c4c3c32ee369d203ccc433489a34adf07bac31d92889ea7bd62946d"
+    },
+    {
+      "href": "./CC09_5000_0105.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12200dcae6c8266e1313dca8b2f7db1a35f6f05401488eb498db755d4db85966f03f"
+    },
+    {
+      "href": "./CC09_5000_0203.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122023e291d49be2089fd131a235bf82f7ea0ba917d112b40c13606ee1a7090d5274"
+    },
+    {
+      "href": "./CC09_5000_0204.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12201f2be7da6558fb616cf0dad8513ede6df983c7ea7aa617ec0a51b6a1c61d5e7d"
+    },
+    {
+      "href": "./CC09_5000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204ffb67b08fa0959bf81eb28b5315cacb4e1aa1ee3ad2497f02e0c763b32f7353"
+    },
+    {
+      "href": "./CC09_5000_0304.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d9a83acd6c563558bfaf36008ec7fb05c2281e8d5a751566c99366e5c68ad4cf"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "licensor", "processor"] },
+    { "name": "Landpro", "roles": ["producer"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "ancillary-near-infrared-aerial-photos",
+  "linz:region": "southland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "livingstone_2026_0.15m",
+  "gsd": 0.15,
+  "created": "2026-09-15T22:19:20Z",
+  "updated": "2026-09-15T22:19:20Z",
+  "data_type": "uint16",
+  "linz:geographic_description": "Livingstone",
+  "extent": {
+    "spatial": { "bbox": [[168.0319504, -45.0551203, 168.1367506, -44.8923734]] },
+    "temporal": { "interval": [["2026-03-22T11:00:00Z", "2026-03-22T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12207cade2c5ba4f84f3495f99f3ae6465fb5848fbed7865bc29fca74bf0ec7e0c4c",
+      "file:size": 1397
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
