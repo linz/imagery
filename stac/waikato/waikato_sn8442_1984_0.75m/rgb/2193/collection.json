@@ -1,0 +1,124 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4CPAJ74K9X7M8FMSD1WAEN8",
+  "title": "Waikato 0.75m SN8442 (1984)",
+  "description": "Scanned aerial imagery within the Waikato region captured in 1984.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BG34_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b39fecd11fadb5180956bcf2101a7bb159aea49c0ca048c8b89e736d1c98da8d"
+    },
+    {
+      "href": "./BG34_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e664c5af77f2a111f622f36653a2bad8c82869f6ad219b52035870e6cd7973c9"
+    },
+    {
+      "href": "./BG35_10000_0301.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220a28cc3ec282fe0eb9dd5e6fd7cb8d2b12c40c29f522a59cb9c7e0e251771c53a"
+    },
+    {
+      "href": "./BG35_10000_0302.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e38a7ea5d738b2166616e00a5ced778cac5d704fafc5efdba0f380578ccc0ad9"
+    },
+    {
+      "href": "./BG35_10000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122071c9e7c45ce805575e8be1fa6827378a6fe41021851fcabab5f0ecff669ae4e0"
+    },
+    {
+      "href": "./BG35_10000_0401.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220f7fe3f0f5e91e2d335d8c1fb37ba96b88df38c8960c39f32e25087c7c53615e9"
+    },
+    {
+      "href": "./BG35_10000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202f90e3be72b01d36f400588c9cde8605c395b9547e14aabe05063fcb8bed0655"
+    },
+    {
+      "href": "./BG35_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122079c17554ab661963ba702e100660cdb1f85ee7539ccf7d12e018244acb4feb2b"
+    },
+    {
+      "href": "./BG35_10000_0404.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d155897cdf4a0e0c85817430846558ac3a5106fc9372669015154da24a92ecae"
+    },
+    {
+      "href": "./BG35_10000_0501.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e89888c1f1903285d0d7b749b379cb9ccf87fbdd0215dbd586588a6acd61b606"
+    },
+    {
+      "href": "./BG35_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205a8543273ecff5d8610c9f1625bade4eebe12cdfd3d69280b8ef0751d155aedf"
+    },
+    {
+      "href": "./BG35_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12206da35e5bc846cf5e04708a96a57e213e56a0be8da3c028db2498089d17804bbb"
+    },
+    {
+      "href": "./BG35_10000_0504.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220869e58959b42c01c10a66267e2d563926b1fc57054132d3c3751a88867a52cf8"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "waikato",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "waikato_sn8442_1984_0.75m",
+  "gsd": 0.75,
+  "created": "2026-10-08T02:43:51Z",
+  "updated": "2026-10-08T02:43:51Z",
+  "linz:historic_survey_number": "SN8442",
+  "extent": {
+    "spatial": { "bbox": [[175.5682272, -38.8745333, 175.8492409, -38.6750279]] },
+    "temporal": { "interval": [["1984-12-22T11:00:00Z", "1984-12-22T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12204b4acb0bdd8e30b09ba56c7949b9a85d575dc822ec00d3b145ce1b38c22d8d81",
+      "file:size": 3123
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
