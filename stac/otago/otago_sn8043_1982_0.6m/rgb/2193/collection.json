@@ -1,0 +1,100 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4CMM8T89K1ERMKFTE6B0P63",
+  "title": "Otago 0.6m SN8043 (1982)",
+  "description": "Scanned aerial imagery within the Otago region captured in 1982.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CF15_10000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122008cbe1ad1823639b63b5e39fe02513b5bbb84343cb1c2550871a57499f7bcc9a"
+    },
+    {
+      "href": "./CF15_10000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e8732173e85676710ec513f0987e77c19c102d7241e2af6dccd5bbd52dd5eb46"
+    },
+    {
+      "href": "./CF15_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12201b4eb763a7a4ab8c180ca247a1550c6e9ad63963311c82c08c20fe9e1dbd6681"
+    },
+    {
+      "href": "./CF15_10000_0404.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202e971f6d31fd2a9bff9e349c515a451c5e85a87f38fef4fcc014887069963ea4"
+    },
+    {
+      "href": "./CF15_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122042990201b618d75bb8b306e3dc889ecd9ae3d13a331c3e6200a9b593848a05ba"
+    },
+    {
+      "href": "./CF15_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220ff57a7478324e19ae486f8f482bf0410567f44c6383296d95230a84c63ee2340"
+    },
+    {
+      "href": "./CF15_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122034bdcd5b31d27803f687cc376183cdc67827a961004402681c268e9457dade80"
+    },
+    {
+      "href": "./CF15_10000_0504.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e8ddb9162340a54f97ffbd4810c58b08821c4e2045309a597be91490ab6905c6"
+    },
+    {
+      "href": "./CF15_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12203849dcd0d2b45192e9299f87e01fbb127414f7f9d39e77c940c8cca52f79dcd8"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "otago",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "otago_sn8043_1982_0.6m",
+  "gsd": 0.6,
+  "created": "2026-10-08T02:14:12Z",
+  "updated": "2026-10-08T02:14:12Z",
+  "linz:historic_survey_number": "SN8043",
+  "extent": {
+    "spatial": { "bbox": [[169.7892212, -46.321202, 170.0452152, -46.1220996]] },
+    "temporal": { "interval": [["1982-02-12T11:00:00Z", "1982-02-12T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "122005815ebb2fdb193dad7ab226a79db553415f4968c49a2819b51f44b57fe02662",
+      "file:size": 7894
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
