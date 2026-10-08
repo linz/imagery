@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4CP96XJTEC8D3TP7KTDAKW7",
+  "title": "Northland 0.375m SN8129 (1982)",
+  "description": "Scanned aerial imagery within the Northland region captured in 1982.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./AV28_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122086d876414257e883b463a26ef3b1ae6b7c05da0ec4770c094cb1ba78ebeacca4"
+    },
+    {
+      "href": "./AV28_10000_0504.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220a8a970c493ae759bb8f165250aa1dee812b63f0c450a440a9fbb1b2900cd1ca6"
+    },
+    {
+      "href": "./AV28_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122076b105eb8d745a9cc7de98a2a86e1b56dfb589177ff268816ecb313cfabf0a5e"
+    },
+    {
+      "href": "./AW28_10000_0103.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122010f3b1e5406e1cf72e168e4402863ece594671c9b712f8e94e4a65489c40397f"
+    },
+    {
+      "href": "./AW28_10000_0104.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220236d652cd32d6ea1b2c5b2bfd0e61220da7a8211fdb16828c3a6a3ffbf4599be"
+    },
+    {
+      "href": "./AW28_10000_0105.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220125c17f554b425c1a33ab5f4da9e9dcd68ba0cfdec4f80f5a4b85af8a7b5af78"
+    },
+    {
+      "href": "./AW28_10000_0203.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204abcaa615b9288c7b02d5d15af90b9d5ea81d20b2d632679d045b2395e3113e8"
+    },
+    {
+      "href": "./AW28_10000_0204.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c4ff8c0b3cfcd2e88afbbce4415ce9c6a54016f5059c83628a31149984d54f44"
+    },
+    {
+      "href": "./AW28_10000_0205.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c73db13e8f5cf8c249669b5485cdd5fd527d2196f8a63dbc48aeb848f28670eb"
+    },
+    {
+      "href": "./AW28_10000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205281f40631f4d0961cb2eb9f9ee54e19d793ad243a12ad39198986e2b532d804"
+    },
+    {
+      "href": "./AW28_10000_0304.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220bca595aea581c612db7362bacea32e10c0eba197b56b4e93a1668eb0f302b24a"
+    },
+    {
+      "href": "./AW28_10000_0305.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122050cb6cd8a31c04339242cbcbc51c9994723a0379ff5f0a7bfadda69a2f58b110"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "northland",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "northland_sn8129_1982_0.375m",
+  "gsd": 0.375,
+  "created": "2026-10-08T02:43:07Z",
+  "updated": "2026-10-08T02:43:07Z",
+  "linz:historic_survey_number": "SN8129",
+  "extent": {
+    "spatial": { "bbox": [[173.7652019, -35.5255678, 173.9264682, -35.264801]] },
+    "temporal": { "interval": [["1982-11-06T11:00:00Z", "1982-11-06T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220327cb5fc05d64e33ad66c88277c295e26c6037a6ba266416b327b3aaf4119435",
+      "file:size": 6610
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
