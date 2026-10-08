@@ -4,6 +4,13 @@ This repository contains STAC Collection metadata and data publishing configurat
 
 There is no need to add a Pull Request overview beyond confirming how many new or changed files were reviewed. Inline comments and/or suggestions where discrepancies are identified are the priority.
 
+## Approach
+
+First, check the files in this PR based on the following rules and criteria.
+Next, check for similar PRs that have been merged. Similar PRs could be: same region, single-vs-multi region, similar type of imagery, etc.
+Put emphasis on recent ones, but look further back if there are no recent similar PRs. 
+Flag any inconsistencies between this and past similar PRs.
+
 ## publish-odr-parameters
 
 When aerial imagery is published to the Registry of Open Data on AWS, a configuration file is created here containing some parameters for the publishing process. When reviewing changes to `publish-odr-parameters` files, check the following rules.
