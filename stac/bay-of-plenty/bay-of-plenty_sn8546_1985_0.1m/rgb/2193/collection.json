@@ -1,0 +1,70 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4F5N5FYW0P3V0M3X9TR9HZP",
+  "title": "Bay of Plenty 0.1m SN8546 (1985)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1985.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE41_5000_0602.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12205b2f7843fc33ece69d5e3a7215764ce3eec8b6871390d020900a337f0976be11"
+    },
+    {
+      "href": "./BE41_5000_0603.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b65578516dd906a41f0a4bf068f03d78f1c3f9d0a67e4f0ffed9581a1fb263f4"
+    },
+    {
+      "href": "./BE41_5000_0702.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d45adaa3ac886e12cf69d6c1015cdf7c8821a50d7471c4829b9688fddafcf7a9"
+    },
+    {
+      "href": "./BE41_5000_0703.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122044acca0afdc8baf5fdf8ecda6904fa26492f63b51aa129ce8ade0d9910607209"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn8546_1985_0.1m",
+  "gsd": 0.1,
+  "created": "2026-10-09T01:50:16Z",
+  "updated": "2026-10-09T01:50:16Z",
+  "linz:historic_survey_number": "SN8546",
+  "extent": {
+    "spatial": { "bbox": [[177.2642415, -38.0790934, 177.322579, -38.0123876]] },
+    "temporal": { "interval": [["1985-10-21T12:00:00Z", "1985-11-08T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12204c7612fd61de12266b6468233bd249baa9bccf49425ee5a2592986fe89f6fdfa",
+      "file:size": 1396
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
