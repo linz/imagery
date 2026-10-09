@@ -1,0 +1,76 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4F60WHDYAKJ67YBKA1VWAEQ",
+  "title": "Otago 0.125m SN9330C (1994)",
+  "description": "Scanned aerial imagery within the Otago region captured in 1994.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CC17_5000_1001.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220ce59b6fce77e80ddcf7d57c13f21fc1205a0234ae80460065944a943cd3b7f4b"
+    },
+    {
+      "href": "./CC17_5000_1002.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b74213ae4029d073ef15062dfa864e91e2f9c273db72f0227e3189a4467d043d"
+    },
+    {
+      "href": "./CD17_5000_0101.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b7ee4aaa6374ee21bd943b91302d1c7daa432b73a326d4ad751b1c64902db8ec"
+    },
+    {
+      "href": "./CD17_5000_0102.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12202824b9093aedecd449ba35564d596ed0c050b108d8acaff24b4d6b79f22e2596"
+    },
+    {
+      "href": "./CD17_5000_0103.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122058ae5fb1061381128290e2e9a4daa87476de8e02cb01fca031e58f3725d01709"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "otago",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "otago_sn9330c_1994_0.125m",
+  "gsd": 0.125,
+  "created": "2026-10-09T01:56:40Z",
+  "updated": "2026-10-09T01:56:40Z",
+  "linz:historic_survey_number": "SN9330C",
+  "extent": {
+    "spatial": { "bbox": [[170.3939106, -45.3922416, 170.4872346, -45.3254379]] },
+    "temporal": { "interval": [["1994-01-09T11:00:00Z", "1994-01-11T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "12205ddc7933267a98cb60159e7044486557001595f8d49cff40a03c558030208363",
+      "file:size": 5682
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
