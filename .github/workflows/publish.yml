@@ -7,8 +7,7 @@ on:
 
 jobs:
   publish:
-    # TODO: Update SHA after linz/topo-workflows#1283 is merged
-    uses: linz/topo-workflows/.github/workflows/publish.yml@c7fed797c04cbc8a7ae22dd270b25372f09aa8f3
+    uses: linz/topo-workflows/.github/workflows/publish.yml@33b337ada15df04354bbad7cc9a68428595053a0
     with:
       user_group: land
       odr_bucket: s3://nz-imagery/
