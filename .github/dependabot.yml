@@ -1,7 +1,6 @@
 version: 2
 
 updates:
-  # Docker base images (FROM lines in Dockerfiles)
   - package-ecosystem: docker
     directories:
       - /.github/workflows
@@ -16,7 +15,6 @@ updates:
     commit-message:
       prefix: build(deps)
 
-  # Actions used in .github/workflows
   - package-ecosystem: github-actions
     directory: /
     open-pull-requests-limit: 5
@@ -35,7 +33,6 @@ updates:
         patterns: ['*']
         update-types: [minor, patch]
 
-  # JavaScript / TypeScript dependencies (package.json and its lock file)
   - package-ecosystem: npm
     directory: /
     open-pull-requests-limit: 5
