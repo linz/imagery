@@ -1,0 +1,118 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4CP9YNDYV8AYB1NNBT0K6MW",
+  "title": "Otago 0.5m SN8216 (1983)",
+  "description": "Scanned aerial imagery within the Otago region captured in 1983.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./CE16_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220e127bd7cca2702e3d8a156593d061359d175cfa5f2365681ff622eb847f2581b"
+    },
+    {
+      "href": "./CE16_10000_0404.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122041129eb467a7b828adea57452ce4899822903ef0f8baa0237b3018a471ea13a1"
+    },
+    {
+      "href": "./CE16_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220468916e3a05f08b910a689fa6a3c885a71e4e1f21f285986c2ed28a47236a560"
+    },
+    {
+      "href": "./CE16_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122021d8da1dd83319d5ae23a789a739bff182e83570d58ab24c9f5a9dd7a78bc3e0"
+    },
+    {
+      "href": "./CE16_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122012ffdb835818c248447d33b6a2852096620acd4281122cd8b9707f8604fa38a1"
+    },
+    {
+      "href": "./CE16_10000_0504.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d93b6a38e58ae6e12003d8e0d6497e40050ec34766d8fad0848db7324845ecb2"
+    },
+    {
+      "href": "./CE16_10000_0505.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122064823e760dc1175e32b8727aa2c82ef631880b62550cb911380cb8bd81b061cc"
+    },
+    {
+      "href": "./CF16_10000_0101.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122019295dfdd3e9e12469515f9c308f89f5020eecc01b3f79865b2e9f9758d2679c"
+    },
+    {
+      "href": "./CF16_10000_0102.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122054a4549ad3ad28413cde1bbaf97e750374fe7fc0b39be15e4dcbd4eff165cf37"
+    },
+    {
+      "href": "./CF16_10000_0103.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122043db3b9495efcc28927d8eddf1c6a75b79d8011105a34dd8b46f332f62bde9cd"
+    },
+    {
+      "href": "./CF16_10000_0104.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220cdd390d4976488207378151c343a1ea9b1637a16bc1bbebef82d216c42411520"
+    },
+    {
+      "href": "./CF16_10000_0203.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122069347a7fdfb6bafc76536a43791bea9e530e614f7e2d9088f80b25cf5c18e349"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "otago",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "otago_sn8216_1983_0.5m",
+  "gsd": 0.5,
+  "created": "2026-10-08T02:43:31Z",
+  "updated": "2026-10-08T02:43:31Z",
+  "linz:historic_survey_number": "SN8216",
+  "extent": {
+    "spatial": { "bbox": [[170.0521335, -46.1317203, 170.3712929, -45.8713056]] },
+    "temporal": { "interval": [["1983-04-09T12:00:00Z", "1983-04-09T12:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220c101efa3617465aa88e44438ebd95dfa0ff680c18afe62c441f3c733720106f1",
+      "file:size": 5452
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
