@@ -7,7 +7,7 @@ Toitū Te Whenua (LINZ) holds multiple imagery types data for [most of New Zeala
 
 This data is delivered to LINZ as GeoTiffs, LINZ is required to store the imagery data in a safe and secure manner while also providing access to the data.
 
-To enable ease of access Imagery is [standardized](https://github.com/linz/topo-imagery) into [Cloud Optimised GeoTiff](https://www.cogeo.org/) using [GDAL](https://github.com/osgeo/gdal/)
+To enable ease of access Imagery is [standardized](https://github.com/linz/geoprocessor) into [Cloud Optimised GeoTiff](https://www.cogeo.org/) using [GDAL](https://github.com/osgeo/gdal/)
 
 ### Imagery types
 
@@ -15,7 +15,7 @@ LINZ's imagery archive consists of
 
 - 1-band 8-bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
 - 3-band 8-bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
-- 4-band 8-bit RGBNIR aerial imagery (Sometimes with `NO_DATA`) - started being published from January 2026
+- 4-band 8-bit and 16-bit RGBNIR aerial imagery (Sometimes with `NO_DATA`) - started being published from January 2026
 
 ### Goals
 

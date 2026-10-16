@@ -1,0 +1,112 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "id": "01M4F5MEPV0V99T95R48ZMGT5B",
+  "title": "Bay of Plenty 0.3m SN8546 (1985)",
+  "description": "Scanned aerial imagery within the Bay of Plenty region captured in 1985.",
+  "license": "CC-BY-4.0",
+  "links": [
+    {
+      "rel": "root",
+      "href": "https://nz-imagery.s3.ap-southeast-2.amazonaws.com/catalog.json",
+      "type": "application/json"
+    },
+    { "rel": "self", "href": "./collection.json", "type": "application/json" },
+    {
+      "href": "./BE40_10000_0305.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122086b264bade6849f49b07f29b36302374dbe9e8e8a08ef46b2977a95dfeddde3d"
+    },
+    {
+      "href": "./BE40_10000_0405.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220ecfb7cac8e0e3e8c9af8c782639a29a903fa0c2cc3cb46c7e37e290e7e700959"
+    },
+    {
+      "href": "./BE41_10000_0301.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220b1bafa7c262f8ee00cca54bafaaeebe312f8564984e8643c0b15625d875129a6"
+    },
+    {
+      "href": "./BE41_10000_0302.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "12204ec8bba3a66739e518ea6c6dcd8e3dc94212735b7d5c37583505b9b8f10fc28e"
+    },
+    {
+      "href": "./BE41_10000_0303.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d4865b15a82a502df6fd27fe8da6ef32938b00781a437839f8e6c0422c8e8c26"
+    },
+    {
+      "href": "./BE41_10000_0401.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122023e0a2bdcffaf2e5b389f2e5d04b9cff03aafdca2a526d09828f6d456c53cf5f"
+    },
+    {
+      "href": "./BE41_10000_0402.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220d9a52cf48a13534289206756a210125dc8cb3c26276f3a995498ab9c924d6193"
+    },
+    {
+      "href": "./BE41_10000_0403.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122017e7e4305f3df523a4a520424769a9ed548c4c7bd94a69e41fd83b647e5e17be"
+    },
+    {
+      "href": "./BE41_10000_0501.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220c6477198a0e3cc9db09152f9ab3aa87b797bf592f579857aa7df181ef913be9e"
+    },
+    {
+      "href": "./BE41_10000_0502.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "122014ae1cd66297c69907fb5f7837b063daef3120e9acf10bc06684f034999a2836"
+    },
+    {
+      "href": "./BE41_10000_0503.json",
+      "rel": "item",
+      "type": "application/geo+json",
+      "file:checksum": "1220010c13ae76b76f3c6556d7c51dafaa1492e70e5d4d814470e95bfd06a44e9cc1"
+    }
+  ],
+  "providers": [
+    { "name": "Toitū Te Whenua Land Information New Zealand", "roles": ["host", "processor"] },
+    { "name": "SKYVUW", "roles": ["producer"] },
+    { "name": "Ministry for Primary Industries", "roles": ["licensor"] }
+  ],
+  "linz:lifecycle": "completed",
+  "linz:geospatial_category": "scanned-aerial-photos",
+  "linz:region": "bay-of-plenty",
+  "linz:security_classification": "unclassified",
+  "linz:slug": "bay-of-plenty_sn8546_1985_0.3m",
+  "gsd": 0.3,
+  "created": "2026-10-09T01:49:53Z",
+  "updated": "2026-10-09T01:49:53Z",
+  "linz:historic_survey_number": "SN8546",
+  "extent": {
+    "spatial": { "bbox": [[177.1805993, -38.1771528, 177.4102773, -37.9769992]] },
+    "temporal": { "interval": [["1985-10-21T12:00:00Z", "1985-11-08T11:00:00Z"]] }
+  },
+  "assets": {
+    "capture_area": {
+      "href": "./capture-area.geojson",
+      "title": "Capture area",
+      "description": "Boundary of the total capture area for this collection. Excludes nodata areas in the source data. Geometries are simplified.",
+      "type": "application/geo+json",
+      "roles": ["metadata"],
+      "file:checksum": "1220371d8ea6527cb2bd51ee65e863f591931c4a054be7589dac3db1b1a1e51e4a92",
+      "file:size": 18992
+    }
+  },
+  "stac_extensions": ["https://stac-extensions.github.io/file/v2.0.0/schema.json"]
+}
