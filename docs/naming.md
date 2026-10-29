@@ -13,7 +13,7 @@ The imagery dataset title is constructed from metadata that is entered when an i
 which can be broken down as:
 
 - if it exists, the `<geographic_description>` is used, if not, `<region>` is used instead (this would be the case where the imagery dataset contains full coverage of the region)
-- if it exists, the `<event_name>` is included, but any duplication with the `<geographic_description>` is removed 
+- if it exists, the `<event_name>` is included, but any duplication with the `<geographic_description>` is removed
 - then `<gsd>` (which is always in metres)
 - if it exists, the `<survey_number>` is used, if not, `<geospatial_category>` is used instead
 - then `<start_year>` (using all four digits to indicate the year)

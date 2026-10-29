@@ -2,15 +2,18 @@
   "name": "@linzjs/imagery",
   "version": "1.0.0",
   "private": "true",
-  "repository": "git@github.com:linz/imagery.git",
   "license": "MIT",
+  "repository": "git@github.com:linz/imagery.git",
+  "type": "module",
   "scripts": {
-    "lint": "eslint --quiet --fix --ignore-path=.gitignore . && prettier --check --write ."
+    "lint": "npm run lint:fmt",
+    "lint:fmt": "oxfmt --check .",
+    "format": "oxfmt --write ."
   },
   "devDependencies": {
-    "@linzjs/style": "^5.4.0"
+    "@linzjs/style": "^6.1.1"
   },
   "engines": {
-    "node": "^24.11.1"
+    "node": "^24.12.0"
   }
 }

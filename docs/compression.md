@@ -1,6 +1,5 @@
 # Imagery Compression
 
-
 ## Background
 
 Toitū Te Whenua (LINZ) holds multiple imagery types data for [most of New Zealand](https://www.linz.govt.nz/products-services/data/types-linz-data/aerial-imagery).
@@ -14,7 +13,7 @@ To enable ease of access Imagery is [standardized](https://github.com/linz/geopr
 LINZ's imagery archive consists of
 
 - 1-band 8-bit grayscale [scanned historical imagery](https://www.linz.govt.nz/our-work/projects/crown-aerial-film-archive-historical-imagery-scanning-project)
-- 3-band 8-bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`) 
+- 3-band 8-bit RGB [aerial imagery](https://data.linz.govt.nz/data/category/aerial-photos/) (Sometimes with `NO_DATA`)
 - 4-band 8-bit and 16-bit RGBNIR aerial imagery (Sometimes with `NO_DATA`) - started being published from January 2026
 
 ### Goals
@@ -73,11 +72,11 @@ The output data can be found in [compression-output.tsv](./data/compression-outp
 
 Below is a table showing the relative file sizes, 63% means the file is 63% of the size of the LZW source image.
 
-| Imagery Type  | LZW  | ZSTD | WebP  | LERC |
-|---------------|------|------|-------|------|
-| Grayscale     | 100% | 87%  | 63%   | 79%  |
-| RGB (8bit)    | 100% | 66%  | 34%   | 57%  |
-| RGBNIR (8bit) | 100% | 79%  | N/A   | 63%  |
+| Imagery Type  | LZW  | ZSTD | WebP | LERC |
+| ------------- | ---- | ---- | ---- | ---- |
+| Grayscale     | 100% | 87%  | 63%  | 79%  |
+| RGB (8bit)    | 100% | 66%  | 34%  | 57%  |
+| RGBNIR (8bit) | 100% | 79%  | N/A  | 63%  |
 
 Some key results:
 
